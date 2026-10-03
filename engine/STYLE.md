@@ -63,3 +63,11 @@ Viewer request (Iron Pillar comments): "Damascus sword" -> make the Wootz steel 
 - Do NOT run make_short.clean_voice (afftdn + compressor) on ElevenLabs takes: it pops on every speech onset after digital silence. Use `highpass=f=80,volume=7dB,alimiter=limit=0.8:attack=7:release=120:level=disabled` and write _work/voice_clean.wav yourself.
 - Captions are timed by the SPOKEN text and snapped to pauses (make_short2 word_times_snap + caption_times): a written "1536" takes the time of "fifteen thirty-six". Before, captions ran ahead of the voice.
 - Images must match the exact moment: no character doing an action before the narration says it (EP5: Panna was already pointing when Banvir burst in).
+
+## Indus Files #1 (day 1, 3 Oct 2026): code-built hook works
+| Short | Stayed to watch | Avg view | Likes | Opening |
+|---|---|---|---|---|
+| Indus Files #1 "They Smashed a 4,500-Year-Old City for a Railway" (57 s) | 62.1% | 0:39 (69.6%) | 23 on 625 views (3.7%) | fx.punch_hook: crisp frame 1, push-in, shake, flying brick chips, steam |
+- Ties the channel best (Iron Pillar 61%) and beats Kuyili (43.8%) by 18 points. Like rate 3.7% is healthy; comments are weak (1).
+- Keep: aggressive code-built hook, word-anchored animations, cliffhanger ending.
+- Next: get comments with a debate question in the pinned comment and in replies, not in the video ending (the ending stays the Part 2 cliffhanger). Post Part 2 within about 48 h while the topic is fresh.
