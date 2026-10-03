@@ -1,0 +1,597 @@
+{
+ "output": "ep005_panna_dai.mp4",
+ "tail_seconds": 1.0,
+ "cap_y": 0.66,
+ "handheld": 8,
+ "captions_from": 3.0,
+ "audio_fade_out": 0.8,
+ "hook": {
+  "text": "SHE SACRIFICED\nHER OWN SON",
+  "until": 3.0,
+  "y": 0.6,
+  "size": 122,
+  "accent": [
+   "SON"
+  ]
+ },
+ "lines": [
+  {
+   "text": "She saved a prince... by giving up her own son.",
+   "emph": [
+    "son"
+   ]
+  },
+  {
+   "text": "Chittor, fifteen thirty-six. Banvir has seized Mewar, and killed its ruler.",
+   "caption": "Chittor, 1536. Banvir has seized Mewar, and killed its ruler.",
+   "emph": [
+    "1536",
+    "banvir"
+   ]
+  },
+  {
+   "text": "Now he wants the young heir, Udai Singh, dead.",
+   "emph": [
+    "udai",
+    "singh",
+    "dead."
+   ]
+  },
+  {
+   "text": "Tradition says the prince's nurse, Panna Dhaai, heard the cries from the palace.",
+   "caption": "Tradition says the prince's nurse, Panna Dai, heard the cries from the palace.",
+   "emph": [
+    "panna",
+    "dai,"
+   ]
+  },
+  {
+   "text": "She hid Udai in a fruit basket, and a trusted servant carried him out of the fort.",
+   "emph": [
+    "basket,"
+   ]
+  },
+  {
+   "text": "But Panna stayed behind.",
+   "emph": [
+    "stayed"
+   ]
+  },
+  {
+   "text": "She laid her own son... in the prince's bed.",
+   "emph": [
+    "own",
+    "son..."
+   ]
+  },
+  {
+   "text": "Banvir burst in, sword drawn, and demanded the prince. Panna could not speak. She pointed to the bed.",
+   "emph": [
+    "pointed"
+   ]
+  },
+  {
+   "text": "Her son died in the prince's place.",
+   "emph": [
+    "died"
+   ]
+  },
+  {
+   "text": "Panna reached Kumbhalgarh with Udai, and he was hidden there for years.",
+   "emph": [
+    "kumbhalgarh"
+   ]
+  },
+  {
+   "text": "In fifteen forty, Udai Singh took back Mewar. Years later, he founded Udaipur, the City of Lakes.",
+   "caption": "In 1540, Udai Singh took back Mewar. Years later, he founded Udaipur, the City of Lakes.",
+   "emph": [
+    "1540,",
+    "udaipur,"
+   ]
+  },
+  {
+   "text": "A kingdom lived on... because one mother chose duty over her own child.",
+   "emph": [
+    "duty"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "ai01_hook.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0,
+   "ai": true,
+   "glint": {
+    "dur": 0.6
+   },
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 8,
+     "opacity": 0.5,
+     "fade": [
+      0.01,
+      0
+     ]
+    }
+   ],
+   "label": "AS TOLD IN MEWAR TRADITION",
+   "label_y": 105,
+   "label_delay": 0.0,
+   "label_dur": 2.8
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "ai02_chittor_night.png",
+   "move": "up",
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": "word:banvir@-0.1",
+   "src": "ai03_banvir.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": "word:killed@-0.08",
+   "src": "ai03_banvir.png",
+   "move": "in",
+   "z": [
+    1.75,
+    1.9
+   ],
+   "focus": [
+    0.4,
+    0.66
+   ],
+   "xfade": 0,
+   "flash": true,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "ai16_prince_room.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": "word:dead@-0.05",
+   "src": "map_chittor.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "ai13_cries.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.45,
+   "ai": true,
+   "label": "AS TOLD IN TRADITION",
+   "label_y": 300,
+   "label_dur": 2.4
+  },
+  {
+   "line": 3,
+   "at": "word:nurse@-0.1",
+   "src": "ai13_cries.png",
+   "move": "in",
+   "z": [
+    1.55,
+    1.7
+   ],
+   "focus": [
+    0.4,
+    0.62
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 3,
+   "at": "word:heard@-0.1",
+   "src": "ai13_cries.png",
+   "move": "punch",
+   "z": [
+    1.45,
+    1.6
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "ai04_basket.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 4,
+   "at": "word:servant@-0.1",
+   "src": "ai05_gate.png",
+   "move": "up",
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "ai04_basket.png",
+   "move": "punch",
+   "z": [
+    1.7,
+    1.85
+   ],
+   "focus": [
+    0.8,
+    0.48
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "ai06_lays_son.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.25,
+   "ai": true
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "ai17_burst.png",
+   "move": "punch",
+   "focus": [
+    0.6,
+    0.42
+   ],
+   "xfade": 0,
+   "shake": true,
+   "ai": true
+  },
+  {
+   "line": 7,
+   "at": "word:could@-0.1",
+   "src": "ai14_silent.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.1,
+   "ai": true,
+   "cap_y": 0.73
+  },
+  {
+   "line": 7,
+   "at": "word:pointed@-0.15",
+   "src": "ai07_doorway.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "ai08_lamp_out.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.08
+   ],
+   "xfade": 0.5,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_19036346.mp4",
+     "opacity": 0.25
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "map_route.mp4",
+   "xfade": 0.25
+  },
+  {
+   "line": 9,
+   "at": "word:udai@-0.1",
+   "src": "ai09_journey.png",
+   "move": "up",
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 9,
+   "at": "word:hidden@-0.1",
+   "src": "wm_kumbhalgarh_wall.jpg",
+   "fit": "cover",
+   "move": "right",
+   "xfade": 0.2,
+   "label": "KUMBHALGARH FORT TODAY",
+   "label_y": 300,
+   "label_dur": 2.0
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "ai11_coronation.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 10,
+   "at": "word:founded@-0.15",
+   "src": "wm_udaipur_palace.jpg",
+   "fit": "cover",
+   "move": "right",
+   "xfade": 0.2,
+   "label": "UDAIPUR TODAY",
+   "label_y": 300,
+   "label_dur": 2.2,
+   "z": [
+    1.05,
+    1.3
+   ]
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "ai12_final.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.3,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": "word:because@-0.1",
+   "src": "ai15_dawn.png",
+   "move": "in",
+   "z": [
+    1.12,
+    1.0
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.35,
+   "ai": true,
+   "headline": "PANNA DAI",
+   "headline_size": 130,
+   "headline_accent": [
+    "PANNA",
+    "DAI"
+   ],
+   "headline_y": 0.1,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 30,
+     "opacity": 0.4
+    }
+   ]
+  },
+  {
+   "line": 7,
+   "at": "word:demanded@-0.1",
+   "src": "ai17_burst.png",
+   "move": "in",
+   "z": [
+    1.75,
+    1.9
+   ],
+   "focus": [
+    0.8,
+    0.3
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 10,
+   "at": "word:took@-0.1",
+   "src": "ai11_coronation.png",
+   "move": "punch",
+   "z": [
+    1.5,
+    1.65
+   ],
+   "focus": [
+    0.3,
+    0.25
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 6,
+   "at": "word:in@-0.1",
+   "src": "ai06_lays_son.png",
+   "move": "in",
+   "z": [
+    1.5,
+    1.62
+   ],
+   "focus": [
+    0.55,
+    0.45
+   ],
+   "xfade": 0.15,
+   "ai": true
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "hit_big",
+   "db": -3
+  },
+  {
+   "line": 0,
+   "at": "word:son",
+   "name": "braam",
+   "db": -7
+  },
+  {
+   "line": 1,
+   "at": "word:banvir",
+   "name": "tom",
+   "db": -4
+  },
+  {
+   "line": 1,
+   "at": "word:killed",
+   "name": "sword",
+   "db": -4
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "name": "footsteps2",
+   "db": -6
+  },
+  {
+   "line": 2,
+   "at": "word:dead",
+   "name": "hit",
+   "db": -4
+  },
+  {
+   "line": 4,
+   "at": "word:servant",
+   "name": "footsteps",
+   "db": -5
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "name": "heartbeat2",
+   "db": -3
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "name": "hit_big",
+   "db": -4
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "name": "tom",
+   "db": -6
+  },
+  {
+   "line": 7,
+   "at": "word:sword",
+   "name": "sword",
+   "db": -6
+  },
+  {
+   "line": 7,
+   "at": "word:could",
+   "name": "heartbeat",
+   "db": -4
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "boom_cine",
+   "db": -5
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "name": "taiko",
+   "db": -5
+  },
+  {
+   "line": 10,
+   "at": "word:founded",
+   "name": "temple_bell",
+   "db": -9
+  },
+  {
+   "line": 11,
+   "at": "word:because",
+   "name": "hit_big",
+   "db": -4
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/last_sacrifice_438148.mp3",
+   "align_src": 56.4,
+   "align_line": 8,
+   "align_at": -0.3,
+   "gap_db": 6,
+   "fade_in": 0.3
+  }
+ ],
+ "voice_light": true
+}

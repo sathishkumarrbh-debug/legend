@@ -1,0 +1,609 @@
+{
+ "output": "ep006_indus_railway.mp4",
+ "tail_seconds": 2.4,
+ "cap_y": 0.68,
+ "handheld": 6,
+ "captions_from": 2.9,
+ "audio_fade_out": 0.8,
+ "voice_light": true,
+ "no_caption_lines": [
+  13
+ ],
+ "hook": {
+  "text": "THEY BUILT IT ON\nA LOST CITY",
+  "until": 2.9,
+  "y": 0.13,
+  "size": 118,
+  "accent": [
+   "LOST",
+   "CITY"
+  ]
+ },
+ "lines": [
+  {
+   "text": "In the 1800s, the British built a railway... with bricks from a lost civilisation.",
+   "emph": [
+    "railway...",
+    "lost"
+   ]
+  },
+  {
+   "text": "They were laying a line from Lahore to Multan, and they needed broken brick to hold the tracks.",
+   "emph": [
+    "lahore",
+    "multan,"
+   ]
+  },
+  {
+   "text": "Near a village called Harappa, they found mounds full of it.",
+   "emph": [
+    "harappa,"
+   ]
+  },
+  {
+   "text": "Red. Fired. Perfectly shaped bricks.",
+   "emph": [
+    "perfectly"
+   ]
+  },
+  {
+   "text": "So they smashed them. Enough, an archaeologist later wrote, for about a hundred miles of track.",
+   "caption": "So they smashed them. Enough, an archaeologist later wrote, for about 100 miles of track.",
+   "emph": [
+    "smashed",
+    "100"
+   ]
+  },
+  {
+   "text": "In that same mound, he found something tiny.",
+   "emph": [
+    "tiny."
+   ]
+  },
+  {
+   "text": "A stone seal. A bull... and six signs no one could read.",
+   "caption": "A stone seal. A bull... and 6 signs no one could read.",
+   "emph": [
+    "seal.",
+    "6"
+   ]
+  },
+  {
+   "text": "He decided it must have come from somewhere else... and moved on.",
+   "emph": [
+    "moved"
+   ]
+  },
+  {
+   "text": "Nineteen twenty-four. The ruins are finally announced to the world. But no one knows how old they are.",
+   "caption": "1924. The ruins are finally announced to the world. But no one knows how old they are.",
+   "emph": [
+    "1924.",
+    "old"
+   ]
+  },
+  {
+   "text": "One week later, a professor writes in. These seals match finds from ancient Persia and Mesopotamia.",
+   "emph": [
+    "week",
+    "persia",
+    "mesopotamia."
+   ]
+  },
+  {
+   "text": "Over four thousand years old.",
+   "caption": "Over 4,000 years old.",
+   "emph": [
+    "4,000"
+   ]
+  },
+  {
+   "text": "India's known history went back two thousand years.",
+   "caption": "India's known history went back 2,000 years.",
+   "emph": [
+    "2,000"
+   ]
+  },
+  {
+   "text": "That bull was never foreign. It belonged to a civilisation as old as the pyramids...",
+   "emph": [
+    "never",
+    "pyramids..."
+   ]
+  },
+  {
+   "text": "The Indus Valley Civilisation."
+  }
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "hook.mp4",
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 0,
+   "at": "word:bricks@-0.1",
+   "src": "ai1.png",
+   "move": "in",
+   "z": [
+    1.7,
+    1.85
+   ],
+   "focus": [
+    0.3,
+    0.85
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "ai2.png",
+   "move": "left",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": "word:lahore@-0.15",
+   "src": "map_draw.mp4",
+   "xfade": 0.08
+  },
+  {
+   "line": 1,
+   "at": "word:needed@-0.1",
+   "src": "ai2.png",
+   "move": "in",
+   "z": [
+    1.6,
+    1.75
+   ],
+   "focus": [
+    0.8,
+    0.5
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": "word:harappa@-0.7",
+   "src": "map_pin.mp4",
+   "xfade": 0.08
+  },
+  {
+   "line": 2,
+   "at": "word:mounds@-0.1",
+   "src": "harappa_mounds.jpg",
+   "move": "in",
+   "z": [
+    1.08,
+    1.3
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.12,
+   "label": "REAL PHOTO: HARAPPA TODAY",
+   "label_y": 300,
+   "label_dur": 2.2
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "harappan_brick_ROM.jpg",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.48,
+    0.5
+   ],
+   "xfade": 0,
+   "label": "REAL: INDUS BRICK, c. 2500 BC",
+   "label_y": 300,
+   "label_dur": 2.4
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "ai3.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "xfade": 0,
+   "ai": true,
+   "shake": true,
+   "overlays": [
+    {
+     "src": "dust.mp4",
+     "opacity": 0.7,
+     "fade": [
+      0.01,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "at": "word:enough@-0.1",
+   "src": "ai3.png",
+   "move": "in",
+   "z": [
+    1.55,
+    1.7
+   ],
+   "focus": [
+    0.45,
+    0.72
+   ],
+   "xfade": 0.12,
+   "ai": true,
+   "label": "ALEXANDER CUNNINGHAM, ASI REPORT, 1875",
+   "label_y": 300,
+   "label_dur": 2.8,
+   "label_delay": 0.4
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "ai4.png",
+   "move": "in",
+   "z": [
+    1.05,
+    1.25
+   ],
+   "focus": [
+    0.55,
+    0.38
+   ],
+   "xfade": 0.2,
+   "ai": true,
+   "glint": {
+    "dur": 0.6
+   }
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "seal_signs.mp4",
+   "xfade": 0,
+   "flash": true
+  },
+  {
+   "line": 7,
+   "at": "word:somewhere@-0.9",
+   "src": "stamp.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "ai7.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0,
+   "ai": true,
+   "flash": true,
+   "label": "EXCAVATIONS, 1920s",
+   "label_y": 300,
+   "label_dur": 2.0
+  },
+  {
+   "line": 8,
+   "at": "word:but@-0.05",
+   "src": "ai5_fix.png",
+   "move": "in",
+   "z": [
+    1.9,
+    2.05
+   ],
+   "focus": [
+    0.66,
+    0.68
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "ai5_fix.png",
+   "move": "left",
+   "z": [
+    1.7,
+    1.8
+   ],
+   "focus": [
+    0.35,
+    0.86
+   ],
+   "xfade": 0.15,
+   "ai": true,
+   "label": "PROF. A.H. SAYCE \u00b7 27 SEPT 1924",
+   "label_y": 300,
+   "label_dur": 2.2
+  },
+  {
+   "line": 9,
+   "at": "word:these@-0.1",
+   "src": "map_west.mp4",
+   "xfade": 0.12
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "unicorn_seal_mohenjodaro.jpg",
+   "fit": "fit",
+   "move": "in",
+   "z": [
+    1.0,
+    1.08
+   ],
+   "xfade": 0,
+   "flash": true,
+   "label": "REAL: INDUS SEAL, MOHENJO-DARO",
+   "label_y": 300,
+   "label_dur": 2.0
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "timeline.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 12,
+   "at": "word:foreign@-0.45",
+   "src": "unstamp.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 12,
+   "at": "word:belonged@-0.1",
+   "src": "ai8.png",
+   "move": "in",
+   "z": [
+    1.02,
+    1.14
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.15,
+   "ai": true,
+   "label": "PYRAMIDS c. 2560 BC  \u00b7  HARAPPA c. 2600 BC",
+   "label_y": 300,
+   "label_dur": 2.6,
+   "label_delay": 0.3
+  },
+  {
+   "line": 13,
+   "at": 0,
+   "src": "ending.mp4",
+   "xfade": 0.3
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "train_whistle",
+   "db": -8
+  },
+  {
+   "line": 0,
+   "at": "abs:0.05",
+   "name": "train_chug",
+   "db": -9
+  },
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "hit_big",
+   "db": -4
+  },
+  {
+   "line": 0,
+   "at": "word:lost",
+   "name": "braam",
+   "db": -8
+  },
+  {
+   "line": 1,
+   "at": "word:lahore",
+   "name": "scribble",
+   "db": -8
+  },
+  {
+   "line": 2,
+   "at": "word:harappa",
+   "name": "tom",
+   "db": -5
+  },
+  {
+   "line": 3,
+   "at": "word:red",
+   "name": "stone_tap",
+   "db": -9
+  },
+  {
+   "line": 3,
+   "at": "word:fired",
+   "name": "stone_tap",
+   "db": -9
+  },
+  {
+   "line": 4,
+   "at": "word:smashed",
+   "name": "hammer_brick2",
+   "db": -2
+  },
+  {
+   "line": 4,
+   "at": "word:smashed",
+   "name": "hit",
+   "db": -8
+  },
+  {
+   "line": 4,
+   "at": "word:smashed@0.4",
+   "name": "hammer_brick2",
+   "db": -6
+  },
+  {
+   "line": 5,
+   "at": "word:tiny",
+   "name": "stone_tap",
+   "db": -7
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "name": "rise",
+   "db": -8,
+   "anchor": "end"
+  },
+  {
+   "line": 6,
+   "at": "word:seal",
+   "name": "stone_reveal",
+   "db": -4
+  },
+  {
+   "line": 6,
+   "at": "word:seal",
+   "name": "braam",
+   "db": -9
+  },
+  {
+   "line": 7,
+   "at": "word:somewhere",
+   "name": "stamp",
+   "db": -3
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "hit_big",
+   "db": -4
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "name": "paper",
+   "db": -8
+  },
+  {
+   "line": 9,
+   "at": "word:week",
+   "name": "clock_tick",
+   "db": -9
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "name": "rise",
+   "db": -8,
+   "anchor": "end"
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "name": "hit_big",
+   "db": -3
+  },
+  {
+   "line": 11,
+   "at": "word:back",
+   "name": "taiko",
+   "db": -6
+  },
+  {
+   "line": 12,
+   "at": "word:foreign",
+   "name": "strike",
+   "db": -6
+  },
+  {
+   "line": 12,
+   "at": "word:foreign@0.5",
+   "name": "tom",
+   "db": -7
+  },
+  {
+   "line": 13,
+   "at": 0,
+   "name": "rise",
+   "db": -7,
+   "anchor": "end"
+  },
+  {
+   "line": 13,
+   "at": 0,
+   "name": "hit_big",
+   "db": -2
+  },
+  {
+   "line": 13,
+   "at": 2.2,
+   "name": "braam",
+   "db": -5
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/nastelbom_documentary_606698.mp3",
+   "align_src": 48.0,
+   "align_line": 11,
+   "align_at": 0,
+   "gap_db": 3.5,
+   "fade_in": 0.2
+  }
+ ],
+ "music_env": [
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   7,
+   0,
+   -3
+  ],
+  [
+   8,
+   0,
+   0
+  ],
+  [
+   11,
+   0,
+   1
+  ],
+  [
+   13,
+   0,
+   2
+  ]
+ ]
+}

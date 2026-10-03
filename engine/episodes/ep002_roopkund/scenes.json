@@ -1,0 +1,165 @@
+{
+ "title": "The Lake of Skeletons",
+ "subtitle": "Roopkund  \u00b7  Uttarakhand",
+ "title_seconds": 3.0,
+ "output": "ep002_roopkund_short.mp4",
+ "music": "../music/ancient_civilisations.mp3",
+ "music_offset": 9.0,
+ "music_db": -9,
+ "tail_seconds": 1.0,
+ "scenes": [
+  {
+   "text": "High in the Himalayas, there's a lake full of human skeletons.",
+   "image": "c4.jpg",
+   "move": "in",
+   "focus": [
+    0.72,
+    0.45
+   ],
+   "fit": "cover",
+   "sfx": [
+    {
+     "name": "boom",
+     "at": 0.0,
+     "db": -8
+    }
+   ]
+  },
+  {
+   "text": "Hundreds of them. And for decades, nobody knew who they were.",
+   "image": "c4.jpg",
+   "move": "left",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "fit": "cover",
+   "circle": [
+    0.5,
+    0.42,
+    0.2
+   ]
+  },
+  {
+   "text": "This is Roopkund, five thousand metres up in Uttarakhand.",
+   "image": "map_pin.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "fit": "cover"
+  },
+  {
+   "text": "In 1942, a forest ranger found the bones as the ice melted.",
+   "image": "ai_ranger.png",
+   "move": "in",
+   "label": "Artist's impression"
+  },
+  {
+   "text": "The first fear? Japanese soldiers from World War Two.",
+   "image": "r2.jpg",
+   "move": "right",
+   "fit": "cover",
+   "sfx": [
+    "whoosh",
+    {
+     "name": "heartbeat",
+     "at": "voice"
+    }
+   ]
+  },
+  {
+   "text": "Wrong. These bones were far older.",
+   "image": "c4.jpg",
+   "move": "in",
+   "focus": [
+    0.8,
+    0.5
+   ],
+   "fit": "cover",
+   "shake": true,
+   "flash": true,
+   "sfx": [
+    {
+     "name": "boom",
+     "db": -6
+    }
+   ]
+  },
+  {
+   "text": "Then came the legend: pilgrims killed by a deadly hailstorm.",
+   "image": "ai_hail.png",
+   "move": "down",
+   "label": "Artist's impression"
+  },
+  {
+   "text": "But in 2019, scientists tested their DNA, and the story broke apart.",
+   "image": "ai_dna.png",
+   "move": "in",
+   "label": "Artist's impression",
+   "sfx": [
+    {
+     "name": "riser",
+     "at": "before"
+    },
+    "whoosh"
+   ]
+  },
+  {
+   "text": "Most were Indians who died more than a thousand years ago.",
+   "image": "c3.jpg",
+   "move": "right",
+   "fit": "cover"
+  },
+  {
+   "text": "But fourteen of them were different. Their DNA matched people from Greece and Crete.",
+   "image": "map_arrow.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "fit": "cover",
+   "shake": true,
+   "sfx": [
+    {
+     "name": "boom",
+     "at": "word:greece",
+     "db": -7
+    },
+    "whoosh"
+   ]
+  },
+  {
+   "text": "And they died around 1800. A thousand years later.",
+   "image": "ai_trav.png",
+   "move": "in",
+   "label": "Artist's impression"
+  },
+  {
+   "text": "What were Mediterranean travellers doing on a frozen Himalayan lake?",
+   "image": "c3.jpg",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "fit": "cover",
+   "sfx": [
+    "whoosh",
+    {
+     "name": "heartbeat",
+     "at": "voice",
+     "db": -12
+    }
+   ]
+  },
+  {
+   "text": "Nobody knows. And every summer, the ice gives back a few more bones...",
+   "image": "c11.jpg",
+   "move": "in",
+   "fit": "cover"
+  }
+ ]
+}

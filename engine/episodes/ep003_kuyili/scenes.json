@@ -1,0 +1,811 @@
+{
+ "output": "ep003_kuyili_short.mp4",
+ "tail_seconds": 1.4,
+ "cap_y": 0.66,
+ "audio_fade_out": 1.0,
+ "lines": [
+  {
+   "text": "In 1780, a woman walked into a British armoury... on fire.",
+   "emph": [
+    "1780",
+    "fire"
+   ]
+  },
+  {
+   "text": "Her name was Kuyili.",
+   "emph": [
+    "kuyili"
+   ]
+  },
+  {
+   "text": "Eight years earlier, the East India Company and its allies killed the King of Sivaganga.",
+   "emph": [
+    "sivaganga"
+   ]
+  },
+  {
+   "text": "His queen, Velu Nachiyar, escaped.",
+   "emph": [
+    "velu",
+    "nachiyar",
+    "escaped"
+   ]
+  },
+  {
+   "text": "But she didn't just hide. With help from Hyder Ali and the Maruthu brothers, she built an army.",
+   "emph": [
+    "army",
+    "hyder",
+    "maruthu"
+   ]
+  },
+  {
+   "text": "When she came back for her kingdom, one deadly obstacle stood in the way: the enemy's weapons store inside the fort.",
+   "emph": [
+    "one",
+    "deadly",
+    "obstacle"
+   ]
+  },
+  {
+   "text": "Later accounts say that on Vijayadashami, women were allowed inside to worship.",
+   "emph": [
+    "vijayadashami"
+   ]
+  },
+  {
+   "text": "Kuyili led the queen's women soldiers right through the gates.",
+   "emph": [
+    "kuyili",
+    "gates"
+   ]
+  },
+  {
+   "text": "Tradition says she soaked her clothes in ghee, set herself ablaze, and ran straight into the gunpowder.",
+   "emph": [
+    "ghee",
+    "ablaze",
+    "gunpowder"
+   ]
+  },
+  {
+   "text": "The explosion destroyed the arsenal. Sivaganga was free again.",
+   "emph": [
+    "explosion",
+    "destroyed",
+    "free"
+   ]
+  },
+  {
+   "text": "Much of her story survives only in tradition."
+  },
+  {
+   "text": "But now you know her name... Kuyili.",
+   "emph": [
+    "kuyili"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "black",
+   "xfade": 0,
+   "overlays": [
+    {
+     "src": "px_9348931.mp4",
+     "clip_start": 20,
+     "scale": 0.26,
+     "pos": [
+      0.5,
+      0.7
+     ],
+     "opacity": 0.9,
+     "fade": [
+      1.0,
+      0
+     ],
+     "delay": 0.3
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "at": "word:woman@-0.1",
+   "src": "ai01_hook.png",
+   "move": "in",
+   "focus": [
+    0.45,
+    0.62
+   ],
+   "z": [
+    1.15,
+    1.0
+   ],
+   "bright": [
+    0.1,
+    0.9
+   ],
+   "bright_dur": 1.3,
+   "xfade": 0.6,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "opacity": 0.6
+    }
+   ]
+  },
+  {
+   "line": 0,
+   "at": "word:on@-0.05",
+   "src": "black",
+   "xfade": 0
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "ai02_portrait.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "xfade": 0,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 12,
+     "opacity": 0.7
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "ai03_battle.png",
+   "move": "down",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "xfade": 0.15,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9694804.mp4",
+     "opacity": 0.45
+    }
+   ]
+  },
+  {
+   "line": 2,
+   "at": "word:killed",
+   "src": "ai03_battle.png",
+   "move": "punch",
+   "focus": [
+    0.45,
+    0.78
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": "word:sivaganga@-0.35",
+   "src": "map_sivaganga.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.35
+   ],
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "xfade": 0.15
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "wm_velu_stamp.jpg",
+   "fit": "fit",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.2
+  },
+  {
+   "line": 3,
+   "at": "word:escaped@-0.1",
+   "src": "ai04_escape.png",
+   "move": "up",
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "ai11_festival.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "xfade": 0.35,
+   "ai": true,
+   "label": "LATER ACCOUNTS",
+   "label_dur": 1.4
+  },
+  {
+   "line": 6,
+   "at": "word:women",
+   "src": "px_34579328.mp4",
+   "clip_start": 2,
+   "z": [
+    1.0,
+    1.1
+   ],
+   "xfade": 0.25
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "ai20_gate_entry.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.25,
+   "ai": true
+  },
+  {
+   "line": 7,
+   "at": "word:right@-0.05",
+   "src": "ai12_among_women.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 9,
+   "at": -0.72,
+   "src": "ai18_explosion.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0,
+   "flash": true,
+   "shake": true,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9666938.mp4",
+     "opacity": 0.9,
+     "fade": [
+      0.05,
+      0
+     ]
+    },
+    {
+     "src": "px_19036346.mp4",
+     "opacity": 0.35,
+     "delay": 0.6
+    }
+   ]
+  },
+  {
+   "line": 9,
+   "at": "word:sivaganga@-0.1",
+   "src": "ai16_aftermath.png",
+   "move": "up",
+   "xfade": 0.3,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9694804.mp4",
+     "opacity": 0.35
+    }
+   ]
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "ai17_final.png",
+   "move": "out",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.5,
+   "ai": true,
+   "label": "LATER ACCOUNTS + ORAL TRADITION",
+   "label_dur": 2.2
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "ai08_queen_army.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": 0.35,
+   "src": "ai20_gate_entry.png",
+   "move": "punch",
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": 0.7,
+   "src": "ai15_run.png",
+   "move": "punch",
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": 1.05,
+   "src": "ai02_portrait.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": "word:kuyili@-0.1",
+   "src": "wm_kuyili_sculpture.jpg",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "fit": "fit",
+   "xfade": 0.35,
+   "label": "KUYILI MEMORIAL, SIVAGANGA",
+   "label_dur": 1.8,
+   "label_delay": 0.4,
+   "fade_out_black": 0.9
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "ai05_queen_alone.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 4,
+   "at": "word:with@-0.05",
+   "src": "ai19_allies.png",
+   "move": "in",
+   "focus": [
+    0.35,
+    0.45
+   ],
+   "z": [
+    1.05,
+    1.2
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 4,
+   "at": "word:maruthu@-0.1",
+   "src": "ai19_allies.png",
+   "move": "punch",
+   "focus": [
+    0.6,
+    0.4
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 4,
+   "at": "word:she#2@-0.1",
+   "src": "ai07_weapons.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "xfade": 0,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 20,
+     "opacity": 0.8
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "at": "word:army@-0.05",
+   "src": "ai08_queen_army.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0,
+   "shake": true,
+   "ai": true
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "ai06_army.png",
+   "move": "right",
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 5,
+   "at": "word:one@-0.05",
+   "src": "ai09_fort.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 5,
+   "at": "word:weapons@-0.1",
+   "src": "ai10_arsenal.png",
+   "move": "in",
+   "focus": [
+    0.4,
+    0.62
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "ai02_portrait.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.25
+   ],
+   "z": [
+    1.2,
+    1.35
+   ],
+   "bright": [
+    0.7,
+    0.7
+   ],
+   "xfade": 0.25,
+   "ai": true,
+   "label": "ORAL TRADITION",
+   "label_dur": 1.6
+  },
+  {
+   "line": 8,
+   "at": "word:soaked@-0.1",
+   "src": "ai13_ghee.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 8,
+   "at": "word:set@-0.1",
+   "src": "ai14_ignite.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.2
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.1,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 5,
+     "opacity": 0.7
+    }
+   ]
+  },
+  {
+   "line": 8,
+   "at": "word:ran@-0.1",
+   "src": "ai15_run.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9251254.mp4",
+     "opacity": 0.45,
+     "clip_start": 3
+    },
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 30,
+     "opacity": 0.8
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": 0,
+   "name": "footsteps",
+   "db": -4
+  },
+  {
+   "line": 0,
+   "at": "word:fire@-0.35",
+   "name": "fire_whoosh",
+   "db": -3
+  },
+  {
+   "line": 0,
+   "at": "word:fire",
+   "name": "hit_big",
+   "db": -3
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "name": "braam",
+   "db": -9
+  },
+  {
+   "line": 2,
+   "at": 0.1,
+   "name": "cannon",
+   "db": -7
+  },
+  {
+   "line": 2,
+   "at": "word:killed",
+   "name": "sword",
+   "db": -9
+  },
+  {
+   "line": 2,
+   "at": "word:sivaganga@-0.35",
+   "name": "tom",
+   "db": -10
+  },
+  {
+   "line": 3,
+   "at": "word:escaped",
+   "name": "fire_whoosh2",
+   "db": -14
+  },
+  {
+   "line": 4,
+   "at": "word:with",
+   "name": "war_drums",
+   "db": -4
+  },
+  {
+   "line": 4,
+   "at": "word:she#2",
+   "name": "anvil",
+   "db": -12
+  },
+  {
+   "line": 4,
+   "at": "word:army",
+   "name": "tom",
+   "db": -3
+  },
+  {
+   "line": 5,
+   "at": "word:one",
+   "name": "rise",
+   "db": -9,
+   "anchor": "end"
+  },
+  {
+   "line": 5,
+   "at": "word:one",
+   "name": "hit",
+   "db": -5
+  },
+  {
+   "line": 5,
+   "at": "word:weapons",
+   "name": "metal_ring",
+   "db": -13
+  },
+  {
+   "line": 6,
+   "at": 0.05,
+   "name": "temple_bell",
+   "db": -8
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "name": "crowd",
+   "db": -15
+  },
+  {
+   "line": 7,
+   "at": "word:gates",
+   "name": "tom",
+   "db": -8
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "heartbeat2",
+   "db": -2
+  },
+  {
+   "line": 8,
+   "at": "word:ablaze@-0.2",
+   "name": "fire_whoosh",
+   "db": -4
+  },
+  {
+   "line": 8,
+   "at": "word:ran",
+   "name": "crackle",
+   "db": -8
+  },
+  {
+   "line": 9,
+   "at": -0.7,
+   "name": "rise",
+   "db": -8,
+   "anchor": "end"
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "name": "tom",
+   "db": -9
+  },
+  {
+   "line": 11,
+   "at": 0.35,
+   "name": "tom",
+   "db": -9
+  },
+  {
+   "line": 11,
+   "at": 0.7,
+   "name": "tom",
+   "db": -8
+  },
+  {
+   "line": 11,
+   "at": "word:kuyili",
+   "name": "hit_big",
+   "db": -4
+  },
+  {
+   "line": 11,
+   "at": "word:kuyili",
+   "name": "taiko",
+   "db": -8
+  },
+  {
+   "line": 9,
+   "at": "word:explosion@0.3",
+   "name": "crackle",
+   "db": -6
+  },
+  {
+   "line": 6,
+   "at": "word:women",
+   "name": "temple_bell2",
+   "db": -12
+  },
+  {
+   "line": 9,
+   "at": -0.7,
+   "name": "mega_explosion",
+   "db": 8
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "crackle",
+   "db": -13
+  },
+  {
+   "line": 8,
+   "at": "word:ran",
+   "name": "footsteps2",
+   "db": -6
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/last_sacrifice_438148.mp3",
+   "align_src": 56.5,
+   "align_line": 9,
+   "align_at": -0.7,
+   "gap_db": 4,
+   "fade_in": 0.5
+  }
+ ],
+ "handheld": 10,
+ "music_env": [
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   8,
+   "end:0.05",
+   0
+  ],
+  [
+   8,
+   "end:0.3",
+   -20
+  ],
+  [
+   9,
+   -0.1,
+   -20
+  ],
+  [
+   9,
+   0.05,
+   3
+  ],
+  [
+   11,
+   "end:0",
+   3
+  ]
+ ]
+}

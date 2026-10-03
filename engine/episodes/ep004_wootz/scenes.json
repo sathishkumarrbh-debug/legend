@@ -1,0 +1,580 @@
+{
+ "output": "ep004_wootz_short.mp4",
+ "tail_seconds": 0.9,
+ "cap_y": 0.66,
+ "handheld": 8,
+ "audio_fade_out": 0.6,
+ "hook": {
+  "text": "CUTS SILK\nIN MID-AIR?",
+  "until": 2.75,
+  "y": 0.13,
+  "size": 140,
+  "accent": [
+   "SILK"
+  ]
+ },
+ "lines": [
+  {
+   "text": "Legend says this sword could cut silk in mid-air... and it was born in India.",
+   "emph": [
+    "silk",
+    "india"
+   ]
+  },
+  {
+   "text": "The world called it Damascus steel.",
+   "emph": [
+    "damascus"
+   ]
+  },
+  {
+   "text": "Its real name was woots, probably from ukku, a South Indian word for steel.",
+   "caption": "Its real name was WOOTZ, probably from UKKU, a South Indian word for steel.",
+   "emph": [
+    "wootz",
+    "ukku"
+   ]
+  },
+  {
+   "text": "Smiths in South India sealed iron and plant matter in small clay pots, and fired them for hours...",
+   "emph": [
+    "clay",
+    "pots"
+   ]
+  },
+  {
+   "text": "until a glowing cake of steel was born.",
+   "emph": [
+    "steel"
+   ]
+  },
+  {
+   "text": "Traders shipped these cakes to Persia and Syria,",
+   "emph": [
+    "persia",
+    "syria"
+   ]
+  },
+  {
+   "text": "where smiths forged them into blades with a flowing, water-like pattern.",
+   "emph": [
+    "water-like"
+   ]
+  },
+  {
+   "text": "But by the eighteen hundreds, the furnaces went cold, and the exact method was lost.",
+   "caption": "But by the 1800s, the furnaces went cold, and the exact method was lost.",
+   "emph": [
+    "lost"
+   ]
+  },
+  {
+   "text": "Even Michael Faraday studied it, in eighteen nineteen, trying to copy it.",
+   "caption": "Even Michael Faraday studied it, in 1819, trying to copy it.",
+   "emph": [
+    "faraday",
+    "1819"
+   ]
+  },
+  {
+   "text": "Then in two thousand six, scientists reported something inside a seventeenth-century Damascus sabre... carbon nanotubes.",
+   "caption": "Then in 2006, scientists reported something inside a 17th-century Damascus sabre... carbon nanotubes.",
+   "emph": [
+    "2006",
+    "carbon",
+    "nanotubes"
+   ]
+  },
+  {
+   "text": "The world called it Damascus. It began in India.",
+   "emph": [
+    "india"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "ai01_silk.png",
+   "move": "out",
+   "z": [
+    1.12,
+    1.0
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0,
+   "ai": true,
+   "label": "LEGEND",
+   "label_y": 1560,
+   "label_dur": 3.0,
+   "label_delay": 0.0,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 8,
+     "opacity": 0.7,
+     "fade": [
+      0.01,
+      0
+     ]
+    }
+   ],
+   "glint": {
+    "dur": 0.55
+   }
+  },
+  {
+   "line": 0,
+   "at": "word:born@-0.25",
+   "src": "ai12_final.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "ai08_bazaar.png",
+   "move": "right",
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "ai02_blade_pattern.png",
+   "fit": "cover",
+   "move": "in",
+   "xfade": 0.15,
+   "headline": "WOOTZ",
+   "headline_size": 150,
+   "headline_accent": [
+    "WOOTZ"
+   ],
+   "headline_y": 0.14,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": "word:ukku@-0.2",
+   "src": "map_south_india.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.25
+   ],
+   "focus": [
+    0.5,
+    0.62
+   ],
+   "xfade": 0.12,
+   "headline": "UKKU = STEEL",
+   "headline_size": 110,
+   "headline_accent": [
+    "UKKU"
+   ],
+   "headline_y": 0.12
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "ai03_crucibles.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "xfade": 0.12,
+   "ai": true,
+   "headline": "IRON + PLANTS",
+   "headline_size": 110,
+   "headline_y": 0.13
+  },
+  {
+   "line": 3,
+   "at": "word:fired@-0.1",
+   "src": "ai04_furnace.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_9348931.mp4",
+     "clip_start": 30,
+     "opacity": 0.35
+    },
+    {
+     "src": "px_4064238.mp4",
+     "opacity": 0.5
+    }
+   ]
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "ai05_ingot.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.1,
+   "ai": true,
+   "headline": "= STEEL",
+   "headline_size": 120,
+   "headline_y": 0.13,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 30,
+     "opacity": 0.8
+    }
+   ]
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "map_route.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.15
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.12
+  },
+  {
+   "line": 5,
+   "at": "word:persia@-0.1",
+   "src": "ai06_dhow.png",
+   "move": "left",
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "ai07_persian_smith.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "xfade": 0,
+   "ai": true,
+   "overlays": [
+    {
+     "src": "px_4064238.mp4",
+     "clip_start": 2,
+     "opacity": 0.6
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "at": "word:flowing@-0.15",
+   "src": "ai02_blade_pattern.png",
+   "move": "right",
+   "xfade": 0.15,
+   "ai": true,
+   "headline": "WATERED STEEL",
+   "headline_size": 110,
+   "headline_y": 0.13
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "ai09_cold_furnace.png",
+   "move": "out",
+   "xfade": 0.3,
+   "ai": true,
+   "headline": "1800s",
+   "headline_size": 130,
+   "headline_y": 0.13
+  },
+  {
+   "line": 7,
+   "at": "word:exact@-0.1",
+   "src": "ai02_blade_pattern.png",
+   "move": "out",
+   "bright": [
+    0.6,
+    0.45
+   ],
+   "xfade": 0.2,
+   "ai": true,
+   "headline": "SECRET LOST",
+   "headline_size": 120,
+   "headline_y": 0.13
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "wm_faraday.jpg",
+   "fit": "fit",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "xfade": 0.12,
+   "headline": "FARADAY  1819",
+   "headline_size": 110,
+   "headline_accent": [
+    "1819"
+   ],
+   "headline_y": 0.1,
+   "z": [
+    1.0,
+    1.3
+   ]
+  },
+  {
+   "line": 8,
+   "at": "word:in@-0.1",
+   "src": "ai10_faraday_lab.png",
+   "move": "in",
+   "xfade": 0.15,
+   "ai": true,
+   "focus": [
+    0.5,
+    0.8
+   ],
+   "z": [
+    1.8,
+    1.95
+   ]
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "ai08_bazaar.png",
+   "fit": "cover",
+   "move": "in",
+   "xfade": 0.12,
+   "headline": "2006",
+   "headline_size": 150,
+   "headline_accent": [
+    "2006"
+   ],
+   "headline_y": 0.12,
+   "focus": [
+    0.3,
+    0.35
+   ],
+   "z": [
+    1.3,
+    1.45
+   ],
+   "ai": true
+  },
+  {
+   "line": 9,
+   "at": "word:carbon@-0.1",
+   "src": "ai11_nano.png",
+   "move": "punch",
+   "xfade": 0,
+   "flash": true,
+   "shake": true,
+   "headline": "CARBON NANOTUBES?",
+   "headline_size": 110,
+   "headline_accent": [
+    "NANOTUBES?"
+   ],
+   "headline_y": 0.12,
+   "label": "ILLUSTRATION  \u00b7  REIBOLD ET AL., NATURE 2006",
+   "label_y": 1560,
+   "label_dur": 3.0
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "ai08_bazaar.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 10,
+   "at": "word:it#2@-0.1",
+   "src": "ai12_final.png",
+   "move": "in",
+   "z": [
+    1.1,
+    1.0
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0,
+   "ai": true,
+   "headline": "IT BEGAN IN INDIA",
+   "headline_size": 120,
+   "headline_accent": [
+    "INDIA"
+   ],
+   "headline_y": 0.13,
+   "overlays": [
+    {
+     "src": "px_9665452.mp4",
+     "clip_start": 40,
+     "opacity": 0.6
+    }
+   ]
+  },
+  {
+   "line": 6,
+   "at": "word:blades@-0.1",
+   "src": "px_39658862.mp4",
+   "z": [
+    1.0,
+    1.1
+   ],
+   "xfade": 0.1
+  },
+  {
+   "line": 3,
+   "at": "word:plant@-0.1",
+   "src": "ai03_crucibles.png",
+   "move": "punch",
+   "focus": [
+    0.25,
+    0.78
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 9,
+   "at": "word:inside@-0.1",
+   "src": "ai02_blade_pattern.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0,
+   "ai": true
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "sword",
+   "db": -2
+  },
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "hit_big",
+   "db": -4
+  },
+  {
+   "line": 0,
+   "at": "word:born@-0.25",
+   "name": "tom",
+   "db": -6
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "name": "sword",
+   "db": -9
+  },
+  {
+   "line": 2,
+   "at": "word:ukku@-0.2",
+   "name": "tom",
+   "db": -9
+  },
+  {
+   "line": 3,
+   "at": "word:fired",
+   "name": "crackle",
+   "db": -8
+  },
+  {
+   "line": 3,
+   "at": "word:fired",
+   "name": "fire_whoosh",
+   "db": -7
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "name": "war_drums",
+   "db": -9
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "name": "braam",
+   "db": -8
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "tom",
+   "db": -9
+  },
+  {
+   "line": 10,
+   "at": "word:it#2",
+   "name": "taiko",
+   "db": -6
+  },
+  {
+   "line": 10,
+   "at": "word:it#2",
+   "name": "hit_big",
+   "db": -4
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "name": "crackle",
+   "db": -12
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "name": "rise",
+   "db": -12,
+   "anchor": "end"
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/last_stand_357651.mp3",
+   "offset": 0,
+   "gap_db": 5,
+   "fade_in": 0.05
+  }
+ ],
+ "captions_from": 2.75
+}

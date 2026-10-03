@@ -1,0 +1,31 @@
+I make a YouTube Shorts channel "Jambudvipa Files" (English, Indian history, faceless, AI images + real photos, narrated by an ElevenLabs documentary voice). A viewer asked for the Damascus sword, so this episode is about wootz steel. Target 40 seconds (hard maximum 55). Our last Short lost 56% of viewers in the first second because it opened on a dark screen, so the rules now are: frame 1 is bright and striking and already moving, a 3 to 5 word text hook is on screen from 0.0 s, the first spoken words are the shock, darkness only after second 3. Everything must be historically accurate; legends must be labelled as legends.
+
+DRAFT SCRIPT (one line per shot group):
+1. The most feared swords in history... were made from Indian steel.
+2. Europeans called them Damascus blades.
+3. But the steel came from South India: Tamil Nadu, Karnataka and Telangana.
+4. Smiths sealed iron and plant matter inside small clay pots and fired them for hours.
+5. Out came a small cake of steel, called urukku in Tamil. The British wrote it as "wootz".
+6. Traders carried these cakes across the sea to Persia and the Arab world.
+7. There, smiths hammered them into blades with a strange, flowing water pattern.
+8. Legends say they could slice a silk scarf falling through the air.
+9. But by the 1800s, the craft had died out and the secret was lost.
+10. Even Michael Faraday studied it and could not work it out.
+11. In 2006, scientists reported carbon nanotubes inside a 17th-century Damascus sabre.
+12. Nanostructures, in a blade made from Indian steel, hundreds of years ago.
+
+DRAFT EDIT PLAN:
+- 0.0 s: bright close-up of a Damascus blade with a glowing watered pattern sweeping across the frame, sparks; on-screen hook text "THIS SWORD WAS MADE IN INDIA"; metal ring + big hit.
+- Line 2: medieval Arab/Persian swordsmith market, blades on display.
+- Line 3: animated map of South India with three glowing regions.
+- Line 4-5: clay crucible pots in a charcoal furnace, glowing; a small steel cake broken open (AI images + real fire/sparks stock footage).
+- Line 6: dhow ships crossing the Arabian Sea at sunset, route arrow on a map.
+- Line 7: hammering on an anvil with sparks, the water pattern appearing on the blade.
+- Line 8: silk scarf falling onto a blade edge in slow motion, label "LEGEND".
+- Line 9: abandoned cold furnace, dust.
+- Line 10: Faraday in his lab (real 19th-century portrait), label.
+- Line 11: electron-microscope style image of nanotubes (label "Reibold et al., Nature, 2006").
+- Line 12: blade glint, final hit, loop back to line 1.
+Music: epic, Indian-flavoured, builds, never dips under the voice. Captions word by word, key words highlighted.
+
+PLEASE: 1) Fact-check every line and flag anything inaccurate or overstated (dates, places, the Faraday claim, the nanotube claim, "Europeans called them", the process description). 2) Rate the hook out of 10 and give 3 stronger first lines. 3) Point out the line where viewers are most likely to swipe and fix it. 4) Rewrite the full script to about 100 to 110 words (about 40 seconds) keeping it accurate, storytelling not a list of facts, with a twist every 5 to 8 seconds and an ending that makes Indians proud and loops. 5) Improve the edit plan: shot ideas, on-screen text, sound effects per moment, and music mood. 6) Three title options under 60 characters with one emoji.

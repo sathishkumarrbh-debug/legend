@@ -1,0 +1,206 @@
+{
+ "title": "The Pillar That Refuses to Rust",
+ "subtitle": "Delhi  ·  c. 400 CE",
+ "title_seconds": 3.2,
+ "output": "ep001_iron_pillar_short.mp4",
+ "tail_seconds": 1.6,
+ "scenes": [
+  {
+   "text": "Sixteen hundred years out in the open, and this iron pillar has barely rusted.",
+   "image": "pillar6.jpg",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "sfx": [
+    {
+     "name": "hit_big",
+     "at": 0.0,
+     "db": -3
+    },
+    {
+     "name": "anvil",
+     "at": "word:pillar",
+     "db": -11
+    }
+   ]
+  },
+  {
+   "text": "No factory. No machines. Just fire and human hands.",
+   "image": "clip_forge.mp4",
+   "label": "Artist's impression",
+   "sfx": [
+    {
+     "name": "anvil",
+     "at": "word:hands",
+     "db": -10
+    }
+   ]
+  },
+  {
+   "text": "It was made around 400 CE, in the time of the Gupta emperor Chandragupta the Second.",
+   "image": "coin0.jpg",
+   "move": "in",
+   "fit": "cover",
+   "label": "Gold coin of Chandragupta II",
+   "sfx": []
+  },
+  {
+   "text": "Over six tonnes of iron, hammered together piece by piece.",
+   "image": "ai_weld.png",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": "Artist's impression",
+   "sfx": [
+    {
+     "name": "anvil",
+     "at": "word:hammered",
+     "db": -12
+    }
+   ]
+  },
+  {
+   "text": "But here's the twist. It wasn't made for Delhi.",
+   "image": "pillar5.jpg",
+   "move": "in",
+   "fit": "cover",
+   "shake": true,
+   "flash": true,
+   "sfx": [
+    {
+     "name": "rise",
+     "at": "before",
+     "db": -9
+    },
+    {
+     "name": "braam",
+     "db": -5
+    }
+   ]
+  },
+  {
+   "text": "Historians believe it first stood at Udayagiri, in Madhya Pradesh.",
+   "image": "udaya0.jpg",
+   "move": "right",
+   "fit": "cover",
+   "label": "Udayagiri, Madhya Pradesh",
+   "sfx": []
+  },
+  {
+   "text": "Centuries later, a cannonball slammed into it. The dent is still there.",
+   "image": "ai_cannon.png",
+   "move": "in",
+   "label": "Artist's impression",
+   "shake": true,
+   "sfx": [
+    {
+     "name": "cannon",
+     "at": "word:cannonball",
+     "db": -2
+    }
+   ]
+  },
+  {
+   "text": "It didn't break. It didn't fall.",
+   "image": "pillar7.jpg",
+   "move": "in",
+   "fit": "cover",
+   "sfx": [
+    {
+     "name": "tom",
+     "at": "word:fall",
+     "db": -4
+    }
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "text": "So what's the secret?",
+   "image": "qutub1.jpg",
+   "move": "in",
+   "fit": "cover",
+   "sfx": [
+    {
+     "name": "rise",
+     "at": "before",
+     "db": -11
+    }
+   ]
+  },
+  {
+   "text": "It's in the iron itself.",
+   "image": "pillar2.jpg",
+   "move": "in",
+   "fit": "cover",
+   "sfx": [
+    {
+     "name": "metal_ring",
+     "at": "word:iron",
+     "db": -9
+    }
+   ]
+  },
+  {
+   "text": "Its high phosphorus helped grow a protective layer, about as thin as a human hair.",
+   "image": "ai_film2.png",
+   "move": "up",
+   "sfx": [
+    {
+     "name": "shimmer",
+     "at": "word:protective",
+     "db": -8
+    }
+   ]
+  },
+  {
+   "text": "Scientists have studied it for over a hundred years.",
+   "image": "ai_lab.png",
+   "move": "in",
+   "fit": "cover",
+   "label": "Artist's impression",
+   "sfx": []
+  },
+  {
+   "text": "Built by Indian hands, sixteen centuries ago. And still standing tall.",
+   "image": "pillar1.jpg",
+   "move": "up",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "sfx": [
+    {
+     "name": "taiko",
+     "db": -11
+    }
+   ],
+   "fit": "cover"
+  },
+  {
+   "text": "That's the pride of India.",
+   "image": "pillar6.jpg",
+   "move": "out",
+   "sfx": [
+    {
+     "name": "hit_big",
+     "at": 0.0,
+     "db": -5
+    }
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ]
+  }
+ ],
+ "music": "../music/ancient_civilisations.mp3",
+ "music_offset": 9.0,
+ "music_gap_db": 7
+}
