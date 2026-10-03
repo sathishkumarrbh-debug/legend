@@ -1,6 +1,6 @@
 {
  "output": "ep006_indus_railway.mp4",
- "tail_seconds": 1.6,
+ "tail_seconds": 2.4,
  "cap_y": 0.68,
  "handheld": 6,
  "captions_from": 2.9,
@@ -119,27 +119,9 @@
   {
    "line": 0,
    "at": 0,
-   "src": "ai1.png",
-   "move": "punch",
-   "focus": [
-    0.4,
-    0.45
-   ],
+   "src": "hook.mp4",
    "xfade": 0,
-   "ai": true,
-   "glint": {
-    "dur": 0.7
-   },
-   "overlays": [
-    {
-     "src": "dust.mp4",
-     "opacity": 0.55,
-     "fade": [
-      0.01,
-      0
-     ]
-    }
-   ]
+   "ai": true
   },
   {
    "line": 0,
@@ -442,32 +424,8 @@
   {
    "line": 13,
    "at": 0,
-   "src": "ai6.png",
-   "move": "up",
-   "z": [
-    1.0,
-    1.14
-   ],
-   "focus": [
-    0.5,
-    0.5
-   ],
-   "xfade": 0.35,
-   "ai": true,
-   "glint": {
-    "dur": 0.9
-   },
-   "headline": "INDUS VALLEY\nCIVILISATION",
-   "headline_size": 132,
-   "headline_y": 0.3,
-   "headline_delay": 0.15,
-   "headline_accent": [
-    "INDUS"
-   ],
-   "label": "BUT WHO WERE THEY?  \u00b7  INDUS FILES #2",
-   "label_y": 1520,
-   "label_delay": 2.0,
-   "label_dur": 9
+   "src": "ending.mp4",
+   "xfade": 0.3
   }
  ],
  "sfx": [
@@ -475,7 +433,7 @@
    "line": 0,
    "at": "abs:0.0",
    "name": "train_whistle",
-   "db": -6
+   "db": -8
   },
   {
    "line": 0,
@@ -605,13 +563,22 @@
    "at": 0,
    "name": "hit_big",
    "db": -2
+  },
+  {
+   "line": 13,
+   "at": 2.2,
+   "name": "braam",
+   "db": -5
   }
  ],
  "music": [
   {
-   "src": "../music/temp_drone.wav",
-   "gap_db": 7,
-   "fade_in": 0.3
+   "src": "../music/nastelbom_documentary_606698.mp3",
+   "align_src": 48.0,
+   "align_line": 11,
+   "align_at": 0,
+   "gap_db": 3.5,
+   "fade_in": 0.2
   }
  ],
  "music_env": [
@@ -631,14 +598,14 @@
    0
   ],
   [
-   12,
+   11,
    0,
-   2
+   1
   ],
   [
    13,
    0,
-   3
+   2
   ]
  ]
 }

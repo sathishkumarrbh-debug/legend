@@ -54,8 +54,14 @@ Indus Files #1. Next: who were they?
 Sources: A. Cunningham, Archaeological Survey of India Report 1872-73 (1875); J. Marshall, Illustrated London News, 20 Sep 1924; A.H. Sayce, Illustrated London News, 27 Sep 1924; harappa.com.
 
 Photos (Wikimedia Commons): Cunningham Seal, British Museum, by Zunkir (CC BY-SA 4.0); Harappa Ruins I and VI by Hassan Nasir (CC BY-SA 3.0); Cut brick, Royal Ontario Museum, by Daderot (CC0); Unicorn seal, Mohenjo-daro, E.J.H. Mackay (public domain); Great Pyramid of Giza by kallerna (CC BY-SA 3.0).
-AI images: artist's impressions. Voice: ElevenLabs (elevenlabs.io).
+AI images: artist's impressions. Voice: ElevenLabs (elevenlabs.io). Music: "Documentary" by Nastelbom (Pixabay). Maps: Natural Earth (public domain).
 
 #IndusValley #Harappa #AncientIndia #IndianHistory #Archaeology #Shorts
 
 Upload settings: altered/synthetic content = Yes; category Education; not made for kids.
+
+## Edit notes (final cut, 58 s)
+- Voice: take 2, pauses tightened (tighten2 0.62/0.2/0.6, holds before "1924" and the final line), atempo 1.04.
+- Music: Nastelbom "Documentary" (Pixabay 606698), aligned so track 48 s lands on "In one week, India's known history" and the 20 s lift lands on "smashed". Pixabay tracks can draw a Content ID claim (not a strike); dispute with the Pixabay licence if one appears.
+- Custom assets (edit/build_assets.py): hook.mp4 (whip push-in, real brick chips flying, steam, dust), map_railway2.mp4, map_west.mp4, seal_signs.mp4, timeline.mp4, ending.mp4, synthesized SFX (train_chug, train_whistle, hammer_brick, clock_tick, heartbeat_phone, paper, stone_tap).
+- Loudness -13.9 LUFS; music about 8 dB and SFX about 7.5 dB under the voice in the phone band.

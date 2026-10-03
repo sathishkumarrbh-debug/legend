@@ -95,7 +95,7 @@ def pin(d, c, t, color=RED):
     d.ellipse((c[0] - r, c[1] - r, c[0] + r, c[1] + r), fill=color, outline=WHITE, width=4)
 
 
-def map_railway(pin_t=4.3, dur=6.0, out="map_railway2.mp4"):
+def map_railway(pin_t=4.3, dur=7.0, out="map_railway2.mp4"):
     P = Proj(70.6, 75.2, 29.4, 32.3, top=420, bottom=1500)
     bg = base_map(P)
     stops = {"LAHORE": (74.34, 31.55), "HARAPPA": (72.86, 30.63), "MULTAN": (71.47, 30.20)}
@@ -126,9 +126,9 @@ def map_railway(pin_t=4.3, dur=6.0, out="map_railway2.mp4"):
             label(d, (hx[0] + 10, hx[1] - 95), "HARAPPA", 64, color=GOLD, anchor="mm", alpha=a)
         label(d, (W / 2, 250), "THE LAHORE–MULTAN RAILWAY", 46, anchor="mm", alpha=ease(t / 0.4))
         im.alpha_composite(ov)
-        z = 1 + 0.35 * ease((t - 2.2) / 3.0)
+        z = 1 + 0.15 * ease((t - 2.2) / 3.0)
         if z > 1.001:
-            cw, ch = W / z, H / z; cx = min(max(hx[0], cw / 2), W - cw / 2); cy = min(max(hx[1], ch / 2), H - ch / 2)
+            cw, ch = W / z, H / z; cx = min(max(W / 2, cw / 2), W - cw / 2); cy = min(max(hx[1], ch / 2), H - ch / 2)
             im = im.resize((W, H), Image.BICUBIC, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
         return im
     write_mp4(frame, int(dur * FPS), os.path.join(IMG, out))
@@ -161,7 +161,7 @@ def map_west():
                 label(d, (max(c[0] - 60, 20), c[1] + (-80 if k == 0 else 80)), name, 42, anchor="lm")
         label(d, (W / 2, 300), "SAME SEALS. 2,000+ KM APART.", 50, anchor="mm", alpha=ease((t - 1.8) / 0.4))
         im.alpha_composite(ov); return im
-    write_mp4(frame, int(3.6 * FPS), os.path.join(IMG, "map_west.mp4"))
+    write_mp4(frame, int(5.5 * FPS), os.path.join(IMG, "map_west.mp4"))
 
 
 # ------------------------------------------------------------------ timeline "+2,000 years"
@@ -174,7 +174,7 @@ def timeline():
     def frame(t):
         im = bg.copy().convert("RGBA"); d = ImageDraw.Draw(im)
         d.text((W / 2, 520), "INDIA'S KNOWN HISTORY", font=font(F_TITLE, 54), fill=WHITE, anchor="mm")
-        p = ease((t - 0.5) / 1.7)
+        p = ease((t - 0.25) / 2.2)
         n = int(round(2000 * p / 50) * 50)
         big = font(F_BIG, 210)
         d.text((W / 2, 800), f"+{n:,}", font=big, fill=GOLD, anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0))
@@ -187,7 +187,7 @@ def timeline():
         d.text(((x_old + x_now) / 2, y - 70), "BEFORE", font=font(F_TITLE, 34), fill=(210, 210, 210), anchor="mm")
         if p > 0.6: d.text(((x_new + x_old) / 2, y - 70), "AFTER ONE LETTER", font=font(F_TITLE, 34), fill=GOLD, anchor="mm")
         return im
-    write_mp4(frame, int(3.6 * FPS), os.path.join(IMG, "timeline.mp4"))
+    write_mp4(frame, int(6.5 * FPS), os.path.join(IMG, "timeline.mp4"))
 
 
 # ------------------------------------------------------------------ brick dust overlay (for "screen" blend)
@@ -282,7 +282,7 @@ def fix_ai5():
     im.paste(im.crop(box).filter(ImageFilter.GaussianBlur(14)), box[:2])
     im.save(os.path.join(IMG, "ai5_fix.png")); print("wrote ai5_fix.png")
 
-def seal(t_bull=1.35, t_signs=2.35, dur=4.2):
+def seal(t_bull=1.35, t_signs=2.35, dur=5.5):
     """Real Cunningham seal (British Museum): wide on seal + impression, push into the clay impression,
     soft gold glow on the bull, then a red ring draws itself around the six signs."""
     src = Image.open(os.path.join(IMG, "cunningham_seal_BM.jpg")).convert("RGB")
@@ -318,6 +318,96 @@ def seal(t_bull=1.35, t_signs=2.35, dur=4.2):
         return im
     write_mp4(frame, int(dur * FPS), os.path.join(IMG, "seal_signs.mp4"))
 
+def hook(dur=3.4, out="hook.mp4", focus=(0.36, 0.42)):
+    """Aggressive opening: whip push-in on the train, zoom-blur burst, decaying shake, steam blast, brick fragments flying at the camera."""
+    src = Image.open(os.path.join(IMG, "ai1.png")).convert("RGB")
+    s = max(W / src.width, H / src.height) * 1.02; src = src.resize((int(src.width * s), int(src.height * s)), Image.LANCZOS)
+    rng = np.random.default_rng(11); N = 90
+    ang = rng.uniform(0, 2 * np.pi, N); spd = rng.uniform(0.6, 1.6, N); t0 = np.concatenate([rng.uniform(0.05, 0.35, N // 2), rng.uniform(0.35, 1.8, N - N // 2)])
+    sz = rng.uniform(9, 30, N); rot = rng.uniform(0, 360, N); col = rng.uniform(0.55, 1.0, N)
+    cx0, cy0 = focus[0] * W, focus[1] * H + 120
+    chips = []
+    for k in range(40):
+        cw_ = int(rng.uniform(26, 60)); x_ = int(rng.uniform(0.05, 0.6) * src.width); y_ = int(rng.uniform(0.72, 0.95) * src.height)
+        patch = src.crop((x_, y_, x_ + cw_, y_ + int(cw_ * 0.75))).convert("RGBA")
+        m = Image.new("L", patch.size, 0); md = ImageDraw.Draw(m); nv = 6
+        md.polygon([(patch.width / 2 * (1 + (0.6 + 0.4 * rng.random()) * math.cos(2 * math.pi * j / nv)), patch.height / 2 * (1 + (0.6 + 0.4 * rng.random()) * math.sin(2 * math.pi * j / nv))) for j in range(nv)], fill=255)
+        patch.putalpha(m.filter(ImageFilter.GaussianBlur(1))); chips.append(patch)
+    puffs = [(rng.uniform(-0.1, 0.5) * W, rng.uniform(-0.05, 0.25) * H, rng.uniform(0, 0.8), rng.uniform(260, 520)) for _ in range(9)]
+    def view(z, dx=0, dy=0):
+        cw, ch = W / z, H / z; fx = focus[0] * src.width; fy = focus[1] * src.height
+        x0 = min(max(fx - cw / 2 + dx, 0), src.width - cw); y0 = min(max(fy - ch / 2 + dy, 0), src.height - ch)
+        return src.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + ch))
+    def frame(t):
+        q0 = max(t - 0.04, 0); z = 1.0 + 0.32 * (1 - math.exp(-q0 * 3.2)) + 0.04 * q0
+        amp = 26 * math.exp(-t * 2.5) + 3
+        dx, dy = amp * math.sin(t * 61), amp * math.cos(t * 47)
+        im = view(z, dx, dy)
+        if 0.04 < t < 0.55:   # zoom-blur burst (frame 1 stays crisp: it is the thumbnail)
+            k = 1 - (t - 0.04) / 0.51
+            for j in (1, 2, 3):
+                im = Image.blend(im, view(z * (1 + 0.035 * j * k), dx, dy), 0.28 * k)
+        im = im.convert("RGBA")
+        # steam blast across the top
+        st = Image.new("RGBA", (W, H)); sd = ImageDraw.Draw(st)
+        for (px, py, d0, r) in puffs:
+            q = (t - d0) / 2.2
+            if 0 < q < 1:
+                rr = r * (0.4 + 1.4 * q); a = int(170 * (1 - q) * min(1, q * 6))
+                sd.ellipse((px + 260 * q - rr, py - 80 * q - rr, px + 260 * q + rr, py - 80 * q + rr), fill=(235, 230, 222, a))
+        im.alpha_composite(st.filter(ImageFilter.GaussianBlur(40)))
+        du = Image.new("RGBA", (W, H)); dd = ImageDraw.Draw(du)
+        for j in range(6):
+            q = (t - 0.06 - j * 0.12) / 1.6
+            if 0 < q < 1:
+                rr = 160 + 520 * q; a = int(150 * (1 - q)); x = W * (0.25 + 0.1 * j); y = H * 0.68 - 120 * q
+                dd.ellipse((x - rr, y - rr * 0.5, x + rr, y + rr * 0.5), fill=(200, 160, 120, a))
+        im.alpha_composite(du.filter(ImageFilter.GaussianBlur(50)))
+        # real brick chips (cut from the ballast in the image itself) flying toward the camera
+        fr = Image.new("RGBA", (W, H))
+        for i in range(N):
+            q = t - t0[i]
+            if q <= 0 or q > 1.3: continue
+            dist = (q * spd[i]) ** 1.7 * 950
+            x = cx0 + math.cos(ang[i]) * dist; y = cy0 + math.sin(ang[i]) * dist * 0.8 + 350 * q * q
+            sc_ = 0.35 + q * 2.4
+            ch_ = chips[i % len(chips)]
+            c2 = ch_.resize((max(4, int(ch_.width * sc_)), max(4, int(ch_.height * sc_))), Image.BILINEAR).rotate(rot[i] + q * 420, expand=True, resample=Image.BILINEAR)
+            if q > 0.25: c2 = c2.filter(ImageFilter.GaussianBlur(float(min(4, q * 4))))
+            fr.alpha_composite(c2, (int(x - c2.width / 2), int(y - c2.height / 2))) if -c2.width < x < W + c2.width and -c2.height < y < H + c2.height else None
+        im.alpha_composite(fr)
+        if 0.03 < t < 0.16:   # impact flash
+            im = Image.blend(im, Image.new("RGBA", (W, H), (255, 245, 225, 255)), 0.4 * (1 - (t - 0.03) / 0.13))
+        return im
+    write_mp4(frame, int(dur * FPS), os.path.join(IMG, out))
+
+
+
+def ending(dur=4.6, out="ending.mp4"):
+    """Name reveal on the dusk track, then the cliffhanger question takes over."""
+    src = Image.open(os.path.join(IMG, "ai6.png")).convert("RGB")
+    s_ = max(W / src.width, H / src.height); src = src.resize((int(src.width * s_), int(src.height * s_)), Image.LANCZOS)
+    f1, f2, f3 = font(F_BIG, 150), font(F_BIG, 112), font(F_TITLE, 44)
+    def frame(t):
+        z = 1.0 + 0.10 * t / dur; cw, ch = W / z, H / z; x0 = (src.width - cw) / 2; y0 = (src.height - ch) * 0.35
+        im = src.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + ch)).convert("RGBA")
+        q = ease((t - 2.1) / 0.6)                                 # darken for the question
+        if q > 0: im = Image.blend(im, Image.new("RGBA", (W, H), (0, 0, 0, 255)), 0.55 * q)
+        ov = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(ov)
+        a = ease((t - 0.1) / 0.5) * (1 - 0.65 * q); dy = 40 * (1 - ease((t - 0.1) / 0.5)) - 120 * q
+        for k, (txt, col) in enumerate((("INDUS VALLEY", GOLD), ("CIVILISATION", WHITE))):
+            y = 560 + k * 165 + dy
+            d.text((W / 2, y), txt, font=f1, fill=col + (int(255 * a),), anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0, int(255 * a)))
+        if q > 0:
+            b = ease((t - 2.2) / 0.5)
+            d.text((W / 2, 1060), "BUT WHO", font=f2, fill=WHITE + (int(255 * b),), anchor="mm", stroke_width=5, stroke_fill=(0, 0, 0, int(255 * b)))
+            d.text((W / 2, 1185), "WERE THEY?", font=f2, fill=GOLD + (int(255 * b),), anchor="mm", stroke_width=5, stroke_fill=(0, 0, 0, int(255 * b)))
+            c = ease((t - 2.8) / 0.5)
+            d.text((W / 2, 1330), "INDUS FILES  #2", font=f3, fill=(230, 230, 230, int(255 * c)), anchor="mm", stroke_width=2, stroke_fill=(0, 0, 0, int(255 * c)))
+        glow = ov.filter(ImageFilter.GaussianBlur(18))
+        im.alpha_composite(glow); im.alpha_composite(ov)
+        return im
+    write_mp4(frame, int(dur * FPS), os.path.join(IMG, out))
 
 
 if __name__ == "__main__":
@@ -330,3 +420,5 @@ if __name__ == "__main__":
     if "timeline" in todo: timeline()
     if "ai5" in todo: fix_ai5()
     if "seal" in todo: seal()
+    if "hook" in todo: hook()
+    if "ending" in todo: ending()
