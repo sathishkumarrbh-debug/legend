@@ -420,14 +420,14 @@
    "line": 8,
    "at": 0,
    "name": "rise",
-   "db": -14,
+   "db": -11,
    "anchor": "end"
   },
   {
    "line": 8,
    "at": 0,
    "name": "hit_big",
-   "db": -9
+   "db": -6
   },
   {
    "line": 10,
@@ -476,13 +476,13 @@
    "line": 7,
    "at": "word:drilled",
    "name": "bow_drill",
-   "db": -6
+   "db": -12
   },
   {
    "line": 8,
    "at": 0,
    "name": "stone_reveal",
-   "db": -10
+   "db": -7
   }
  ],
  "music": [
