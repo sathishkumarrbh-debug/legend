@@ -30,6 +30,10 @@ Channel: Jambudvipa Files. Target 52 to 56 s. Voice: Yash (prompts.md).
 | Written mainly right to left (Mahadevan: about 83% right-to-left) | Confirmed | harappa.com (Mahadevan) |
 | $1 million prize (Tamil Nadu CM, 5 Jan 2025, Indus centenary seminar) | Confirmed; script says "a prize" without political framing | Deccan Herald; Archaeology Magazine, Jan 2025 |
 
+## Photo credits (Wikimedia Commons)
+- "The 'Ten Indus Scripts' discovered near the northern gateway of the Dholavira citadel" by Siyajkak (CC BY-SA 3.0): drawing of the ten real signs; used to build the code-rendered signboard.
+- "Rosetta Stone" by Hans Hillewaert (CC BY-SA 4.0), British Museum.
+
 ## Titles
 1. A 4,000-Year-Old Signboard No One Can Read 🤯
 2. $1 Million If You Can Read This 4,000-Year-Old Sign
