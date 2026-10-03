@@ -95,7 +95,7 @@ def pin(d, c, t, color=RED):
     d.ellipse((c[0] - r, c[1] - r, c[0] + r, c[1] + r), fill=color, outline=WHITE, width=4)
 
 
-def map_railway(pin_t=4.3, dur=7.0, out="map_railway2.mp4"):
+def map_railway(pin_t=4.3, dur=7.0, out="map_railway2.mp4", draw=(0.15, 1.75), zoom=(1.0, 1.15, 2.2, 3.0), title=True):
     P = Proj(70.6, 75.2, 29.4, 32.3, top=420, bottom=1500)
     bg = base_map(P)
     stops = {"LAHORE": (74.34, 31.55), "HARAPPA": (72.86, 30.63), "MULTAN": (71.47, 30.20)}
@@ -103,7 +103,7 @@ def map_railway(pin_t=4.3, dur=7.0, out="map_railway2.mp4"):
     hx = P(*stops["HARAPPA"])
     def frame(t):
         im = bg.copy().convert("RGBA"); ov = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(ov)
-        fr = ease((t - 0.15) / 1.75)
+        fr = ease((t - draw[0]) / draw[1])
         pts = polyline_partial(route, fr)
         if len(pts) > 1:
             d.line(pts, fill=(20, 12, 6, 255), width=20, joint="curve")
@@ -124,9 +124,9 @@ def map_railway(pin_t=4.3, dur=7.0, out="map_railway2.mp4"):
             pin(d, hx, t - pin_t)
             a = ease((t - pin_t) / 0.35)
             label(d, (hx[0] + 10, hx[1] - 95), "HARAPPA", 64, color=GOLD, anchor="mm", alpha=a)
-        label(d, (W / 2, 250), "THE LAHORE–MULTAN RAILWAY", 46, anchor="mm", alpha=ease(t / 0.4))
+        if title: label(d, (W / 2, 250), "THE LAHORE–MULTAN RAILWAY", 46, anchor="mm", alpha=ease(t / 0.25))
         im.alpha_composite(ov)
-        z = 1 + 0.15 * ease((t - 2.2) / 3.0)
+        z = zoom[0] + (zoom[1] - zoom[0]) * ease((t - zoom[2]) / zoom[3])
         if z > 1.001:
             cw, ch = W / z, H / z; cx = min(max(W / 2, cw / 2), W - cw / 2); cy = min(max(hx[1], ch / 2), H - ch / 2)
             im = im.resize((W, H), Image.BICUBIC, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
@@ -174,7 +174,7 @@ def timeline():
     def frame(t):
         im = bg.copy().convert("RGBA"); d = ImageDraw.Draw(im)
         d.text((W / 2, 520), "INDIA'S KNOWN HISTORY", font=font(F_TITLE, 54), fill=WHITE, anchor="mm")
-        p = ease((t - 0.25) / 2.2)
+        p = ease((t - 0.15) / 1.75)
         n = int(round(2000 * p / 50) * 50)
         big = font(F_BIG, 210)
         d.text((W / 2, 800), f"+{n:,}", font=big, fill=GOLD, anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0))
@@ -410,6 +410,86 @@ def ending(dur=4.6, out="ending.mp4"):
     write_mp4(frame, int(dur * FPS), os.path.join(IMG, out))
 
 
+def stamp_clip(out, t_stamp=0.9, strike_t=None, dur=3.2, stamped_from_start=False):
+    """Real Cunningham seal with a red rubber stamp 'FOREIGN?' slamming on (his 1875 verdict: 'foreign to India').
+    strike_t: the stamp gets struck through and fades (payoff: 'That bull was never foreign')."""
+    src = Image.open(os.path.join(IMG, "cunningham_seal_BM.jpg")).convert("RGB")
+    sw, sh = src.size
+    bgf = src.resize((int(sw * H / sh), H)).crop((0, 0, W, H)).filter(ImageFilter.GaussianBlur(30))
+    bgf = Image.blend(bgf, Image.new("RGB", (W, H)), 0.55)
+    st = Image.new("RGBA", (760, 300)); sd = ImageDraw.Draw(st)
+    sd.rounded_rectangle((10, 10, 750, 290), 30, outline=(205, 30, 30, 255), width=18)
+    sd.text((380, 152), "FOREIGN?", font=font(F_BIG, 190), fill=(205, 30, 30, 255), anchor="mm")
+    grit = Image.effect_noise(st.size, 90).point(lambda v: 255 if v > 95 else 0)          # worn ink
+    st.putalpha(Image.composite(st.getchannel("A"), Image.new("L", st.size, 0), grit))
+    st = st.rotate(-11, expand=True, resample=Image.BICUBIC)
+    lab = 'A. CUNNINGHAM, 1875: "FOREIGN TO INDIA"'
+    def frame(t):
+        z = 1.0 + 0.06 * t / dur
+        bw = W * 1.28 * z; s_ = bw / sw; crop = src.resize((int(sw * s_), int(sh * s_)), Image.BICUBIC)
+        im = bgf.copy().convert("RGBA"); ox, oy = (W - crop.width) // 2, int(H * 0.42 - crop.height / 2)
+        dx = dy = 0
+        ts = None if stamped_from_start else t_stamp
+        if ts is not None and 0 <= t - ts < 0.35:
+            a = 22 * (1 - (t - ts) / 0.35); dx, dy = int(a * math.sin(t * 90)), int(a * math.cos(t * 70))
+        im.paste(crop, (ox + dx, oy + dy))
+        show = stamped_from_start or t >= t_stamp
+        if show:
+            q = 1.0 if stamped_from_start else min(1, (t - t_stamp) / 0.11)
+            sc = 2.3 - 1.3 * ease(q); s2 = st.resize((int(st.width * sc), int(st.height * sc)), Image.BICUBIC)
+            fade = 1.0
+            if strike_t is not None and t > strike_t + 0.45: fade = max(0, 1 - (t - strike_t - 0.45) / 0.5)
+            if fade < 1: s2.putalpha(s2.getchannel("A").point(lambda v, f=fade: int(v * f)))
+            im.alpha_composite(s2, (W // 2 - s2.width // 2 + dx, int(H * 0.42) - s2.height // 2 + dy))
+            if strike_t is not None and t > strike_t:
+                p = ease((t - strike_t) / 0.3); sl = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(sl)
+                x0, y0, x1, y1 = W * 0.08, H * 0.48, W * 0.92, H * 0.36
+                d.line((x0, y0, x0 + (x1 - x0) * p, y0 + (y1 - y0) * p), fill=(255, 255, 255, int(255 * fade)), width=24)
+                im.alpha_composite(sl)
+            if strike_t is not None and t > strike_t + 0.6:   # gold glow returns to the seal
+                g = ease((t - strike_t - 0.6) / 0.5); gl = Image.new("RGBA", (W, H)); gd = ImageDraw.Draw(gl)
+                gd.rounded_rectangle((ox - 10, oy - 10, ox + crop.width + 10, oy + crop.height + 10), 30, outline=GOLD + (int(230 * g),), width=12)
+                im.alpha_composite(gl.filter(ImageFilter.GaussianBlur(6)))
+        d = ImageDraw.Draw(im)
+        if strike_t is None and show:
+            d.text((W / 2, 1560), lab, font=font(F_TITLE, 36), fill=(235, 235, 235, 255), anchor="mm", stroke_width=2, stroke_fill=(0, 0, 0))
+            m = ease((t - t_stamp - 0.9) / 1.2)             # "moved on": the find sinks into the dark
+            if m > 0: im = Image.blend(im, Image.new("RGBA", (W, H), (0, 0, 0, 255)), 0.55 * m)
+        return im
+    write_mp4(frame, int(dur * FPS), os.path.join(IMG, out))
+
+
+def sfx_v2():
+    # heavier brick smash: mid-body thump + crack + crunch grains (reads on phone speakers)
+    n = int(1.0 * SR); t = np.arange(n) / SR; out = np.zeros(n)
+    out += 1.1 * sum(np.sin(2 * np.pi * f * t) / k for k, f in ((1, 140), (2, 280), (3, 420), (4, 560))) * env(n, 0.002, 0.07)
+    m = int(0.03 * SR); out[:m] += 1.6 * bp(rng.normal(size=m), 900, 9000) * env(m, 0.0004, 0.005)
+    m2 = int(0.5 * SR); out[:m2] += 0.9 * bp(rng.normal(size=m2), 400, 5000) * env(m2, 0.002, 0.11)
+    for k in range(45):
+        st = int(rng.uniform(0.03, 0.85) * SR); m = int(0.025 * SR)
+        out[st:st + m] += rng.uniform(0.15, 0.55) * bp(rng.normal(size=m), 1200, 7000) * env(m, 0.0004, 0.005)
+    save("hammer_brick2", out)
+    # resonant stone reveal: soft thud + inharmonic stone partials ringing out
+    n = int(2.2 * SR); t = np.arange(n) / SR
+    out = sum(g * np.sin(2 * np.pi * f * t) * np.exp(-t / d) for f, g, d in ((196, 1, 0.9), (311, 0.7, 0.7), (467, 0.5, 0.55), (742, 0.35, 0.4), (1180, 0.2, 0.25)))
+    out[: int(0.05 * SR)] += bp(rng.normal(size=int(0.05 * SR)), 300, 3000) * env(int(0.05 * SR), 0.0005, 0.01)
+    out *= np.minimum(t / 0.004, 1)
+    save("stone_reveal", out)
+    # rubber stamp slam: wood thump + paper slap
+    n = int(0.6 * SR); t = np.arange(n) / SR
+    out = sum(np.sin(2 * np.pi * f * t) / k for k, f in ((1, 110), (2, 220), (3, 330), (5, 550))) * env(n, 0.001, 0.05)
+    out += 0.8 * bp(rng.normal(size=n), 700, 6000) * env(n, 0.0005, 0.02)
+    save("stamp", out)
+    # pen scribble for the map line (fast scratch strokes)
+    n = int(0.9 * SR); t = np.arange(n) / SR
+    out = bp(rng.normal(size=n), 2000, 9000) * (0.4 + 0.6 * np.abs(np.sin(2 * np.pi * 7 * t))) * np.minimum(t / 0.03, 1) * np.minimum((0.9 - t) / 0.1, 1)
+    save("scribble", out)
+    # marker strike-through
+    n = int(0.35 * SR); t = np.arange(n) / SR
+    out = bp(rng.normal(size=n), 1500, 7000) * np.minimum(t / 0.02, 1) * np.exp(-t / 0.15)
+    save("strike", out)
+
+
 if __name__ == "__main__":
     import sys
     todo = sys.argv[1:] or ["sfx", "dust", "railway", "west", "timeline", "ai5", "seal"]
@@ -422,3 +502,9 @@ if __name__ == "__main__":
     if "seal" in todo: seal()
     if "hook" in todo: hook()
     if "ending" in todo: ending()
+    if "v2" in todo:
+        sfx_v2()
+        map_railway(pin_t=99, dur=2.6, out="map_draw.mp4", draw=(0.1, 0.8), zoom=(1.0, 1.0, 0, 1))
+        map_railway(pin_t=0.7, dur=2.6, out="map_pin.mp4", draw=(-1, 0.01), zoom=(1.04, 1.14, 0, 2.6), title=False)
+        stamp_clip("stamp.mp4", t_stamp=0.9, dur=3.4)
+        stamp_clip("unstamp.mp4", strike_t=0.45, dur=2.4, stamped_from_start=True)

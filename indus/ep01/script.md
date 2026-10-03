@@ -16,7 +16,7 @@ Channel: Jambudvipa Files (English). Target 54 to 58 s, 14 lines. Voice: ElevenL
 | 9 | Nineteen twenty-four. The ruins are finally announced to the world. But no one knows how old they are. | AI-5 1924 desk, newspaper + photos (no readable text) | silence 0.8 s before "Nineteen" |
 | 10 | One week later, a professor writes in. These seals match finds from ancient Persia and Mesopotamia. | REAL `unicorn_seal_mohenjodaro.jpg` + map arrow Indus → Susa/Mesopotamia | rise |
 | 11 | Over four thousand years old. | Hold on seal, flash | hit_big |
-| 12 | In one week, India's known history went back two thousand years. | Animated timeline: marker slides from 600 BC to 2600 BC | taiko |
+| 12 | India's known history went back two thousand years. | Animated timeline: marker slides from 600 BC to 2600 BC | taiko |
 | 13 | That bull was never foreign. It belonged to a civilisation as old as the pyramids… | REAL `great_pyramid.jpg` → cut back to the Cunningham seal (payoff of line 7) | music swell |
 | 14 | The Indus Valley Civilisation. | AI-6 track at dusk with the ancient city rising behind. Big text: **INDUS VALLEY CIVILISATION** | hit_big, then hold 1.2 s |
 
@@ -65,3 +65,10 @@ Upload settings: altered/synthetic content = Yes; category Education; not made f
 - Music: Nastelbom "Documentary" (Pixabay 606698), aligned so track 48 s lands on "In one week, India's known history" and the 20 s lift lands on "smashed". Pixabay tracks can draw a Content ID claim (not a strike); dispute with the Pixabay licence if one appears.
 - Custom assets (edit/build_assets.py): hook.mp4 (whip push-in, real brick chips flying, steam, dust), map_railway2.mp4, map_west.mp4, seal_signs.mp4, timeline.mp4, ending.mp4, synthesized SFX (train_chug, train_whistle, hammer_brick, clock_tick, heartbeat_phone, paper, stone_tap).
 - Loudness -13.9 LUFS; music about 8 dB and SFX about 7.5 dB under the voice in the phone band.
+
+## v5 changes (after Gemini review, 7.5/10)
+- "In one week," cut from the voice (repeated "one week"); hold before "1924" shortened. Final length 56.8 s.
+- Map split into a fast route draw (with scribble sound) and a pin drop on "Harappa".
+- "moved on" well shot replaced by a FOREIGN? stamp slam on the real seal (Cunningham's 1875 verdict); paid off by a strike-through on "never foreign".
+- New AI images: 1920s excavation (line 9), pyramid + Indus city split (line 13).
+- Crunchier brick smash, resonant stone sound on the seal reveal.

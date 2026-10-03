@@ -98,8 +98,8 @@
    ]
   },
   {
-   "text": "In one week, India's known history went back two thousand years.",
-   "caption": "In one week, India's known history went back 2,000 years.",
+   "text": "India's known history went back two thousand years.",
+   "caption": "India's known history went back 2,000 years.",
    "emph": [
     "2,000"
    ]
@@ -153,9 +153,31 @@
   },
   {
    "line": 1,
-   "at": "word:lahore@-0.3",
-   "src": "map_railway2.mp4",
-   "xfade": 0.15
+   "at": "word:lahore@-0.15",
+   "src": "map_draw.mp4",
+   "xfade": 0.08
+  },
+  {
+   "line": 1,
+   "at": "word:needed@-0.1",
+   "src": "ai2.png",
+   "move": "in",
+   "z": [
+    1.6,
+    1.75
+   ],
+   "focus": [
+    0.8,
+    0.5
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": "word:harappa@-0.7",
+   "src": "map_pin.mp4",
+   "xfade": 0.08
   },
   {
    "line": 2,
@@ -170,7 +192,7 @@
     0.5,
     0.5
    ],
-   "xfade": 0.15,
+   "xfade": 0.12,
    "label": "REAL PHOTO: HARAPPA TODAY",
    "label_y": 300,
    "label_dur": 2.2
@@ -264,26 +286,29 @@
   },
   {
    "line": 7,
-   "at": 0,
-   "src": "harappa_ruins.jpg",
-   "move": "out",
-   "z": [
-    1.35,
-    1.1
-   ],
-   "focus": [
-    0.5,
-    0.5
-   ],
-   "xfade": 0.3,
-   "bright": [
-    1.0,
-    0.55
-   ]
+   "at": "word:somewhere@-0.9",
+   "src": "stamp.mp4",
+   "xfade": 0.1
   },
   {
    "line": 8,
    "at": 0,
+   "src": "ai7.png",
+   "move": "punch",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0,
+   "ai": true,
+   "flash": true,
+   "label": "EXCAVATIONS, 1920s",
+   "label_y": 300,
+   "label_dur": 2.0
+  },
+  {
+   "line": 8,
+   "at": "word:but@-0.05",
    "src": "ai5_fix.png",
    "move": "in",
    "z": [
@@ -294,24 +319,7 @@
     0.66,
     0.68
    ],
-   "xfade": 0,
-   "ai": true,
-   "flash": true
-  },
-  {
-   "line": 8,
-   "at": "word:but@-0.05",
-   "src": "ai5_fix.png",
-   "move": "in",
-   "z": [
-    2.3,
-    2.5
-   ],
-   "focus": [
-    0.62,
-    0.62
-   ],
-   "xfade": 0.15,
+   "xfade": 0.12,
    "ai": true
   },
   {
@@ -327,7 +335,7 @@
     0.35,
     0.86
    ],
-   "xfade": 0.2,
+   "xfade": 0.15,
    "ai": true,
    "label": "PROF. A.H. SAYCE \u00b7 27 SEPT 1924",
    "label_y": 300,
@@ -337,89 +345,55 @@
    "line": 9,
    "at": "word:these@-0.1",
    "src": "map_west.mp4",
-   "xfade": 0.15
+   "xfade": 0.12
   },
   {
    "line": 10,
    "at": 0,
    "src": "unicorn_seal_mohenjodaro.jpg",
+   "fit": "fit",
    "move": "in",
    "z": [
     1.0,
     1.08
    ],
-   "focus": [
-    0.5,
-    0.5
-   ],
    "xfade": 0,
    "flash": true,
    "label": "REAL: INDUS SEAL, MOHENJO-DARO",
    "label_y": 300,
-   "label_dur": 2.0,
-   "fit": "fit"
+   "label_dur": 2.0
   },
   {
    "line": 11,
    "at": 0,
    "src": "timeline.mp4",
-   "xfade": 0.12
+   "xfade": 0.1
   },
   {
    "line": 12,
-   "at": 0,
-   "src": "cunningham_seal_BM.jpg",
-   "fit": "fit",
-   "move": "in",
-   "z": [
-    1.0,
-    1.1
-   ],
-   "focus": [
-    0.3,
-    0.5
-   ],
-   "xfade": 0.25,
-   "label": "THE SAME SEAL",
-   "label_y": 300,
-   "label_dur": 1.8
+   "at": "word:foreign@-0.45",
+   "src": "unstamp.mp4",
+   "xfade": 0.1
   },
   {
    "line": 12,
    "at": "word:belonged@-0.1",
-   "src": "harappa_mounds.jpg",
-   "move": "right",
-   "z": [
-    1.35,
-    1.45
-   ],
-   "focus": [
-    0.4,
-    0.5
-   ],
-   "xfade": 0.2,
-   "bright": [
-    0.85,
-    0.85
-   ]
-  },
-  {
-   "line": 12,
-   "at": "word:pyramids@-0.15",
-   "src": "great_pyramid.jpg",
+   "src": "ai8.png",
    "move": "in",
    "z": [
-    1.0,
-    1.12
+    1.02,
+    1.14
    ],
    "focus": [
     0.5,
     0.45
    ],
    "xfade": 0.15,
-   "label": "GREAT PYRAMID, c. 2560 BC",
+   "ai": true,
+   "label": "PYRAMIDS c. 2560 BC  \u00b7  HARAPPA c. 2600 BC",
    "label_y": 300,
-   "label_dur": 1.8
+   "label_dur": 2.6,
+   "label_delay": 0.3
   },
   {
    "line": 13,
@@ -454,10 +428,16 @@
    "db": -8
   },
   {
+   "line": 1,
+   "at": "word:lahore",
+   "name": "scribble",
+   "db": -8
+  },
+  {
    "line": 2,
    "at": "word:harappa",
    "name": "tom",
-   "db": -6
+   "db": -5
   },
   {
    "line": 3,
@@ -474,14 +454,20 @@
   {
    "line": 4,
    "at": "word:smashed",
-   "name": "hammer_brick",
-   "db": -3
+   "name": "hammer_brick2",
+   "db": -2
   },
   {
    "line": 4,
-   "at": "word:smashed@0.45",
-   "name": "hammer_brick",
-   "db": -7
+   "at": "word:smashed",
+   "name": "hit",
+   "db": -8
+  },
+  {
+   "line": 4,
+   "at": "word:smashed@0.4",
+   "name": "hammer_brick2",
+   "db": -6
   },
   {
    "line": 5,
@@ -499,14 +485,20 @@
   {
    "line": 6,
    "at": "word:seal",
+   "name": "stone_reveal",
+   "db": -4
+  },
+  {
+   "line": 6,
+   "at": "word:seal",
    "name": "braam",
-   "db": -6
+   "db": -9
   },
   {
    "line": 7,
-   "at": 0,
-   "name": "heartbeat_phone",
-   "db": -7
+   "at": "word:somewhere",
+   "name": "stamp",
+   "db": -3
   },
   {
    "line": 8,
@@ -547,9 +539,15 @@
   },
   {
    "line": 12,
-   "at": "word:never",
-   "name": "tom",
+   "at": "word:foreign",
+   "name": "strike",
    "db": -6
+  },
+  {
+   "line": 12,
+   "at": "word:foreign@0.5",
+   "name": "tom",
+   "db": -7
   },
   {
    "line": 13,
