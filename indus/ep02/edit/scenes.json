@@ -1,0 +1,563 @@
+{
+ "output": "ep007_indus_iraq.mp4",
+ "tail_seconds": 3.2,
+ "cap_y": 0.68,
+ "handheld": 6,
+ "captions_from": 2.6,
+ "audio_fade_out": 0.8,
+ "voice_light": true,
+ "no_caption_lines": [
+  9,
+  13
+ ],
+ "hook": {
+  "text": "FOUND IN IRAQ.\nMADE 2,000 KM AWAY",
+  "until": 2.6,
+  "y": 0.12,
+  "size": 104,
+  "accent": [
+   "IRAQ.",
+   "2,000"
+  ]
+ },
+ "lines": [
+  {
+   "text": "This tiny stone was dug up in Iraq.",
+   "emph": [
+    "iraq."
+   ]
+  },
+  {
+   "text": "But it wasn't made there.",
+   "emph": [
+    "wasn't"
+   ]
+  },
+  {
+   "text": "It's an Indus seal... carved more than two thousand kilometres away.",
+   "caption": "It's an Indus seal... carved more than 2,000 kilometres away.",
+   "emph": [
+    "indus",
+    "2,000"
+   ]
+  },
+  {
+   "text": "So how did it get there?",
+   "emph": [
+    "how"
+   ]
+  },
+  {
+   "text": "Ships. Around twenty-three hundred BC, King Sargon of Akkad wrote that ships from a land called Meluhha docked at his capital.",
+   "caption": "Ships. Around 2300 BC, King Sargon of Akkad wrote that ships from a land called Meluhha docked at his capital.",
+   "emph": [
+    "ships.",
+    "meluhha"
+   ]
+  },
+  {
+   "text": "They brought bright red carnelian, and precious wood.",
+   "emph": [
+    "carnelian,"
+   ]
+  },
+  {
+   "text": "Many historians believe Meluhha... was the Indus Valley.",
+   "emph": [
+    "indus",
+    "valley."
+   ]
+  },
+  {
+   "text": "In the royal tombs of Ur, the elite were buried with red beads, drilled the Indus way.",
+   "emph": [
+    "royal",
+    "indus"
+   ]
+  },
+  {
+   "text": "Then, archaeologists found a seal that changes everything.",
+   "emph": [
+    "everything."
+   ]
+  },
+  {
+   "text": "It belonged to a man named Shuilishu.",
+   "caption": "It belonged to a man named Shu-ilishu.",
+   "emph": []
+  },
+  {
+   "text": "Carved beside him, his job: interpreter of the Meluhhan language.",
+   "emph": [
+    "interpreter"
+   ]
+  },
+  {
+   "text": "Over four thousand years ago, someone in Iraq could talk with the Indus people.",
+   "caption": "Over 4,000 years ago, someone in Iraq could talk with the Indus people.",
+   "emph": [
+    "4,000",
+    "talk"
+   ]
+  },
+  {
+   "text": "He understood them.",
+   "emph": [
+    "understood"
+   ]
+  },
+  {
+   "text": "Today... no one can read a word they wrote.",
+   "emph": [
+    "read"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "hook.mp4",
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "kish.mp4",
+   "xfade": 0,
+   "flash": true
+  },
+  {
+   "line": 2,
+   "at": "word:2000@-0.35",
+   "src": "map_iraq.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "telloh_seal.jpg",
+   "fit": "fit",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "xfade": 0.12,
+   "label": "REAL: INDUS SEAL, TELLOH, IRAQ",
+   "label_y": 300,
+   "label_dur": 2.0
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "ai2.png",
+   "move": "punch",
+   "focus": [
+    0.45,
+    0.45
+   ],
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 4,
+   "at": "word:sargon@-0.1",
+   "src": "ai2.png",
+   "move": "in",
+   "z": [
+    1.55,
+    1.7
+   ],
+   "focus": [
+    0.33,
+    0.42
+   ],
+   "xfade": 0.12,
+   "ai": true,
+   "label": "KING SARGON OF AKKAD, c. 2300 BC",
+   "label_y": 300,
+   "label_dur": 2.4
+  },
+  {
+   "line": 4,
+   "at": "word:docked@-0.1",
+   "src": "ai3.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "ai3.png",
+   "move": "in",
+   "z": [
+    1.65,
+    1.8
+   ],
+   "focus": [
+    0.25,
+    0.78
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "map_meluhha.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "puabi_headdress.jpg",
+   "move": "in",
+   "z": [
+    1.05,
+    1.2
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "xfade": 0.12,
+   "label": "REAL: ROYAL TOMBS OF UR, c. 2500 BC",
+   "label_y": 300,
+   "label_dur": 1.8
+  },
+  {
+   "line": 7,
+   "at": "word:buried@-0.1",
+   "src": "ur_etched_beads.jpg",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "xfade": 0.1,
+   "label": "REAL: ETCHED BEAD FROM UR",
+   "label_y": 300,
+   "label_dur": 1.6
+  },
+  {
+   "line": 7,
+   "at": "word:drilled@-0.1",
+   "src": "ai4.png",
+   "move": "in",
+   "z": [
+    1.2,
+    1.35
+   ],
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "seal_reveal.mp4",
+   "xfade": 0,
+   "flash": true,
+   "shake": true
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "seal_reveal.mp4",
+   "clip_start": 3.8,
+   "xfade": 0.1,
+   "headline": "SHU-ILISHU",
+   "headline_size": 110,
+   "headline_y": 0.66,
+   "headline_delay": 0.5,
+   "headline_accent": [
+    "SHU-ILISHU"
+   ]
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "seal_rings.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "ai5.png",
+   "move": "in",
+   "z": [
+    1.18,
+    1.28
+   ],
+   "focus": [
+    0.5,
+    0.62
+   ],
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": "word:talk@-0.1",
+   "src": "ai5.png",
+   "move": "left",
+   "z": [
+    1.6,
+    1.7
+   ],
+   "focus": [
+    0.25,
+    0.55
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 12,
+   "at": 0,
+   "src": "ai5.png",
+   "move": "in",
+   "z": [
+    1.9,
+    2.1
+   ],
+   "focus": [
+    0.56,
+    0.3
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 13,
+   "at": 0,
+   "src": "ending.mp4",
+   "xfade": 0.3
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "hit_big",
+   "db": -7
+  },
+  {
+   "line": 0,
+   "at": "word:iraq",
+   "name": "tom",
+   "db": -10
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "name": "braam",
+   "db": -11
+  },
+  {
+   "line": 2,
+   "at": "word:2000",
+   "name": "scribble",
+   "db": -12
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "name": "heartbeat_phone",
+   "db": -11
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "name": "waves",
+   "db": -12
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "name": "hit",
+   "db": -11
+  },
+  {
+   "line": 4,
+   "at": "word:docked",
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 5,
+   "at": "word:carnelian",
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 6,
+   "at": "word:valley",
+   "name": "tom",
+   "db": -9
+  },
+  {
+   "line": 7,
+   "at": "word:beads",
+   "name": "stone_reveal",
+   "db": -9
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "rise",
+   "db": -11,
+   "anchor": "end"
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "hit_big",
+   "db": -6
+  },
+  {
+   "line": 10,
+   "at": "word:interpreter",
+   "name": "braam",
+   "db": -9
+  },
+  {
+   "line": 12,
+   "at": 0,
+   "name": "heartbeat_phone",
+   "db": -12
+  },
+  {
+   "line": 13,
+   "at": 0,
+   "name": "rise",
+   "db": -12,
+   "anchor": "end"
+  },
+  {
+   "line": 13,
+   "at": 2.7,
+   "name": "braam",
+   "db": -8
+  },
+  {
+   "line": 13,
+   "at": 2.7,
+   "name": "hit_big",
+   "db": -10
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/the_mountain_576567.mp3",
+   "align_src": 84.0,
+   "align_line": 8,
+   "align_at": 0,
+   "gap_db": 3.5,
+   "fade_in": 0.2
+  }
+ ],
+ "music_env": [
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   7,
+   0,
+   -2
+  ],
+  [
+   8,
+   0,
+   1
+  ],
+  [
+   12,
+   0,
+   -4
+  ],
+  [
+   13,
+   0,
+   2
+  ]
+ ],
+ "line_times": [
+  [
+   0.0,
+   2.52
+  ],
+  [
+   2.9,
+   4.07
+  ],
+  [
+   4.47,
+   8.29
+  ],
+  [
+   8.67,
+   9.96
+  ],
+  [
+   10.36,
+   17.97
+  ],
+  [
+   18.41,
+   21.08
+  ],
+  [
+   21.43,
+   24.38
+  ],
+  [
+   24.83,
+   29.69
+  ],
+  [
+   30.66,
+   34.23
+  ],
+  [
+   34.65,
+   36.7
+  ],
+  [
+   37.1,
+   41.16
+  ],
+  [
+   41.48,
+   45.96
+  ],
+  [
+   46.59,
+   47.4
+  ],
+  [
+   48.59,
+   51.18
+  ]
+ ]
+}

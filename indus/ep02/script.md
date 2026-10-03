@@ -43,10 +43,16 @@ Indus Files #2. Part 1: how the British ran trains over Harappa. Next: why can't
 
 Sources: Sargon of Akkad inscription (CDLI P461937); Shu-ilishu seal, Louvre AO 22310; Penn Museum Expedition magazine; J.M. Kenoyer on etched carnelian beads; harappa.com.
 Photos (Wikimedia Commons): Indus seal and beads from Kish (E.J.H. Mackay, public domain); Indus seal from Telloh (F. Thureau-Dangin, public domain); Shu-ilishu cylinder seal (L. de Clercq, public domain); Queen Puabi's headdress by Mary Harrsch (CC BY 2.0); etched carnelian beads, British Museum, by Vassil (CC0).
-AI images: artist's impressions. Voice: ElevenLabs. Music: Pixabay. Maps: Natural Earth.
+AI images: artist's impressions. Voice: ElevenLabs. Music: "The Mountain" (Pixabay 576567). Maps: Natural Earth.
 #IndusValley #Mesopotamia #AncientIndia #Harappa #Archaeology #Shorts
 
 ## Pinned comment
 🔓 Indus Files #3: "Why Can't Anyone Read the Indus Script?"
 Thousands of inscriptions, and not one word deciphered 🤯
 Which ancient mystery should we crack next? Comment below 👇
+
+## Edit notes (final, 54.4 s)
+- Voice take 1 (Stability 40%), tighten2 0.66/0.2/0.6 with holds before "Then" and "Today"; no tempo change. Reverb tails (synthetic hall, high-passed) on "Interpreter of the Meluhhan language", "He understood them", "No one can read a word they wrote".
+- Music: The Mountain, its 84 s lift aligned to "Then, archaeologists found a seal"; dip under "He understood them".
+- line_times pinned from Whisper (the auto aligner shifted line 11). Word anchors use the caption form ("word:2000").
+- Loudness -14.6 LUFS; music -6.5 dB, SFX -5.9 dB vs voice (phone band).

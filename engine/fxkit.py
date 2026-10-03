@@ -263,9 +263,9 @@ def zoom_rings(image, out, wide, tight, rings=(), top_text="", label="", dur=5.5
                 pts = [(cx + rx * math.cos(-math.pi / 2 + 2 * math.pi * q * k / 80 * 1.06), cy + ry * math.sin(-math.pi / 2 + 2 * math.pi * q * k / 80 * 1.06)) for k in range(81)]
                 ov = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(ov)
                 d.line(pts, fill=(0, 0, 0, 170), width=20, joint="curve"); d.line(pts, fill=col + (255,), width=12, joint="curve"); im.alpha_composite(ov)
-                if r.get("text") and q > 0.9: outlined(ImageDraw.Draw(im), (W / 2, 260), r["text"], font(F_TITLE, 46), WHITE + (255,))
+                if r.get("text") and q > 0.9: outlined(ImageDraw.Draw(im), (W / 2, max(110, oy - 70)), r["text"], font(F_TITLE, 46), WHITE + (255,))
         d = ImageDraw.Draw(im)
-        if top_text and t > (rings[-1]["t"] + 0.45 if rings else 0): outlined(d, (W / 2, 260), top_text, font(F_TITLE, 46), WHITE + (255,))
+        if top_text and t > (rings[-1]["t"] + 0.45 if rings else 0): outlined(d, (W / 2, max(110, oy - 70)), top_text, font(F_TITLE, 46), WHITE + (255,))
         if label: outlined(d, (W / 2, 1560), label, font(F_TITLE, 34), (230, 230, 230, 255), stroke=2)
         return im
     write_mp4(frame, dur, out)
