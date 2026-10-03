@@ -72,3 +72,10 @@ Upload settings: altered/synthetic content = Yes; category Education; not made f
 - "moved on" well shot replaced by a FOREIGN? stamp slam on the real seal (Cunningham's 1875 verdict); paid off by a strike-through on "never foreign".
 - New AI images: 1920s excavation (line 9), pyramid + Indus city split (line 13).
 - Crunchier brick smash, resonant stone sound on the seal reveal.
+
+## Pinned comment
+🔓 Indus Files #2: "This Was Dug Up in Iraq. It Came From India."
+How did a tiny Indus seal end up 2,000 km away in Mesopotamia? 🚢
+
+👍 If this video reaches 100 likes, Part 2 goes up next.
+Comment "PART 2" if you want it 👇
