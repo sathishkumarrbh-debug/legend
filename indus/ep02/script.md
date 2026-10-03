@@ -46,6 +46,9 @@ Photos (Wikimedia Commons): Indus seal and beads from Kish (E.J.H. Mackay, publi
 AI images: artist's impressions. Voice: ElevenLabs. Music: "The Mountain" (Pixabay 576567). Maps: Natural Earth.
 #IndusValley #Mesopotamia #AncientIndia #Harappa #Archaeology #Shorts
 
+## Gemini review v2 (8/10) applied
+- Hook text changed to "WHAT IS THIS DOING IN IRAQ?" (no repeat of 2,000 km); map arcs snap in 0.4 s; seal reveal punch-in 0.9 s with glint; new foley: dirt_brush, bow_drill, ship_creak, waves_loud.
+
 ## Pinned comment
 🔓 Indus Files #3: "Why Can't Anyone Read the Indus Script?"
 Thousands of inscriptions, and not one word deciphered 🤯
