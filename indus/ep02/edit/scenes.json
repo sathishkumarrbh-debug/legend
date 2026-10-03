@@ -11,13 +11,12 @@
   13
  ],
  "hook": {
-  "text": "FOUND IN IRAQ.\nMADE 2,000 KM AWAY",
+  "text": "WHAT IS THIS\nDOING IN IRAQ?",
   "until": 2.6,
   "y": 0.12,
-  "size": 104,
+  "size": 110,
   "accent": [
-   "IRAQ.",
-   "2,000"
+   "IRAQ?"
   ]
  },
  "lines": [
@@ -276,7 +275,10 @@
    "src": "seal_reveal.mp4",
    "xfade": 0,
    "flash": true,
-   "shake": true
+   "shake": true,
+   "glint": {
+    "dur": 0.8
+   }
   },
   {
    "line": 9,
@@ -387,12 +389,6 @@
   {
    "line": 4,
    "at": 0,
-   "name": "waves",
-   "db": -12
-  },
-  {
-   "line": 4,
-   "at": 0,
    "name": "hit",
    "db": -11
   },
@@ -463,6 +459,36 @@
    "at": 2.7,
    "name": "hit_big",
    "db": -10
+  },
+  {
+   "line": 0,
+   "at": "abs:0.05",
+   "name": "dirt_brush",
+   "db": -8
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "name": "waves_loud",
+   "db": -8
+  },
+  {
+   "line": 4,
+   "at": "word:sargon",
+   "name": "ship_creak",
+   "db": -8
+  },
+  {
+   "line": 7,
+   "at": "word:drilled",
+   "name": "bow_drill",
+   "db": -6
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -7
   }
  ],
  "music": [

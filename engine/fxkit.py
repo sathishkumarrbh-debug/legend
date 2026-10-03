@@ -202,7 +202,7 @@ def route_map(stops, route, bounds, out, pin=None, pin_t=99, draw=(0.1, 0.8), zo
     write_mp4(frame, dur, out)
 
 
-def arc_map(src, dests, bounds, out, src_name="", caption="", dur=5.5):
+def arc_map(src, dests, bounds, out, src_name="", caption="", dur=5.5, draw=(0.3, 1.6), cap_t=1.8):
     """Dashed arcs from src (lon, lat) to each {"NAME": (lon, lat)}: trade, travel, influence."""
     P = Proj(*bounds); bg = base_map(P); s = P(*src)
     def arc(a, b, h): return [(a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u - h * math.sin(math.pi * u)) for u in np.linspace(0, 1, 60)]
@@ -213,14 +213,14 @@ def arc_map(src, dests, bounds, out, src_name="", caption="", dur=5.5):
         ov.alpha_composite(g.filter(ImageFilter.GaussianBlur(40)))
         if src_name: map_label(d, (s[0] - 40, s[1] + 250), src_name, 54, GOLD, "rm")
         for k, A in enumerate(arcs):
-            fr = ease((t - 0.3 - 0.35 * k) / 1.6); p = _partial(A, fr)
+            fr = ease((t - draw[0] - draw[0] * 1.1 * k) / draw[1]); p = _partial(A, fr)
             if len(p) > 1:
                 for i in range(0, len(p) - 1, 2): d.line((p[i], p[i + 1]), fill=WHITE + (255,), width=9)
                 x, y = p[-1]; d.ellipse((x - 12, y - 12, x + 12, y + 12), fill=GOLD + (255,))
             if fr > 0.98:
                 name = list(dests)[k]; c = P(*dests[name]); _pin(d, c, t, (240, 170, 40))
                 map_label(d, (max(c[0] - 60, 20), c[1] + (-80 if k % 2 == 0 else 80)), name, 42)
-        if caption: map_label(d, (W / 2, 300), caption, 50, anchor="mm", alpha=ease((t - 1.8) / 0.4))
+        if caption: map_label(d, (W / 2, 300), caption, 50, anchor="mm", alpha=ease((t - cap_t) / 0.3))
         im.alpha_composite(ov); return im
     write_mp4(frame, dur, out)
 
@@ -366,6 +366,34 @@ def _save(folder, name, a):
     with wave.open(os.path.join(folder, name + ".wav"), "wb") as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((st * 32767).astype(np.int16).tobytes())
     print("sfx", name)
+
+
+def make_sfx_foley(folder):
+    """dirt_brush, bow_drill, ship_creak, waves_loud: textured foley with mid-band energy (Gemini: foley needs mid-range punch)."""
+    os.makedirs(folder, exist_ok=True); r = np.random.default_rng(21)
+    n = int(1.6 * SR); out = np.zeros(n)
+    for k in range(5):                                   # five brush strokes over grit
+        st, m = int(k * 0.3 * SR), int(0.26 * SR); tt = np.arange(m) / SR
+        stroke = _bp(r.normal(size=m), 900, 7000) * np.sin(np.pi * tt / 0.26) ** 1.5
+        for _ in range(18):
+            g = int(r.uniform(0, m - 200)); stroke[g:g + 200] += r.uniform(0.3, 0.9) * _bp(r.normal(size=200), 2000, 8000) * np.hanning(200)
+        out[st:st + m] += stroke
+    _save(folder, "dirt_brush", out)
+    n = int(1.4 * SR); t = np.arange(n) / SR; out = np.zeros(n)
+    for k in range(6):                                   # bow strokes: squeaky pitch sweep + stone grit
+        st, m = int(k * 0.22 * SR), int(0.2 * SR); tt = np.arange(m) / SR
+        f = 900 + 500 * np.sin(np.pi * tt / 0.2) * (1 if k % 2 else -1) * 0.5
+        squeak = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.4 * np.sin(np.pi * tt / 0.2)
+        out[st:st + m] += squeak + 0.8 * _bp(r.normal(size=m), 1500, 6000) * np.sin(np.pi * tt / 0.2)
+    _save(folder, "bow_drill", out)
+    n = int(1.8 * SR); t = np.arange(n) / SR
+    f = 180 + 70 * np.sin(2 * np.pi * 0.7 * t); creak = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * (0.5 + 0.5 * np.sin(2 * np.pi * 6 * t))
+    creak = _bp(creak, 200, 3000) * np.sin(np.pi * t / 1.8) ** 2
+    _save(folder, "ship_creak", creak)
+    n = int(3.5 * SR); t = np.arange(n) / SR
+    w = _bp(r.normal(size=n), 300, 4000) * (0.2 + 0.8 * np.sin(np.pi * t / 1.75) ** 4)   # two crashing swells
+    w += 0.5 * _bp(r.normal(size=n), 2500, 8000) * (np.sin(np.pi * t / 1.75) ** 8)        # foam hiss on the crest
+    _save(folder, "waves_loud", w)
 
 
 def make_sfx(folder):
