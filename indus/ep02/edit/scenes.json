@@ -360,19 +360,19 @@
    "line": 0,
    "at": "abs:0.0",
    "name": "hit_big",
-   "db": -7
+   "db": -10
   },
   {
    "line": 0,
    "at": "word:iraq",
    "name": "tom",
-   "db": -10
+   "db": -13
   },
   {
    "line": 1,
    "at": 0,
    "name": "braam",
-   "db": -11
+   "db": -14
   },
   {
    "line": 2,
@@ -420,14 +420,14 @@
    "line": 8,
    "at": 0,
    "name": "rise",
-   "db": -11,
+   "db": -14,
    "anchor": "end"
   },
   {
    "line": 8,
    "at": 0,
    "name": "hit_big",
-   "db": -6
+   "db": -9
   },
   {
    "line": 10,
@@ -464,18 +464,12 @@
    "line": 0,
    "at": "abs:0.05",
    "name": "dirt_brush",
-   "db": -8
+   "db": -11
   },
   {
    "line": 4,
    "at": 0,
    "name": "waves_loud",
-   "db": -8
-  },
-  {
-   "line": 4,
-   "at": "word:sargon",
-   "name": "ship_creak",
    "db": -8
   },
   {
@@ -488,7 +482,7 @@
    "line": 8,
    "at": 0,
    "name": "stone_reveal",
-   "db": -7
+   "db": -10
   }
  ],
  "music": [
