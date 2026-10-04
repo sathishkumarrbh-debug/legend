@@ -1,0 +1,507 @@
+{
+ "output": "ep008_indus_sign.mp4",
+ "tail_seconds": 4.6,
+ "cap_y": 0.68,
+ "handheld": 6,
+ "captions_from": 2.8,
+ "audio_fade_out": 0.8,
+ "voice_light": true,
+ "no_caption_lines": [
+  6
+ ],
+ "hook": {
+  "text": "NO ONE ALIVE\nCAN READ THIS",
+  "until": 2.8,
+  "y": 0.12,
+  "size": 110,
+  "accent": [
+   "READ"
+  ]
+ },
+ "lines": [
+  {
+   "text": "In nineteen ninety-one, archaeologists in Gujarat found something strange in the dirt.",
+   "caption": "In 1991, archaeologists in Gujarat found something strange in the dirt.",
+   "emph": [
+    "strange"
+   ]
+  },
+  {
+   "text": "Ten huge signs. Each one bigger than a school ruler.",
+   "caption": "10 huge signs. Each one bigger than a school ruler.",
+   "emph": [
+    "10",
+    "ruler."
+   ]
+  },
+  {
+   "text": "Four thousand years ago, they were fixed on a wooden board... at the gate of a city called Dholavira.",
+   "caption": "4,000 years ago, they were fixed on a wooden board... at the gate of a city called Dholavira.",
+   "emph": [
+    "4,000",
+    "dholavira."
+   ]
+  },
+  {
+   "text": "Then the board fell face down. The wood rotted away... but the signs stayed in the ground, in order.",
+   "emph": [
+    "fell",
+    "order."
+   ]
+  },
+  {
+   "text": "It may be the oldest signboard ever found.",
+   "emph": [
+    "oldest"
+   ]
+  },
+  {
+   "text": "So... what did it say?",
+   "emph": [
+    "say?"
+   ]
+  },
+  {
+   "text": "Nobody knows.",
+   "emph": []
+  },
+  {
+   "text": "We have found more than four thousand pieces of Indus writing. But most are only four or five signs long.",
+   "caption": "We have found more than 4,000 pieces of Indus writing. But most are only 4 or 5 signs long.",
+   "emph": [
+    "4,000",
+    "5"
+   ]
+  },
+  {
+   "text": "And there's no translation key, like Egypt's Rosetta Stone.",
+   "emph": [
+    "rosetta"
+   ]
+  },
+  {
+   "text": "We don't even know what language they spoke.",
+   "emph": [
+    "language"
+   ]
+  },
+  {
+   "text": "That's why there's now a one-million-dollar prize for anyone who can read it.",
+   "caption": "That's why there's now a $1,000,000 prize for anyone who can read it.",
+   "emph": [
+    "$1,000,000"
+   ]
+  },
+  {
+   "text": "Ten signs at the gate of a great city... and no one alive can read them.",
+   "caption": "10 signs at the gate of a great city... and no one alive can read them.",
+   "emph": [
+    "no",
+    "one"
+   ]
+  }
+ ],
+ "line_times": [
+  [
+   0.0,
+   4.95
+  ],
+  [
+   5.43,
+   9.37
+  ],
+  [
+   9.97,
+   15.68
+  ],
+  [
+   16.27,
+   22.68
+  ],
+  [
+   23.3,
+   26.29
+  ],
+  [
+   26.81,
+   28.36
+  ],
+  [
+   29.36,
+   30.23
+  ],
+  [
+   30.85,
+   36.85
+  ],
+  [
+   37.29,
+   40.5
+  ],
+  [
+   40.96,
+   42.86
+  ],
+  [
+   43.37,
+   47.84
+  ],
+  [
+   48.75,
+   53.55
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "hook.mp4",
+   "xfade": 0,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "ten.mp4",
+   "xfade": 0,
+   "flash": true
+  },
+  {
+   "line": 1,
+   "at": "abs:7.3",
+   "src": "sign_size.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "ai7_fix.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.1
+   ],
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "xfade": 0.12,
+   "ai": true
+  },
+  {
+   "line": 2,
+   "at": "word:gate@-0.1",
+   "src": "ai7_fix.png",
+   "move": "in",
+   "z": [
+    1.35,
+    1.5
+   ],
+   "focus": [
+    0.5,
+    0.2
+   ],
+   "xfade": 0.12,
+   "ai": true,
+   "label": "DHOLAVIRA \u00b7 KUTCH, GUJARAT",
+   "label_y": 300,
+   "label_dur": 2.2
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "board_fall.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "signs_lit.mp4",
+   "xfade": 0,
+   "glint": {
+    "dur": 0.8
+   }
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "ai9_fix.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.15
+   ],
+   "focus": [
+    0.5,
+    0.48
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "black.png",
+   "xfade": 0,
+   "shake": true,
+   "headline": "NOBODY KNOWS.",
+   "headline_size": 130,
+   "headline_y": 0.48,
+   "headline_delay": 0.0,
+   "headline_accent": [
+    "NOBODY"
+   ]
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "count_4000.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 7,
+   "at": "word:but@-0.1",
+   "src": "five.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "rosetta_stone.jpg",
+   "fit": "fit",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "xfade": 0.12,
+   "label": "REAL: ROSETTA STONE \u00b7 BRITISH MUSEUM",
+   "label_y": 300,
+   "label_dur": 2.6
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "ai5.png",
+   "move": "in",
+   "z": [
+    1.05,
+    1.18
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.15,
+   "ai": true
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "prize.mp4",
+   "xfade": 0.1,
+   "flash": true
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "ai8_fix.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.15
+   ],
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": "word:them@0.45",
+   "src": "ending.mp4",
+   "xfade": 0.3
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "hit_big",
+   "db": -12
+  },
+  {
+   "line": 0,
+   "at": "abs:0.05",
+   "name": "dirt_brush",
+   "db": -13
+  },
+  {
+   "line": 0,
+   "at": "word:strange",
+   "name": "tom",
+   "db": -14
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -12
+  },
+  {
+   "line": 1,
+   "at": "word:ruler",
+   "name": "stone_tap",
+   "db": -13
+  },
+  {
+   "line": 2,
+   "at": "word:dholavira",
+   "name": "braam",
+   "db": -14
+  },
+  {
+   "line": 3,
+   "at": "abs:17.95",
+   "name": "hit_big",
+   "db": -11
+  },
+  {
+   "line": 3,
+   "at": "word:order",
+   "name": "stone_tap",
+   "db": -13
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "name": "rise",
+   "db": -13
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "name": "heartbeat_phone",
+   "db": -12
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "name": "hit_big",
+   "db": -12
+  },
+  {
+   "line": 6,
+   "at": "end:0.08",
+   "name": "braam",
+   "db": -12
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "name": "paper",
+   "db": -14
+  },
+  {
+   "line": 7,
+   "at": "word:but@-0.1",
+   "name": "stone_tap",
+   "db": -13
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -12
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "name": "taiko",
+   "db": -11
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "name": "rise",
+   "db": -16,
+   "anchor": "end"
+  },
+  {
+   "line": 11,
+   "at": "word:them@0.45",
+   "name": "hit_big",
+   "db": -11
+  },
+  {
+   "line": 11,
+   "at": "word:them@2.35",
+   "name": "braam",
+   "db": -9
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/leberch-documentary-517370.mp3",
+   "align_src": 32.45,
+   "align_line": 6,
+   "align_at": "end:0.08",
+   "gap_db": 3.5,
+   "fade_in": 0.2
+  }
+ ],
+ "music_env": [
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   4,
+   0,
+   0
+  ],
+  [
+   4,
+   "end:0.2",
+   -4
+  ],
+  [
+   5,
+   0,
+   -11
+  ],
+  [
+   6,
+   "end:0",
+   -8
+  ],
+  [
+   6,
+   "end:0.08",
+   1
+  ],
+  [
+   7,
+   0,
+   -1
+  ],
+  [
+   10,
+   0,
+   0
+  ],
+  [
+   11,
+   0,
+   -5
+  ],
+  [
+   11,
+   "word:them@0.45",
+   1
+  ]
+ ]
+}

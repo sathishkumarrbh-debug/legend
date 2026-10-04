@@ -73,7 +73,7 @@ def clip_size(out="images/sign_size.mp4", dur=4.8):
         d = ImageDraw.Draw(im)
         # height marker beside the sign = 37 cm; ruler = 30 cm
         if t > 1.0:
-            a = int(255 * fx.ease((t - 1.0) / 0.4)); top, bot = y0, y0 + p.height; xm = x0 + p.width + 70
+            a = int(255 * fx.ease((t - 1.0) / 0.4)); top, bot = y0, y0 + p.height; xm = x0 + p.width + 50
             d.line([(xm, top), (xm, bot)], fill=fx.GOLD + (a,), width=6)
             for yy in (top, bot): d.line([(xm - 22, yy), (xm + 22, yy)], fill=fx.GOLD + (a,), width=6)
             fx.outlined(d, (xm + 30, (top + bot) // 2), "37 CM", fx.font(fx.F_BIG, 70), fx.GOLD + (a,), anchor="lm", stroke=4)
@@ -84,7 +84,7 @@ def clip_size(out="images/sign_size.mp4", dur=4.8):
             for i in range(31):
                 yy = ry + rh - int(rh * i / 30); L = 26 if i % 10 == 0 else (16 if i % 5 == 0 else 9)
                 d.line([(xr - 34, yy), (xr - 34 + L, yy)], fill=(50, 35, 10, int(255 * k2)), width=2)
-            fx.outlined(d, (xr - 60, ry - 44), "RULER 30 CM", fx.font(fx.F_BIG, 46), fx.WHITE + (int(255 * k2),), stroke=3)
+            fx.outlined(d, (xr - 40, ry + rh + 50), "RULER 30 CM", fx.font(fx.F_BIG, 46), fx.WHITE + (int(255 * k2),), stroke=3)
         return vignette(im)
     fx.write_mp4(frame, dur, out)
 

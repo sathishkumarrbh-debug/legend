@@ -98,6 +98,23 @@ Final narration:
 Huge planned cities… but no palace, no royal tomb, no statue of a conqueror. Who was in charge? 👑❓
 Comment "PART 4" 👇
 
-## Edit progress
+## Description
+In 1991, archaeologists at Dholavira (Kutch, Gujarat) found ten large signs lying in the ground near the city's north gate. They were once set on a wooden board, which fell face down and rotted away, leaving the signs in order. It may be the oldest signboard ever found. More than 4,000 Indus inscriptions are known, most only 4 or 5 signs long, with no translation key, and no one can read them yet.
+
+Indus Files #3. Part 1: how the British ran trains over Harappa. Part 2: an Indus seal dug up in Iraq. Next: the giant civilisation with no king?
+
+Sources: harappa.com, "Dholavira and its mysterious sign board" (R.S. Bisht excavation, ASI); I. Mahadevan, The Indus Script (1977); Rao et al., on the statistics of the Indus script; Indus script decipherment prize announced January 2025.
+Images: drawing of the ten signs by Siyajkak (CC BY-SA 3.0, Wikimedia Commons), used to build the signs shown in every shot; Rosetta Stone, British Museum, by Hans Hillewaert (CC BY-SA 4.0).
+AI images: artist's impressions (symbols replaced with the real ten signs). Voice: ElevenLabs. Music: "Documentary" by Leberch (Pixabay 517370).
+#IndusValley #Dholavira #IndusScript #AncientIndia #Archaeology #Shorts
+
+## Edit notes (final v5, 58.1 s)
+- Voice take B ("prize" clear; take A sounded like "price"); tighten2 0.66/0.2/0.6 with holds before "Nobody knows" (0.95 s) and the last line (0.9 s). Whispered "So... what did it say?" lifted 7 dB.
+- Reverb tails (synthetic hall, 250 Hz–5 kHz) on "oldest signboard", "what did it say?", "Nobody knows" (+ short slap echo) and the last line (light; a heavier echo made "read them" unclear).
+- Music: Leberch "Documentary"; its 32.45 s hit lands right after "Nobody knows"; dipped -11 dB under the whisper.
+- AI images invented wrong symbols: replaced in code with the real ten signs (patch.py: inpaint/clone fill + perspective placement). Used ai1 (hook), ai7/ai8 (gates), ai9 ("what did it say"); ai0/ai3/ai10 not used.
+- Loudness -14.3 LUFS; every line verified with Whisper on the final mix.
+
+## Edit progress (earlier)
 - Code-built (indus/ep03/edit/board.py, from the real ten-sign drawing via signs.py): sign_size.mp4 (one sign vs a 30 cm ruler, line 2), board_fall.mp4 (board on the gate, falls face down, wood fades, signs stay in order, lines 3-4; pass bg_image=AI-2 when it arrives), signs_lit.mp4 (ten signs light up one by one + "MAYBE THE OLDEST SIGNBOARD EVER FOUND", line 5).
 - Waiting for: 6 AI images + 2 voice takes in Drive folder `indus_ep03`.
