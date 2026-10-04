@@ -173,3 +173,73 @@ if __name__ == "__main__":
     if "size" in which: clip_size()
     if "board" in which: clip_board()
     if "lit" in which: clip_lit()
+
+# ---------------------------------------------------------------- 2b. faster fall: impact flash, dust burst, wood crumbles, glint sweeps the signs in order
+def clip_board2(out="images/board_fall.mp4", bg_image=None, dur=7.6, t_fall=1.0, t_sweep=3.45, fall=0.35):
+    board, pcs = make_board()
+    s = (W - 40) / board.width; board = board.resize((int(board.width * s), int(board.height * s)), Image.LANCZOS)
+    bg = fx.cover(Image.open(bg_image).convert("RGB")) if bg_image else gate_bg()
+    by = int(H * 0.40); s2 = (W - 140) / board.width * s     # lying row a little narrower so the push-in never crops it
+    floor = dirt(W, H, 33).convert("RGBA"); x = 70 + int(34 * s2); cy = int(H * 0.5); spots = []
+    pcs2 = [p.resize((int(p.width * s2), int(p.height * s2)), Image.LANCZOS) for p in pcs]
+    for q in pcs2:
+        shadowed(floor, q, (x, cy - q.height // 2), (2, 4), 3, 150); spots.append((x, cy - q.height // 2, q)); x += q.width + int(16 * s2)
+    bw = W - 140; bh = int(board.height * (W - 140) / board.width); bx = 70
+    back = wood(bw, bh, 8).convert("RGBA"); n_ch = 7; cw = bw // n_ch
+    r = np.random.default_rng(12); delays = r.uniform(0.75, 1.9, n_ch)
+    P = 340; px = r.uniform(bx, bx + bw, P); py = cy + r.normal(0, bh * 0.3, P); vx = r.normal(0, 260, P); vy = -np.abs(r.normal(260, 180, P))
+    ps = r.uniform(2, 8, P); pl = r.uniform(0.8, 1.9, P)
+    crumbs = [(r.uniform(bx + i * cw, bx + (i + 1) * cw, 40), r.uniform(cy - bh / 2, cy + bh / 2, 40)) for i in range(n_ch)]
+    def cam(im, z, sh=0, dx=0):
+        im = im.resize((int(W * z), int(H * z)), Image.LANCZOS); x0 = (im.width - W) // 2 + dx; y0 = (im.height - H) // 2 + sh
+        return im.crop((x0, y0, x0 + W, y0 + H))
+    def frame(t):
+        if t < t_fall:  # board on the gate, quick push in
+            im = cam(bg.convert("RGBA"), 1 + 0.12 * fx.ease(t / t_fall)); shadowed(im, board, ((W - board.width) // 2, by), (8, 16), 12, 190)
+            return vignette(im, 0.6)
+        u = t - t_fall
+        if u < fall:  # tipping toward the camera
+            k = (u / fall) ** 2; im = cam(bg.convert("RGBA"), 1.12 + 0.1 * k)
+            hh = int(board.height * (1 + 9 * k)); bb = board.resize((board.width, hh)).point(lambda v: int(v * (1 - 0.85 * k)))
+            im.alpha_composite(bb, ((W - board.width) // 2, by + board.height - hh // 2)); return vignette(im, 0.6)
+        v = u - fall; im = floor.copy()
+        for i in range(n_ch):  # wood back crumbles chunk by chunk
+            a = 1 - fx.ease((v - delays[i]) / 0.55)
+            if a > 0:
+                ch = back.crop((i * cw, 0, (i + 1) * cw, bh)); sink = int(10 * (1 - a))
+                ch.putalpha(int(255 * a)); im.alpha_composite(ch, (bx + i * cw, cy - bh // 2 + sink))
+            if 0 < v - delays[i] < 1.0:  # crumbs falling off that chunk
+                lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay); w_ = v - delays[i]; xs, ys = crumbs[i]
+                for xx, yy in zip(xs, ys):
+                    al = int(200 * (1 - w_)); d.ellipse([xx - 3, yy + 120 * w_ * w_ - 2, xx + 3, yy + 120 * w_ * w_ + 2], fill=(70, 45, 22, al))
+                im.alpha_composite(lay)
+        if t > t_sweep:  # gold glint runs across the ten signs, in order
+            gl = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            for i, (x0, y0, q) in enumerate(spots):
+                k = (t - t_sweep - i * 0.16) / 0.45
+                if 0 < k < 2.5:
+                    a = math.sin(min(k, 1) * math.pi / 2) * (1 - max(0, k - 1) / 1.5)
+                    g = Image.new("RGBA", q.size, fx.GOLD + (0,)); g.putalpha(q.getchannel("A").point(lambda v_: int(v_ * a)))
+                    gl.alpha_composite(g, (x0, y0))
+            im = Image.alpha_composite(im, gl.filter(ImageFilter.GaussianBlur(10))); im = Image.alpha_composite(im, gl.point(lambda v_: v_ * 2 // 3))
+        if v < 2.0:  # dust burst from the impact
+            lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+            for j in range(P):
+                if v < pl[j]:
+                    k = v / pl[j]; xx = px[j] + vx[j] * v; yy = py[j] + vy[j] * v + 300 * v * v; rr = ps[j] * (1 + 2 * k)
+                    d.ellipse([xx - rr, yy - rr, xx + rr, yy + rr], fill=(190, 160, 120, int(150 * (1 - k))))
+            im.alpha_composite(lay.filter(ImageFilter.GaussianBlur(1.5)))
+        sh = int(34 * math.exp(-v * 5) * math.sin(v * 55))
+        # camera: close on the impact, then track the glint along the row, then pull back to all ten on "in order"
+        c_first = spots[0][0] + spots[0][2].width / 2; c_last = spots[-1][0] + spots[-1][2].width / 2
+        t1, t2, t3 = t_sweep - 0.35, t_sweep + 0.16 * 9 + 0.35, t_sweep + 0.16 * 9 + 0.95
+        if t < t1: z = 1.5 - 0.15 * fx.ease(v / 1.5); cx = W / 2
+        elif t < t2:
+            k = fx.ease((t - t1) / 0.35); z = 1.35 + (2.1 - 1.35) * k
+            cx = W / 2 + (c_first - W / 2) * k + (c_last - c_first) * max(0, min(1, (t - t1 - 0.2) / (t2 - t1 - 0.4)))
+        else: k = fx.ease((t - t2) / (t3 - t2)); z = 2.1 + (1.0 - 2.1) * k; cx = c_last + (W / 2 - c_last) * k
+        im = im.resize((int(W * z), int(H * z)), Image.LANCZOS); x0 = int(min(max(cx * z - W / 2, 0), im.width - W)); y0 = (im.height - H) // 2 + sh
+        im = im.crop((x0, y0, x0 + W, y0 + H))
+        if v < 0.25: im = Image.blend(im.convert("RGB"), Image.new("RGB", (W, H), (255, 236, 200)), 0.75 * (1 - v / 0.25))
+        return vignette(im, 0.5)
+    fx.write_mp4(frame, dur, out)

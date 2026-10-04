@@ -14,15 +14,14 @@ def echo(x, delay, gains):
     y = np.zeros(x.size + int(delay * SR * len(gains)), np.float32)
     for k, g in enumerate(gains, 1): y[int(delay * SR * k):int(delay * SR * k) + x.size] += x * g
     return y
-g_ = np.ones_like(a); s0, s1 = int(26.70 * SR), int(28.50 * SR); f = int(0.05 * SR)
-g_[s0:s1] = 10 ** (7 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (7 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (7 / 20), 1, f); s0, s1 = int(48.60 * SR), int(53.75 * SR); g_[s0:s1] = 10 ** (10 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (10 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (10 / 20), 1, f)   # lift the soft last line
+g_ = np.ones_like(a); s0, s1 = int(26.55 * SR), int(28.10 * SR); f = int(0.05 * SR)
+g_[s0:s1] = 10 ** (11 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (11 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (11 / 20), 1, f); s0, s1 = int(47.62 * SR), int(52.75 * SR); g_[s0:s1] = 10 ** (10 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (10 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (10 / 20), 1, f)   # lift the soft last line
 s0, s1 = int(23.20 * SR), int(26.45 * SR); g_[s0:s1] = 10 ** (5 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (5 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (5 / 20), 1, f)   # lift 'oldest signboard'
 a = a * g_   # lift the whisper
 out = np.concatenate([a, np.zeros(3 * SR, np.float32)])
 # (start, end, wet gain, decay, echo)
 fx = [
-      (26.75, 28.45, 0.16, 0.45, None),        # So... what did it say?
-      (29.30, 30.30, 0.17, 0.60, (0.26, [0.20, 0.09, 0.04])),   # Nobody knows.  (hall + slap echo)
+      (28.32, 29.32, 0.17, 0.55, (0.24, [0.20, 0.09, 0.04])),   # Nobody knows.  (hall + slap echo)
       ]
 for s, e, g, d, ec in fx:
     seg = a[int(s * SR):int(e * SR)].copy(); f = int(0.02 * SR); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)

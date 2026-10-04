@@ -9,7 +9,7 @@ if "ten" in todo: B.clip_lit(I + "ten.mp4", dur=4.5, text=())
 if "size" in todo: B.clip_size(I + "sign_size.mp4", dur=5.0)
 if "fall" in todo:
     bg = ImageEnhance.Brightness(fx.cover(Image.open(I + "ai7_fix.png").convert("RGB")).filter(ImageFilter.GaussianBlur(10))).enhance(0.55)
-    bg.save(I + "ai2_soft.png"); B.clip_board(I + "board_fall.mp4", bg_image=I + "ai2_soft.png", dur=7.5, t_fall=1.15)
+    bg.save(I + "ai2_soft.png"); B.clip_board2(I + "board_fall.mp4", bg_image=I + "ai2_soft.png", dur=7.6, t_fall=1.0, t_sweep=3.45)
 if "lit" in todo: B.clip_lit(I + "signs_lit.mp4", dur=4.5, text=())
 if "black" in todo: Image.new("RGB", (1080, 1920), (6, 5, 4)).save(I + "black.png")
 if "count" in todo: fx.counter(I + "ai4.png", I + "count_4000.mp4", 4000, top="WE HAVE FOUND", unit="PIECES OF WRITING", prefix="", suffix="+", window=(0.1, 1.5), dur=7)
@@ -25,4 +25,4 @@ if "five" in todo:
 if "prize" in todo: fx.counter(I + "ai8_fix.png", I + "prize.mp4", 1000000, top="A PRIZE OF", unit="TO READ IT", prefix="$", suffix="", window=(0.3, 1.8), dur=7, bar=False)
 if "ending" in todo:
     im6 = Image.open(I + "ai8_fix.png").convert("RGB"); sh = 330; c = Image.new("RGB", im6.size); c.paste(im6.crop((0, sh, im6.width, im6.height)), (0, 0)); c.paste(im6.crop((0, im6.height - sh, im6.width, im6.height)).transpose(Image.FLIP_TOP_BOTTOM), (0, im6.height - sh)); c.save(I + "ai6_end.png")
-    fx.ending(I + "ai6_end.png", I + "ending.mp4", ["IF WE CAN'T", "READ THEM…"], ["WHO", "RULED THEM?"], "INDUS FILES  #4", q_at=1.9, dur=6.0)
+    fx.ending(I + "ai6_end.png", I + "ending.mp4", ["IF WE CAN'T", "READ THEM…"], ["WHO", "RULED THEM?"], "INDUS FILES  #4", q_at=1.0, dur=4.8)
