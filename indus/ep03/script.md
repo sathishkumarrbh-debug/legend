@@ -108,7 +108,8 @@ Images: drawing of the ten signs by Siyajkak (CC BY-SA 3.0, Wikimedia Commons), 
 AI images: artist's impressions (symbols replaced with the real ten signs). Voice: ElevenLabs. Music: "Documentary" by Leberch (Pixabay 517370).
 #IndusValley #Dholavira #IndusScript #AncientIndia #Archaeology #Shorts
 
-## Edit notes (final v5, 58.1 s)
+## Edit notes (final v6, 58.1 s)
+- v6 (Legend: 0:24 and the last line too low and messy): both lines now dry (no reverb), rise SFX removed, voice lifted (+5 dB oldest, +10 dB last line, before the compressor), music -10 dB under the last line. Reverb kept only on "what did it say?" and "Nobody knows". Lesson: soft [awed]/[softly] ElevenLabs lines need lifting, and reverb on soft lines sounds muddy on a phone.
 - Voice take B ("prize" clear; take A sounded like "price"); tighten2 0.66/0.2/0.6 with holds before "Nobody knows" (0.95 s) and the last line (0.9 s). Whispered "So... what did it say?" lifted 7 dB.
 - Reverb tails (synthetic hall, 250 Hz–5 kHz) on "oldest signboard", "what did it say?", "Nobody knows" (+ short slap echo) and the last line (light; a heavier echo made "read them" unclear).
 - Music: Leberch "Documentary"; its 32.45 s hit lands right after "Nobody knows"; dipped -11 dB under the whisper.

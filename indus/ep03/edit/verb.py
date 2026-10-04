@@ -15,19 +15,20 @@ def echo(x, delay, gains):
     for k, g in enumerate(gains, 1): y[int(delay * SR * k):int(delay * SR * k) + x.size] += x * g
     return y
 g_ = np.ones_like(a); s0, s1 = int(26.70 * SR), int(28.50 * SR); f = int(0.05 * SR)
-g_[s0:s1] = 10 ** (7 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (7 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (7 / 20), 1, f); a = a * g_   # lift the whisper
+g_[s0:s1] = 10 ** (7 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (7 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (7 / 20), 1, f); s0, s1 = int(48.60 * SR), int(53.75 * SR); g_[s0:s1] = 10 ** (10 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (10 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (10 / 20), 1, f)   # lift the soft last line
+s0, s1 = int(23.20 * SR), int(26.45 * SR); g_[s0:s1] = 10 ** (5 / 20); g_[s0 - f:s0] = np.linspace(1, 10 ** (5 / 20), f); g_[s1:s1 + f] = np.linspace(10 ** (5 / 20), 1, f)   # lift 'oldest signboard'
+a = a * g_   # lift the whisper
 out = np.concatenate([a, np.zeros(3 * SR, np.float32)])
 # (start, end, wet gain, decay, echo)
-fx = [(23.25, 26.40, 0.22, 0.35, None),        # It may be the oldest signboard ever found
+fx = [
       (26.75, 28.45, 0.16, 0.45, None),        # So... what did it say?
       (29.30, 30.30, 0.17, 0.60, (0.26, [0.20, 0.09, 0.04])),   # Nobody knows.  (hall + slap echo)
-      (48.70, 53.65, 0.12, 0.65, None),        # Ten signs ... no one alive can read them.
       ]
 for s, e, g, d, ec in fx:
     seg = a[int(s * SR):int(e * SR)].copy(); f = int(0.02 * SR); seg[:f] *= np.linspace(0, 1, f); seg[-f:] *= np.linspace(1, 0, f)
     if g: w = fftconvolve(seg, ir(d)) * g * 6.0; out[int(s * SR):int(s * SR) + w.size] += w[:out.size - int(s * SR)]
     if ec: w = echo(_bp(seg, 250, 9000).astype(np.float32), *ec); out[int(s * SR):int(s * SR) + w.size] += w[:out.size - int(s * SR)]
-out = out[:a.size + int(1.0 * SR)]; pk = np.abs(out).max(); out = out / max(pk, 1) * 0.97 if pk > 0.97 else out
+out = out[:a.size + int(1.0 * SR)]; print('peak', round(float(np.abs(out).max()), 3)); pk = np.abs(out).max(); out = out / max(pk, 1) * 0.97 if pk > 0.97 else out
 with wave.open("voice_in.wav", "wb") as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((out * 32767).astype(np.int16).tobytes())
 def rms(x): return 20 * np.log10(np.sqrt((x ** 2).mean()) + 1e-9)
 for s, e, *_ in fx[:0]:
