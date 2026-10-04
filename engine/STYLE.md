@@ -71,3 +71,8 @@ Viewer request (Iron Pillar comments): "Damascus sword" -> make the Wootz steel 
 - Ties the channel best (Iron Pillar 61%) and beats Kuyili (43.8%) by 18 points. Like rate 3.7% is healthy; comments are weak (1).
 - Keep: aggressive code-built hook, word-anchored animations, cliffhanger ending.
 - Next: get comments with a debate question in the pinned comment and in replies, not in the video ending (the ending stays the Part 2 cliffhanger). Post Part 2 within about 48 h while the topic is fresh.
+
+## Indus Files #2 (first 4 h): hook fine, middle leaked
+Stayed to watch 66.8% but AVD 0:25 of 0:55 (46%) vs Part 1 AVD 0:54 of 0:57.
+Cause: 0:10-0:25 stacked three unfamiliar names + a date (Sargon, Akkad, Meluhha, 2300 BC) and a list of facts with no question; the best twist (the interpreter) came at 0:30.
+Rules: one thread; at most one new proper noun per 10 s; first twist by about 0:20, second by 0:25; replace fact lists with a relatable analogy ("learning English from car number plates"); talk to "you".

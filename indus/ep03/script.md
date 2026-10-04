@@ -18,6 +18,26 @@ Channel: Jambudvipa Files. Target 52 to 56 s. Voice: Yash (prompts.md).
 | 12 | Today, there's a one-million-dollar prize for anyone who cracks it. | fx.counter $1,000,000 | taiko |
 | 13 | Ten letters at the gate of a great city… and no one alive can read them. | AI-6 gate at night, signs glowing → fx.ending: **IF WE CAN'T READ THEM…** → **WHO RULED THEM?** · INDUS FILES #4 | braam |
 
+## Revision 2 (after Part 2 retention: 66.8% stayed, AVD 46%, drop around 0:10-0:25)
+Lesson: Part 2 stacked unfamiliar names (Sargon, Akkad, Meluhha) and facts with no tension; its twist came at 0:30, after the average viewer left.
+Rules now: one simple thread; at most one new proper noun per 10 s; twist at about 0:20, second twist about 0:25, third about 0:40; relatable analogy instead of fact lists; "you" framing.
+
+Final narration:
+1. In 1991, archaeologists in Gujarat found ten giant letters lying in the dirt.
+2. Each one longer than a school ruler.  (37 cm > 30 cm ruler)
+3. They were once fixed on a wooden board at the gate of a great city: Dholavira.
+4. One day the board fell face down. The wood rotted… but the letters stayed in the ground, in perfect order.
+5. It may be the oldest signboard ever found.
+6. So what does it say?
+7. Nobody knows.
+8. Not one word. Not even the city's real name.  ("Dholavira" is the modern village name)
+9. Here's the problem. Imagine learning English using only car number plates.  (code-built grid of plates with real Indus signs)
+10. That's what experts have: over four thousand Indus writings, most just five signs long.
+11. No bilingual stone like Egypt's Rosetta Stone. Not one king's name to start from.
+12. It's so hard, there's now a one-million-dollar prize for whoever cracks it.
+13. Ten letters at the gate of a great city… and no one alive can read them.
+(The table above is the first draft; this revision replaces its narration. The right-to-left fact was dropped to avoid a fact list.)
+
 ## Fact check
 | Claim | Status | Source |
 |---|---|---|

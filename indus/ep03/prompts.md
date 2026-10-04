@@ -30,19 +30,19 @@ Voice: Yash – Mystery Documentary Narrator · Model: Eleven v3
 Settings: Stability 40% · Similarity 75% · Style 35% · Speaker boost ON · Speed 1.05
 Generate once (2 takes).
 
-TEXT:
+TEXT (revision 2):
 [curious] In nineteen ninety-one, archaeologists in Gujarat found ten giant letters lying in the dirt.
-Each one about thirty-seven centimetres tall, cut from white gypsum.
-[mysterious] Once, they were set into a wooden board... near the gate of a great city: Dholavira.
-[serious] Then the board fell face down. The wood rotted away. But the letters stayed in the ground, in order.
+Each one longer than a school ruler.
+[mysterious] They were once fixed on a wooden board at the gate of a great city: Dholavira.
+[serious] One day the board fell face down. The wood rotted... but the letters stayed in the ground, in perfect order.
 [awed] It may be the oldest signboard ever found.
 [whispering] So what does it say?
 [long pause] Nobody knows.
-[thoughtful] We have over four thousand Indus inscriptions. But most are only about five signs long.
-There's no bilingual stone to crack them, like Egypt's Rosetta Stone.
-[tense] We don't know their language. We don't know a single king's name.
-[curious] We know just one thing: they wrote from right to left.
-[dramatic] Today, there's a one-million-dollar prize for anyone who cracks it.
+[tense] Not one word. Not even the city's real name.
+[curious] Here's the problem. Imagine learning English using only car number plates.
+That's what experts have: over four thousand Indus writings, most just five signs long.
+[thoughtful] No bilingual stone like Egypt's Rosetta Stone. Not one king's name to start from.
+[dramatic] It's so hard, there's now a one-million-dollar prize for whoever cracks it.
 [long pause] [softly] Ten letters at the gate of a great city... and no one alive can read them.
 
 ## C. Upload to Drive folder `indus_ep03`: 1.png … 6.png + both voice takes (and any music you want, under 5 MB).
