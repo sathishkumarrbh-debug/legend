@@ -18,7 +18,24 @@ Channel: Jambudvipa Files. Target 52 to 56 s. Voice: Yash (prompts.md).
 | 12 | Today, there's a one-million-dollar prize for anyone who cracks it. | fx.counter $1,000,000 | taiko |
 | 13 | Ten letters at the gate of a great city… and no one alive can read them. | AI-6 gate at night, signs glowing → fx.ending: **IF WE CAN'T READ THEM…** → **WHO RULED THEM?** · INDUS FILES #4 | braam |
 
-## Revision 2 (after Part 2 retention: 66.8% stayed, AVD 46%, drop around 0:10-0:25)
+## Revision 3 (FINAL, simple): Legend found revision 2 hard to follow
+Rule: short sentences, everyday words, one idea per line; no jargon (gypsum, bilingual, Rosetta), no clever analogies; place names as on-screen text.
+1. In 1991, in Gujarat, archaeologists found something strange in the dirt.
+2. Ten huge letters. Each one bigger than a school ruler.
+3. Four thousand years ago, they were fixed on a wooden board, at the gate of a great city.
+4. A signboard. Maybe the oldest in the world.
+5. One day the board fell. The wood rotted away. But the letters stayed exactly where they fell.
+6. So… what does it say?
+7. Nobody knows.
+8. Not a single word.
+9. We have found more than four thousand pieces of their writing.
+10. But each one is tiny. Just four or five letters.
+11. Too short to understand. And there's no translation anywhere.
+12. That's why there's a one-million-dollar prize for anyone who can read it.
+13. A sign at the gate of a great city… and no one alive can read it.
+On-screen: "DHOLAVIRA, GUJARAT" label on line 3; "4,000+ WRITINGS" / "≈5 SIGNS EACH" counters on 9-10; "$1,000,000" counter on 12.
+
+## Revision 2 (superseded; after Part 2 retention: 66.8% stayed, AVD 46%, drop around 0:10-0:25)
 Lesson: Part 2 stacked unfamiliar names (Sargon, Akkad, Meluhha) and facts with no tension; its twist came at 0:30, after the average viewer left.
 Rules now: one simple thread; at most one new proper noun per 10 s; twist at about 0:20, second twist about 0:25, third about 0:40; relatable analogy instead of fact lists; "you" framing.
 

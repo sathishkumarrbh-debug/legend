@@ -30,19 +30,19 @@ Voice: Yash – Mystery Documentary Narrator · Model: Eleven v3
 Settings: Stability 40% · Similarity 75% · Style 35% · Speaker boost ON · Speed 1.05
 Generate once (2 takes).
 
-TEXT (revision 2):
-[curious] In nineteen ninety-one, archaeologists in Gujarat found ten giant letters lying in the dirt.
-Each one longer than a school ruler.
-[mysterious] They were once fixed on a wooden board at the gate of a great city: Dholavira.
-[serious] One day the board fell face down. The wood rotted... but the letters stayed in the ground, in perfect order.
-[awed] It may be the oldest signboard ever found.
-[whispering] So what does it say?
+TEXT (revision 3, final):
+[curious] In nineteen ninety-one, in Gujarat, archaeologists found something strange in the dirt.
+[mysterious] Ten huge letters. Each one bigger than a school ruler.
+Four thousand years ago, they were fixed on a wooden board, at the gate of a great city.
+[awed] A signboard. Maybe the oldest in the world.
+[serious] One day the board fell. The wood rotted away. But the letters stayed exactly where they fell.
+[whispering] So... what does it say?
 [long pause] Nobody knows.
-[tense] Not one word. Not even the city's real name.
-[curious] Here's the problem. Imagine learning English using only car number plates.
-That's what experts have: over four thousand Indus writings, most just five signs long.
-[thoughtful] No bilingual stone like Egypt's Rosetta Stone. Not one king's name to start from.
-[dramatic] It's so hard, there's now a one-million-dollar prize for whoever cracks it.
-[long pause] [softly] Ten letters at the gate of a great city... and no one alive can read them.
+[tense] Not a single word.
+[thoughtful] We have found more than four thousand pieces of their writing.
+But each one is tiny. Just four or five letters.
+Too short to understand. And there's no translation anywhere.
+[dramatic] That's why there's a one-million-dollar prize for anyone who can read it.
+[long pause] [softly] A sign at the gate of a great city... and no one alive can read it.
 
 ## C. Upload to Drive folder `indus_ep03`: 1.png … 6.png + both voice takes (and any music you want, under 5 MB).

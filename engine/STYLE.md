@@ -76,3 +76,4 @@ Viewer request (Iron Pillar comments): "Damascus sword" -> make the Wootz steel 
 Stayed to watch 66.8% but AVD 0:25 of 0:55 (46%) vs Part 1 AVD 0:54 of 0:57.
 Cause: 0:10-0:25 stacked three unfamiliar names + a date (Sargon, Akkad, Meluhha, 2300 BC) and a list of facts with no question; the best twist (the interpreter) came at 0:30.
 Rules: one thread; at most one new proper noun per 10 s; first twist by about 0:20, second by 0:25; replace fact lists with a relatable analogy ("learning English from car number plates"); talk to "you".
+- Legend (Part 3): clever analogies and jargon (bilingual, Rosetta, number plates) made the script HARDER. Write like telling a friend: short sentences, everyday words, one idea per line; names go on screen, not in the voice.
