@@ -97,3 +97,7 @@ Final narration:
 🔓 Indus Files #4: "The Giant Civilisation With No King?"
 Huge planned cities… but no palace, no royal tomb, no statue of a conqueror. Who was in charge? 👑❓
 Comment "PART 4" 👇
+
+## Edit progress
+- Code-built (indus/ep03/edit/board.py, from the real ten-sign drawing via signs.py): sign_size.mp4 (one sign vs a 30 cm ruler, line 2), board_fall.mp4 (board on the gate, falls face down, wood fades, signs stay in order, lines 3-4; pass bg_image=AI-2 when it arrives), signs_lit.mp4 (ten signs light up one by one + "MAYBE THE OLDEST SIGNBOARD EVER FOUND", line 5).
+- Waiting for: 6 AI images + 2 voice takes in Drive folder `indus_ep03`.
