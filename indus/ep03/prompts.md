@@ -30,19 +30,18 @@ Voice: Yash – Mystery Documentary Narrator · Model: Eleven v3
 Settings: Stability 40% · Similarity 75% · Style 35% · Speaker boost ON · Speed 1.05
 Generate once (2 takes).
 
-TEXT (revision 3, final):
-[curious] In nineteen ninety-one, in Gujarat, archaeologists found something strange in the dirt.
-[mysterious] Ten huge letters. Each one bigger than a school ruler.
-Four thousand years ago, they were fixed on a wooden board, at the gate of a great city.
-[awed] A signboard. Maybe the oldest in the world.
-[serious] One day the board fell. The wood rotted away. But the letters stayed exactly where they fell.
-[whispering] So... what does it say?
+TEXT (revision 4, final):
+[curious] In nineteen ninety-one, archaeologists in Gujarat found something strange in the dirt.
+[dramatic] Ten huge signs. Each one bigger than a school ruler.
+[mysterious] Four thousand years ago, they were fixed on a wooden board... at the gate of a city called Dholavira.
+[serious] Then the board fell face down. The wood rotted away... but the signs stayed in the ground, in order.
+[awed] It may be the oldest signboard ever found.
+[whispering] So... what did it say?
 [long pause] Nobody knows.
-[tense] Not a single word.
-[thoughtful] We have found more than four thousand pieces of their writing.
-But each one is tiny. Just four or five letters.
-Too short to understand. And there's no translation anywhere.
-[dramatic] That's why there's a one-million-dollar prize for anyone who can read it.
-[long pause] [softly] A sign at the gate of a great city... and no one alive can read it.
+[thoughtful] We have found more than four thousand pieces of Indus writing. But most are only four or five signs long.
+[tense] And there's no translation key, like Egypt's Rosetta Stone.
+[curious] We don't even know what language they spoke.
+[dramatic] That's why there's now a one-million-dollar prize for anyone who can read it.
+[long pause] [softly] Ten signs at the gate of a great city... and no one alive can read them.
 
 ## C. Upload to Drive folder `indus_ep03`: 1.png … 6.png + both voice takes (and any music you want, under 5 MB).

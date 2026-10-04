@@ -18,7 +18,24 @@ Channel: Jambudvipa Files. Target 52 to 56 s. Voice: Yash (prompts.md).
 | 12 | Today, there's a one-million-dollar prize for anyone who cracks it. | fx.counter $1,000,000 | taiko |
 | 13 | Ten letters at the gate of a great city… and no one alive can read them. | AI-6 gate at night, signs glowing → fx.ending: **IF WE CAN'T READ THEM…** → **WHO RULED THEM?** · INDUS FILES #4 | braam |
 
-## Revision 3 (FINAL, simple): Legend found revision 2 hard to follow
+## Revision 4 (FINAL): revision 3 + external AI review (accuracy fixes, plain words kept)
+1. In 1991, archaeologists in Gujarat found something strange in the dirt.
+2. Ten huge signs. Each one bigger than a school ruler.
+3. Four thousand years ago, they were fixed on a wooden board… at the gate of a city called Dholavira.
+4. Then the board fell face down. The wood rotted away… but the signs stayed in the ground, in order.
+5. It may be the oldest signboard ever found.
+6. So… what did it say?
+7. Nobody knows.
+8. We have found more than four thousand pieces of Indus writing. But most are only four or five signs long.
+9. And there's no translation key, like Egypt's Rosetta Stone.  (REAL Rosetta Stone photo)
+10. We don't even know what language they spoke.
+11. That's why there's now a one-million-dollar prize for anyone who can read it.
+12. Ten signs at the gate of a great city… and no one alive can read them.
+Taken from review: "signs" not "letters"; "in order" (not "exactly where they fell"); "may be the oldest signboard ever found"; past tense "did"; removed "Not a single word" (individual signs have proposed readings; no accepted decipherment); added unknown-language line; Dholavira named once.
+Not taken: jargon ("inscriptions", "bilingual", "decipher"); Legend found it hard.
+On-screen: one small label at a time.
+
+## Revision 3 (superseded, simple): Legend found revision 2 hard to follow
 Rule: short sentences, everyday words, one idea per line; no jargon (gypsum, bilingual, Rosetta), no clever analogies; place names as on-screen text.
 1. In 1991, in Gujarat, archaeologists found something strange in the dirt.
 2. Ten huge letters. Each one bigger than a school ruler.
