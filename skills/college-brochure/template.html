@@ -1,0 +1,162 @@
+<!doctype html><html><head><meta charset="utf-8"><title>FDP Brochure</title>
+<!-- SJCET tri-fold brochure template (A4 landscape, 3 panels). Edit the text inside <main>; keep the classes. -->
+<style>
+@page{size:A4 landscape;margin:0}
+:root{--p:#4a1d8c;--pd:#2a0d5c;--pl:#7b4fd0;--g:#e2a614;--gl:#ffd666;--ink:#1d1d1d;--bg:#f4effc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Times New Roman",Times,"Liberation Serif",serif;color:var(--ink)}
+.page{width:297mm;height:210mm;display:flex;overflow:hidden;position:relative;background:var(--bg)}
+.pan{width:99mm;height:210mm;position:relative;overflow:hidden;padding:9mm 7mm 8mm}
+.pan>*{position:relative;z-index:2}
+.pan .deco{position:absolute;z-index:0;pointer-events:none}
+.p1{padding:0;background:linear-gradient(180deg,#fbf9ff 0%,#efe6fb 45%,#e4d6f7 100%)}
+.p2{background:linear-gradient(180deg,#fbf9ff,#f1eafb);border-left:1px solid #ddd0f2;border-right:1px solid #ddd0f2}
+.p3{background:linear-gradient(180deg,#fbf9ff,#efe7fb)}
+/* corner shards + dots */
+.shard{position:absolute;z-index:1}
+.dots{position:absolute;z-index:0;background-image:radial-gradient(rgba(74,29,140,.28) 1.1px,transparent 1.3px);background-size:9px 9px}
+/* section ribbon headings */
+h3{position:relative;display:flex;align-items:center;margin:0 0 2.6mm;font-size:15px;font-weight:bold;letter-spacing:.4px;text-transform:uppercase;color:#fff;line-height:1.12}
+h3 span{flex:none;background:linear-gradient(90deg,var(--pd),var(--p) 60%,var(--pl));padding:1.6mm 9mm 1.6mm 3.5mm;clip-path:polygon(0 0,100% 0,calc(100% - 5mm) 100%,0 100%)}
+h3:after{content:"";flex:1;height:1.5px;background:var(--p);align-self:flex-end;margin-left:1mm}
+h3 em{align-self:stretch;width:3mm;background:var(--g);transform:skewX(-28deg);margin-left:-2.2mm;flex:none}
+p{font-size:11.4px;line-height:1.42;text-align:justify;margin-bottom:4mm}
+.sec{margin-bottom:3.5mm}
+/* panel 1 */
+.title{padding:10mm 6mm 0;text-align:center}
+.title .t{font-weight:bold;font-size:22.5px;line-height:1.1;color:var(--pd);text-transform:uppercase}
+.divider{display:flex;align-items:center;justify-content:center;gap:2mm;margin:2.5mm 0 2mm}
+.divider:before,.divider:after{content:"";width:22mm;height:1.6px;background:var(--g)}
+.divider b{width:2.6mm;height:2.6mm;background:var(--g);transform:rotate(45deg)}
+.title .s{font-size:12.5px;font-weight:bold;color:#2b2b2b;line-height:1.3}
+.band{margin:4mm 3mm 0;position:relative;text-align:center;color:#fff;padding:4mm 9mm 3.5mm;
+ background:linear-gradient(160deg,var(--pd),var(--p) 55%,#5b2aa6);clip-path:polygon(0 0,100% 0,88% 100%,12% 100%)}
+.bandwrap{position:relative;margin-top:4mm}
+.bandwrap:before,.bandwrap:after{content:"";position:absolute;top:0;bottom:0;width:4mm;background:var(--g);z-index:3}
+.bandwrap:before{left:2.2mm;clip-path:polygon(0 0,100% 0,calc(12% + 100%) 100%,12% 100%);transform:skewX(23deg);transform-origin:top left;left:0}
+.bandwrap:after{right:0;transform:skewX(-23deg);transform-origin:top right}
+.bandwrap .band{margin:0 2mm}
+.band .f{font-weight:bold;font-size:22px;line-height:1.07;letter-spacing:.6px}
+.band .m{font-size:12px;margin-top:1.4mm}
+.band .d{font-size:17px;font-weight:bold;color:var(--gl);margin-top:.4mm}
+.illus{position:absolute;left:0;width:99mm;top:92mm;height:64mm;z-index:1}
+.logo{position:absolute;left:50%;top:128mm;transform:translateX(-50%);width:30mm;height:30mm;border-radius:50%;overflow:hidden;background:#fff;
+ box-shadow:0 0 0 1.6mm #fff,0 0 0 2.1mm var(--g),0 3mm 7mm rgba(42,13,92,.45);z-index:4}
+.logo img{position:absolute;height:31.6mm;left:-5.6mm;top:-0.8mm}
+.org{position:absolute;bottom:7mm;left:0;right:0;text-align:center;padding:0 4mm;z-index:4}
+.org .lab{color:#b3261e;font-size:14px;font-weight:bold;margin-bottom:.8mm}
+.org .dep{font-weight:bold;font-size:13.5px;color:var(--pd)}
+.org .cn{font-weight:bold;font-size:15px;color:var(--p);line-height:1.12;margin-top:1mm}
+.org .ad{font-size:10.6px;color:#333;margin-top:.7mm}
+.acc{width:26mm;height:10mm;overflow:hidden;position:relative;margin:1.6mm auto 0}
+.acc img{position:absolute;height:10.6mm;left:-80mm;top:-.3mm}
+/* committee, bullets, people */
+.cm{font-size:11.4px;line-height:1.25}
+.cm b{display:block;font-size:12.2px;color:#111}
+.cm div{margin-bottom:1.7mm}
+ul{list-style:none;margin:0 0 3.5mm}
+li{font-size:11.3px;line-height:1.38;text-align:justify;padding-left:5mm;position:relative;margin-bottom:1.6mm}
+li:before{content:"";position:absolute;left:0;top:1.5mm;width:2.2mm;height:2.2mm;border-radius:50%;background:var(--pd)}
+.rp{font-size:11px;line-height:1.24;margin-bottom:2.3mm;padding-left:3mm;border-left:3px solid var(--g)}
+.rp b{font-size:12px;color:#111}
+.rp .dt{color:var(--p);font-weight:bold}
+.rp i{color:var(--p)}
+.box{background:#fff;border:1.5px solid var(--p);border-left:5px solid var(--g);padding:2.6mm 4mm;font-size:11.6px;line-height:1.5;box-shadow:0 2px 6px rgba(42,13,92,.12)}
+.box b{color:var(--p)}
+</style></head><body><div class="page">
+
+<!-- ============ PANEL 1 : cover-inside ============ -->
+<div class="pan p1">
+ <div class="dots deco" style="left:0;top:0;width:30mm;height:30mm;opacity:.6"></div>
+ <svg class="shard" style="left:0;top:0" width="40mm" height="24mm" viewBox="0 0 40 24"><polygon points="0,0 22,0 0,16" fill="#4a1d8c"/><polygon points="0,16 22,0 27,0 0,20" fill="#e2a614"/><polygon points="30,0 40,0 40,0 34,0" fill="#e2a614"/></svg>
+ <div class="title">
+  <div class="t">AI and Digital Technologies for Next-Generation Mechanical Engineering</div>
+  <div class="divider"><b></b></div>
+  <div class="s">Robotics · Industry 4.0 · Additive Manufacturing ·<br>Machine Learning</div>
+ </div>
+ <div class="bandwrap"><div class="band"><div class="f">FACULTY<br>DEVELOPMENT<br>PROGRAMME</div><div class="m">(Online Mode)</div><div class="d">12 – 16 October 2026</div></div></div>
+ <svg class="illus" id="illus" viewBox="0 0 99 80" preserveAspectRatio="none"></svg>
+ <div class="logo"><img src="assets/header.webp" alt="College logo"></div>
+ <div class="org">
+  <div class="lab">Organised by</div>
+  <div class="dep">Department of Mechanical Engineering</div>
+  <div class="cn">ST. JOSEPH’S COLLEGE OF<br>ENGINEERING AND TECHNOLOGY</div>
+  <div class="ad">A.S. Nagar, Elupatti, Thanjavur – 613 403</div>
+  <div class="ad">Approved by AICTE, New Delhi · Affiliated to Anna University, Chennai</div>
+  <div class="acc"><img src="assets/header.webp" alt="NAAC, Anna University, AICTE"></div>
+ </div>
+ <svg class="shard" style="left:0;bottom:0" width="34mm" height="20mm" viewBox="0 0 34 20"><polygon points="0,4 30,20 0,20" fill="#4a1d8c"/><polygon points="0,0 34,20 30,20 0,4" fill="#e2a614"/></svg>
+</div>
+
+<!-- ============ PANEL 2 : college / dept / committee ============ -->
+<div class="pan p2">
+ <div class="sec"><h3><span>St. Joseph’s College of<br>Engineering and Technology</span></h3>
+ <p>St. Joseph’s College of Engineering and Technology, Thanjavur is run under the DMI Foundations with the motto <i>“Fully Human &amp; Fully Alive”</i>. The college is approved by AICTE, New Delhi, affiliated to Anna University, Chennai and accredited by NAAC. It is committed to imparting quality technical education, nurturing values and developing skilled engineers to serve society and industry.</p></div>
+ <div class="sec"><h3><span>Department of<br>Mechanical Engineering</span></h3>
+ <p>The Department of Mechanical Engineering offers the B.E. Mechanical Engineering programme with well-equipped laboratories and experienced faculty members. The department regularly organises industrial visits, workshops, seminars and faculty development programmes to keep faculty and students abreast of emerging technologies in the field.</p></div>
+ <div class="sec"><h3><span>Organising Committee</span></h3>
+ <div class="cm">
+  <div><b>Rev. Sr. P. Mariya Alangaram, DMI</b>Chief Patron &amp; Administrator</div>
+  <div><b>Prof. Dr. R. Ravikumar</b>Patron &amp; Principal (i/c)</div>
+  <div><b>Prof. M. Sureshkumar</b>Convener &amp; Head of the Department, Mechanical</div>
+  <div><b>Dr. C. Anand</b>FDP Co-ordinator, Department of Mechanical Engineering</div>
+ </div></div>
+ <div class="sec"><h3><span>Who Can Attend</span></h3>
+ <p>Faculty members, research scholars and students of Engineering and Technology institutions.</p></div>
+ <div class="box"><b>Programme at a Glance</b><br>Dates: 12 – 16 October 2026<br>Mode: Online · 5 Expert Sessions</div>
+</div>
+
+<!-- ============ PANEL 3 : programme / objectives / speakers ============ -->
+<div class="pan p3">
+ <div class="dots deco" style="right:0;top:0;width:34mm;height:26mm;opacity:.55"></div>
+ <h3><span>About the Programme</span></h3>
+ <p>The FDP has been designed to provide faculty members, researchers and students with updated knowledge of how Artificial Intelligence and digital technologies are transforming Mechanical Engineering. Experts from reputed academic institutions will deliver lectures and interact with the participants.</p>
+ <h3><span>Programme Objectives</span></h3>
+ <ul>
+  <li>To introduce the fundamentals of AI and digital transformation in Mechanical Engineering.</li>
+  <li>To expose participants to AI in robotics, automation, Industry 4.0 and smart factories.</li>
+  <li>To explore digital technologies in additive manufacturing and machine learning applications.</li>
+ </ul>
+ <h3><span>Key Resource Persons</span></h3>
+ <div class="rp"><span class="dt">12.10.2026</span> · <b>Dr. S. Sivasankar</b><br>Professor, Mechanical, GCE Sengipatti<br><i>Introduction to AI and Digital Transformation in Mechanical Engineering</i></div>
+ <div class="rp"><span class="dt">13.10.2026</span> · <b>Dr. V. Thanigaivelan</b><br>Associate Professor, Mechanical, SRMIST<br><i>AI Applications in Robotics, Automation and Intelligent Machines</i></div>
+ <div class="rp"><span class="dt">14.10.2026</span> · <b>Dr. Umar Ahamed</b><br>Assistant Professor, Mechanical, Mohamed Sathak Engg. College<br><i>Digital Manufacturing, Industry 4.0 and Smart Factory Technologies</i></div>
+ <div class="rp"><span class="dt">15.10.2026</span> · <b>Dr. S. Ramesh Kumar</b><br>Associate Professor, Mechanical, SASTRA<br><i>AI and Digital Technologies in Additive Manufacturing</i></div>
+ <div class="rp"><span class="dt">16.10.2026</span> · <b>Dr. R. Lavanya</b><br>Assistant Professor, Computing Technologies, SRMIST<br><i>Machine Learning Fundamentals and Engineering Applications</i></div>
+ <svg class="shard" style="right:0;bottom:0" width="44mm" height="26mm" viewBox="0 0 44 26"><polygon points="44,4 44,26 10,26" fill="#4a1d8c"/><polygon points="44,0 44,4 10,26 5,26" fill="#e2a614"/><polygon points="44,12 44,26 26,26" fill="#2a0d5c"/></svg>
+</div>
+</div>
+<script>
+// Decorative tech illustration for panel 1: glow, network mesh, gears ("AI"), diagonal light streaks.
+document.querySelectorAll('h3').forEach(h=>h.querySelector('span').after(document.createElement('em')));
+(function(){
+ const s=document.getElementById('illus'),N='http://www.w3.org/2000/svg';
+ const el=(t,a,p=s)=>{const e=document.createElementNS(N,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+ const defs=el('defs',{});
+ const rg=el('radialGradient',{id:'gl',cx:'50%',cy:'45%',r:'55%'},defs);
+ el('stop',{offset:'0',  'stop-color':'#ffffff','stop-opacity':'.95'},rg);
+ el('stop',{offset:'.45','stop-color':'#b99bf0','stop-opacity':'.55'},rg);
+ el('stop',{offset:'1',  'stop-color':'#4a1d8c','stop-opacity':'0'},rg);
+ el('rect',{x:0,y:0,width:99,height:80,fill:'url(#gl)'});
+ // streaks
+ [[-10,70,60,10,'#e2a614',2.2,.9],[0,80,80,8,'#4a1d8c',3,.55],[30,80,110,20,'#7b4fd0',1.2,.5],[50,80,110,40,'#e2a614',1.4,.7]]
+  .forEach(([x1,y1,x2,y2,c,w,o])=>el('line',{x1,y1,x2,y2,stroke:c,'stroke-width':w,opacity:o}));
+ // network mesh
+ let seed=7;const r=()=>(seed=(seed*9301+49297)%233280)/233280;
+ const pts=[...Array(26)].map(()=>[r()*99,r()*70+5]);
+ pts.forEach((a,i)=>pts.forEach((b,j)=>{if(j>i&&Math.hypot(a[0]-b[0],a[1]-b[1])<19)el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#6a3fc0','stroke-width':.25,opacity:.55})}));
+ pts.forEach(p=>el('circle',{cx:p[0],cy:p[1],r:.7,fill:'#fff',stroke:'#6a3fc0','stroke-width':.25}));
+ // gears
+ function gear(cx,cy,R,n,col,label){
+  let d='';for(let i=0;i<n*2;i++){const a1=i*Math.PI/n,a2=(i+1)*Math.PI/n,rr=i%2?R:R*1.18;
+   d+=(i?'L':'M')+(cx+rr*Math.cos(a1+.08)).toFixed(2)+','+(cy+rr*Math.sin(a1+.08)).toFixed(2)+'L'+(cx+rr*Math.cos(a2-.08)).toFixed(2)+','+(cy+rr*Math.sin(a2-.08)).toFixed(2)}
+  el('path',{d:d+'Z',fill:'none',stroke:col,'stroke-width':1.1,opacity:.9});
+  el('circle',{cx,cy,r:R*.62,fill:'none',stroke:col,'stroke-width':.8,opacity:.9});
+  if(label){const t=el('text',{x:cx,y:cy+R*.22,'text-anchor':'middle','font-size':R*.6,'font-family':'Arial','font-weight':'bold',fill:col});t.textContent=label}
+ }
+ gear(26,22,9,10,'#ffffff','AI');gear(26,22,9.6,10,'#7b4fd0');
+ gear(80,48,8,9,'#ffffff');gear(80,48,8.5,9,'#6a3fc0');
+ gear(14,56,5,8,'#7b4fd0');
+})();
+</script>
+</body></html>
