@@ -37,9 +37,9 @@ def multi_stamp(bg_img, out, items, dur, dim=0.5, top=None, zoom=0.06, size=150)
     fx.write_mp4(frame, dur, out)
 
 if "hook" in todo:
-    fx.punch_hook(I + "priest_king.jpg", I + "hook.mp4", focus=(0.5, 0.33), chips_from=(0.32, 0.5, 0.72, 0.68), steam=False, dur=3.6)
+    fx.punch_hook(I + "priest_king_lic.jpg", I + "hook.mp4", focus=(0.5, 0.42), chips_from=(0.32, 0.5, 0.72, 0.68), steam=False, dur=3.6)
 if "who" in todo:   # line 2: "Nothing says he was a priest... or a king."  (line starts 4.79; priest ~5.9, king ~7.1)
-    multi_stamp(I + "priest_king.jpg", I + "who.mp4", [("PRIEST?", 1.0, 1.55, 0.60), ("KING?", 2.2, 2.6, 0.75)], dur=4.0, dim=0.35)
+    multi_stamp(I + "priest_king_lic.jpg", I + "who.mp4", [("PRIEST?", 1.0, 1.55, 0.60), ("KING?", 2.2, 2.6, 0.75)], dur=4.0, dim=0.35)
 
 # map: approximate extents (hand-drawn from site distributions; labelled APPROXIMATE)
 INDUS = [(61.6, 25.4), (64.5, 29.5), (66.8, 31.6), (69.5, 34.0), (72.6, 34.0), (74.8, 32.6), (76.6, 31.3), (78.2, 29.9), (77.9, 28.4),
@@ -101,7 +101,7 @@ if "ratio" in todo:   # line 9 "the bricks were made the same shape. One, two, f
         a = ease(t / 0.3); p2 = ph.copy(); p2.putalpha(int(255 * a)); im.alpha_composite(p2, (W // 2 - ph.width // 2, 380))
         outlined(d, (W / 2, 330), "REAL: HARAPPAN BRICK (ROYAL ONTARIO MUSEUM)", font(fx.F_TITLE, 32), (235, 235, 235, int(255 * a)), stroke=2)
         # code brick, proportions 1 : 2 : 4 (height : width : length)
-        u = 62; L, Wd, Hh = 4 * u, 2 * u, 1 * u; ox, oy = 250, 1500; k = 0.55
+        u = 62; L, Wd, Hh = 4 * u, 2 * u, 1 * u; ox, oy = 250, 1590; k = 0.55
         top = [(ox, oy), (ox + L, oy), (ox + L + Wd * k, oy - Wd * k), (ox + Wd * k, oy - Wd * k)]
         front = [(ox, oy), (ox + L, oy), (ox + L, oy + Hh), (ox, oy + Hh)]
         side = [(ox + L, oy), (ox + L + Wd * k, oy - Wd * k), (ox + L + Wd * k, oy - Wd * k + Hh), (ox + L, oy + Hh)]
@@ -114,7 +114,7 @@ if "ratio" in todo:   # line 9 "the bricks were made the same shape. One, two, f
             q = ease((t - tt) / 0.18)
             if q > 0:
                 s = int(96 * (1.6 - 0.6 * q)); outlined(d, pos, txt, font(fx.F_BIG, s), GOLD + (int(255 * q),), stroke=5)
-        if t > 3.5: outlined(d, (W / 2, 1780), "THE SAME RATIO EVERYWHERE", font(fx.F_TITLE, 46), WHITE + (int(255 * ease((t - 3.5) / 0.3)),), stroke=3)
+        if t > 3.5: outlined(d, (W / 2, 1840), "THE SAME RATIO EVERYWHERE", font(fx.F_TITLE, 46), WHITE + (int(255 * ease((t - 3.5) / 0.3)),), stroke=3)
         return im
     fx.write_mp4(frame, 5.0, I + "ratio.mp4")
 if "options" in todo:   # line 10 starts 36.75: merchants 38.25, priests 39.33, council 40.15, argue 41.28
@@ -141,3 +141,7 @@ if "options" in todo:   # line 10 starts 36.75: merchants 38.25, priests 39.33, 
     fx.write_mp4(frame, 7.0, I + "options.mp4")
 if "ending" in todo:
     fx.ending(I + "ai2.png", I + "ending.mp4", ["7 OF EVERY", "10 SEALS"], ["WHAT IS THIS", "CREATURE?"], "INDUS FILES  #5  ·  COMMENT YOUR GUESS", q_at=1.0, dur=4.6)
+if "unicorn" in todo:   # line 12 starts 47.36: "seven of every ten seals" ~49.5
+    fx.zoom_rings(I + "unicorn_met.jpg", I + "unicorn.mp4", (0, 200, 1280, 1080), (590, 470, 1030, 900),
+                  rings=[{"box": (640, 560, 960, 840), "t": 2.2, "color": "gold"}],
+                  top_text="ON NEARLY 7 OF EVERY 10 SEALS", label="REAL: INDUS SEAL + MODERN IMPRESSION · MET MUSEUM", push=(0.2, 1.6), dur=8.5)

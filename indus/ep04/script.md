@@ -44,3 +44,20 @@ Care: "no clear evidence of kings" is an interpretation; the script only says wh
 🔓 Indus Files #5: "The Unicorn Only They Carved" 🦄
 On nearly 7 of every 10 Indus seals… one strange animal.
 👇 Who do YOU think ran the Indus cities: merchants, priests or a council?
+
+## Description
+Archaeologists named him the "Priest-King". But nothing says he was a priest, or a king. Egypt built pyramids for its pharaohs, and the royals of Ur were buried in gold. The Indus civilisation spread over more land than both combined, yet no palace, no royal tomb, no statue of a conqueror and no picture of a battle has been found. Someone made bricks the same 1:2:4 shape in cities hundreds of kilometres apart. Who gave the orders? Archaeologists still argue.
+
+Indus Files #4. Part 3: a 4,000-year-old signboard no one can read. Next: the creature on nearly 7 of every 10 Indus seals.
+
+Sources: J.M. Kenoyer, harappa.com; R. Strayer, Ways of the World (Indus civilisation); worldhistory.org (Priest-King, 17.5 cm, National Museum of Pakistan); Durham University, "The Indus Valley Mystery".
+Photos (Wikimedia Commons): "Priest-King", Mohenjo-daro, by Mamoon Mengal (CC BY-SA 1.0); Great Pyramid of Giza by kallerna (CC BY-SA 3.0); Queen Puabi's headdress, Ur, by Mary Harrsch (CC BY 2.0); Harappa ruins by Hassan Nasir (CC BY-SA 3.0); Cut brick, Royal Ontario Museum, by Daderot (CC0); Indus stamp seal and modern impression, unicorn and incense burner, Metropolitan Museum of Art (CC0).
+AI images: artist's impressions. Voice: ElevenLabs. Music: "Documentary" (Nastelbom, Pixabay). Maps: Natural Earth; extents approximate.
+#IndusValley #MohenjoDaro #PriestKing #AncientIndia #Archaeology #Shorts
+
+## Edit notes (final v3, 58.5 s)
+- Voice take 1 with take 2's "In Iraq, royals were buried in gold" spliced in (take 1 sounded like a question); tighten2 0.5/0.16/0.42.
+- Hook photo: the original statue, Mamoon Mengal's licensed Wikimedia photo (584 px, upscaled on a blurred backdrop). Not used: Legend's sharper black-background photo (source unknown) and two Wikimedia photos that show REPLICAS (Indian Museum Kolkata; souvenir copy).
+- Music: Nastelbom "Documentary", its 43 s lift on "Yet someone was clearly in charge" (dip under "not even a picture of a battle").
+- Comment prompt on screen at the debate ("YOUR GUESS? COMMENT") and on the ending card; no captions on the stamps and options lines (the text is on screen).
+- Loudness -14.1 LUFS; every line verified with Whisper on the final mix.
