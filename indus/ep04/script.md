@@ -55,7 +55,10 @@ Photos (Wikimedia Commons): "Priest-King", Mohenjo-daro, by Mamoon Mengal (CC BY
 AI images: artist's impressions. Voice: ElevenLabs. Music: "Documentary" (Nastelbom, Pixabay). Maps: Natural Earth; extents approximate.
 #IndusValley #MohenjoDaro #PriestKing #AncientIndia #Archaeology #Shorts
 
-## Edit notes (final v3, 58.5 s)
+## Edit notes (final v4, 58.5 s)
+- v4 after Gemini review (7.5/10): map 3x faster (Indus fills by 0.6 s) with a punch-in; thud_heavy under each NO stamp; synthesized 'click' on 1-2-4 and on the three options (which now slam in, camera push stronger); music -3 dB under the stamps; ending card shows only "WHAT IS THIS CREATURE?" (the "7 of 10" repeat removed). Not taken: hook zoom (frame 1 must stay crisp; punch_hook already zooms from frame 2).
+
+## Edit notes (v3)
 - Voice take 1 with take 2's "In Iraq, royals were buried in gold" spliced in (take 1 sounded like a question); tighten2 0.5/0.16/0.42.
 - Hook photo: the original statue, Mamoon Mengal's licensed Wikimedia photo (584 px, upscaled on a blurred backdrop). Not used: Legend's sharper black-background photo (source unknown) and two Wikimedia photos that show REPLICAS (Indian Museum Kolkata; souvenir copy).
 - Music: Nastelbom "Documentary", its 43 s lift on "Yet someone was clearly in charge" (dip under "not even a picture of a battle").

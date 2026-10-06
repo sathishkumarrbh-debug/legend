@@ -371,8 +371,20 @@
   {
    "line": 7,
    "at": "abs:21.86",
+   "name": "thud_heavy",
+   "db": -12
+  },
+  {
+   "line": 7,
+   "at": "abs:21.86",
    "name": "stamp",
    "db": -11
+  },
+  {
+   "line": 7,
+   "at": "abs:22.78",
+   "name": "thud_heavy",
+   "db": -12
   },
   {
    "line": 7,
@@ -383,8 +395,20 @@
   {
    "line": 7,
    "at": "abs:24.10",
+   "name": "thud_heavy",
+   "db": -12
+  },
+  {
+   "line": 7,
+   "at": "abs:24.10",
    "name": "stamp",
    "db": -11
+  },
+  {
+   "line": 7,
+   "at": "abs:26.02",
+   "name": "thud_heavy",
+   "db": -12
   },
   {
    "line": 7,
@@ -401,38 +425,56 @@
   {
    "line": 9,
    "at": "abs:34.58",
+   "name": "click",
+   "db": -9
+  },
+  {
+   "line": 9,
+   "at": "abs:34.58",
    "name": "stone_tap",
-   "db": -12
+   "db": -16
+  },
+  {
+   "line": 9,
+   "at": "abs:35.21",
+   "name": "click",
+   "db": -9
   },
   {
    "line": 9,
    "at": "abs:35.21",
    "name": "stone_tap",
-   "db": -12
+   "db": -16
+  },
+  {
+   "line": 9,
+   "at": "abs:35.89",
+   "name": "click",
+   "db": -9
   },
   {
    "line": 9,
    "at": "abs:35.89",
    "name": "stone_tap",
-   "db": -11
+   "db": -16
   },
   {
    "line": 10,
    "at": "abs:38.25",
-   "name": "clock_tick",
-   "db": -15
+   "name": "click",
+   "db": -11
   },
   {
    "line": 10,
    "at": "abs:39.33",
-   "name": "clock_tick",
-   "db": -15
+   "name": "click",
+   "db": -11
   },
   {
    "line": 10,
    "at": "abs:40.15",
-   "name": "clock_tick",
-   "db": -15
+   "name": "click",
+   "db": -11
   },
   {
    "line": 12,
@@ -476,8 +518,13 @@
   ],
   [
    7,
+   0,
+   -3
+  ],
+  [
+   7,
    "end:0",
-   -4
+   -5
   ],
   [
    8,

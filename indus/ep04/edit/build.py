@@ -49,23 +49,23 @@ MESO = [(38.3, 36.9), (40.8, 37.3), (43.6, 37.2), (45.4, 35.3), (46.6, 33.6), (4
 nile = [(31.0, 30.1), (31.1, 29.4), (30.9, 28.4), (30.8, 27.6), (31.3, 27.1), (32.2, 26.2), (32.6, 25.9), (32.8, 25.3), (32.9, 24.1)]
 EGYPT = [(29.9, 31.3), (31.0, 31.6), (32.3, 31.3), (31.3, 30.0)] + [(x + 0.35, y) for x, y in nile] + [(x - 0.35, y) for x, y in reversed(nile)]
 if "map" in todo:
-    B = (22.0, 84.0, 12.0, 42.0); P = fx.Proj(*B, top=420, bottom=1560); bg = fx.base_map(P)
+    B = (21.0, 88.0, 12.0, 42.0); P = fx.Proj(*B, top=420, bottom=1560); bg = fx.base_map(P)
     def frame(t):
         im = bg.copy().convert("RGBA"); ov = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(ov)
-        a1 = ease((t - 0.05) / 0.35)
+        a1 = ease((t - 0.0) / 0.2)
         for poly, name, xy in ((EGYPT, "EGYPT", (31.5, 21.3)), (MESO, "MESOPOTAMIA", (41.5, 39.6))):
             d.polygon([P(*p) for p in poly], fill=(235, 235, 235, int(120 * a1)), outline=(255, 255, 255, int(255 * a1)))
             fx.map_label(d, P(*xy), name, 38, alpha=a1, anchor="mm")
-        a2 = ease((t - 0.9) / 0.5)
+        a2 = ease((t - 0.35) / 0.25)
         if a2 > 0:
             g = Image.new("RGBA", (W, H)); ImageDraw.Draw(g).polygon([P(*p) for p in INDUS], fill=GOLD + (int(150 * a2),)); ov.alpha_composite(g.filter(ImageFilter.GaussianBlur(10)))
             d.polygon([P(*p) for p in INDUS], fill=GOLD + (int(120 * a2),), outline=GOLD + (int(255 * a2),))
             fx.map_label(d, P(70.0, 18.6), "INDUS", 56, GOLD, "mm", a2)
-        a3 = ease((t - 1.8) / 0.4)
+        a3 = ease((t - 0.75) / 0.25)
         if a3 > 0: fx.map_label(d, (W / 2, 330), "MORE LAND THAN BOTH COMBINED", 44, anchor="mm", alpha=a3)
         fx.map_label(d, (W / 2, 1600), "APPROXIMATE EXTENT, c. 2500 BC", 30, (200, 200, 200), "mm")
         im.alpha_composite(ov)
-        z = 1 + 0.05 * t / 4.5; im = im.resize((int(W * z), int(H * z)), Image.LANCZOS); x0, y0 = (im.width - W) // 2, (im.height - H) // 2
+        z = 1.1 - 0.1 * ease(t / 0.45) + 0.06 * max(0, t - 0.45) / 4.0; im = im.resize((int(W * z), int(H * z)), Image.LANCZOS); x0, y0 = (im.width - W) // 2, (im.height - H) // 2
         return im.crop((x0, y0, x0 + W, y0 + H))
     fx.write_mp4(frame, 4.5, I + "map.mp4")
 if "nos" in todo:   # line 7 starts 20.81: palace ~21.9, tomb 22.78, conqueror 24.10, battle 26.02
@@ -121,13 +121,14 @@ if "options" in todo:   # line 10 starts 36.75: merchants 38.25, priests 39.33, 
     bg = fx.cover(Image.open(I + "ai3.png").convert("RGB"))
     opts = [("RICH MERCHANTS?", 1.5), ("PRIESTS?", 2.58), ("A COUNCIL?", 3.4)]
     def frame(t):
-        z = 1 + 0.08 * t / 6.5; im = bg.resize((int(W * z), int(H * z)), Image.LANCZOS); x0, y0 = (im.width - W) // 2, (im.height - H) // 2
+        z = 1.05 + 0.22 * t / 7.0; im = bg.resize((int(W * z), int(H * z)), Image.LANCZOS); x0, y0 = (im.width - W) // 2, (im.height - H) // 2
         im = Image.blend(im.crop((x0, y0, x0 + W, y0 + H)), Image.new("RGB", (W, H)), 0.5).convert("RGBA"); d = ImageDraw.Draw(im)
         outlined(d, (W / 2, 360), "WHO GAVE THE ORDERS?", font(fx.F_BIG, 92), WHITE + (int(255 * ease(t / 0.3)),), stroke=5)
         for k, (txt, tt) in enumerate(opts):
             q = ease((t - tt) / 0.2)
             if q <= 0: continue
-            y = 640 + k * 190; bw = 760; x = W / 2 - bw / 2 + (1 - q) * 300
+            q2 = (t - tt) / 0.22; sc = 1.0 + 0.25 * max(0.0, 1 - q2) if q2 < 1 else 1.0
+            y = 640 + k * 190; bw = int(760 * sc); x = W / 2 - bw / 2
             d.rounded_rectangle((x, y - 70, x + bw, y + 70), 36, fill=(20, 16, 12, int(215 * q)), outline=GOLD + (int(255 * q),), width=6)
             outlined(d, (x + bw / 2, y), txt, font(fx.F_BIG, 84), GOLD + (int(255 * q),), stroke=3)
         q = ease((t - 4.53) / 0.3)
@@ -140,7 +141,7 @@ if "options" in todo:   # line 10 starts 36.75: merchants 38.25, priests 39.33, 
         return im
     fx.write_mp4(frame, 7.0, I + "options.mp4")
 if "ending" in todo:
-    fx.ending(I + "ai2.png", I + "ending.mp4", ["7 OF EVERY", "10 SEALS"], ["WHAT IS THIS", "CREATURE?"], "INDUS FILES  #5  ·  COMMENT YOUR GUESS", q_at=1.0, dur=4.6)
+    fx.ending(I + "ai2.png", I + "ending.mp4", [], ["WHAT IS THIS", "CREATURE?"], "INDUS FILES  #5  ·  COMMENT YOUR GUESS", q_at=0.15, dur=4.6)
 if "unicorn" in todo:   # line 12 starts 47.36: "seven of every ten seals" ~49.5
     fx.zoom_rings(I + "unicorn_met.jpg", I + "unicorn.mp4", (0, 200, 1280, 1080), (590, 470, 1030, 900),
                   rings=[{"box": (640, 560, 960, 840), "t": 2.2, "color": "gold"}],
