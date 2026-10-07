@@ -27,9 +27,14 @@ The user approved this look (it follows a ChatGPT-made reference they liked). Us
 - St. Joseph's College of Engineering and Technology, A.S. Nagar, Elupatti, Thanjavur – 613 403. Approved by AICTE, New Delhi; affiliated to Anna University, Chennai; NAAC accredited. Run by DMI Foundations, motto "Fully Human & Fully Alive".
 - Rev. Sr. P. Mariya Alangaram, DMI: Administrator (Chief Patron).
 - Prof. Dr. R. Ravikumar: Principal (i/c) (Patron).
-- M. Sureshkumar: HOD, Mechanical (Convener). Title not confirmed; "Prof." used so far.
+- Mr. M. Sureshkumar: HoD, Mechanical (the Oct 2026 PPCE seminar poster also lists him as AP/Mech when he is the speaker).
+- Dr. S. R. Sathishkumar: AP/Mech, event co-ordinator (PPCE seminar, Oct 2026).
+- Mechanical student lists: III year 821924114xxx (26 students), IV year 821923114xxx.
 - Prof. Mr. A. Manikandan: HOD, MBA.
 - Dr. C. Anand: Mechanical, FDP co-ordinator (Oct 2026 FDP).
+
+## Event file (seminar/FDP report .docx)
+Use the college letterhead .docx the user supplies (its header1.xml carries the logo/address). Order: Requisition letter → Circular → Report (details table, programme details, objectives, outcomes, photographs with figure captions, 4 signatures: Event Co-ordinator, HoD, IQAC Co-ordinator, Principal) → Attendance → Feedback (4 blocks/page). Times New Roman 12 pt, proper tables (no space-padding), numbered lists, each section on a new page, and check the render so signatures don't fall onto a page by themselves. LibreOffice Writer may need `apt-get install -y libreoffice-writer-nogui` before rendering.
 
 ## Checks before sending
 - Never add a role or word the sources don't give (the ChatGPT version wrote "Dr. C. Anand Chairman").
