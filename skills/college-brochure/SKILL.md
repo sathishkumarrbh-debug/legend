@@ -21,12 +21,14 @@ The user approved this look (it follows a ChatGPT-made reference they liked). Us
 - Panel 3: About the Programme, Programme Objectives (purple dot bullets), Key Resource Persons (gold left bar; purple date · bold name; affiliation; purple italic topic).
 - Corner decorations: purple/gold triangular shards (top-left and bottom-left of panel 1, bottom-right of panel 3), dotted grid patches at top corners.
 - Change the illustration's gear label/icons to suit the topic (e.g. no "AI" for a non-AI event).
+- Worked example: `examples/project-expo-2026/` (A4 poster `poster.html` + tri-fold built by `build.py` from template.html, light-bulb gear instead of "AI").
 - Single-page A4 portrait poster (e.g. a WhatsApp invite): same colours, fonts, ribbons and banner; college banner image across the top.
 
 ## College facts (check every time; ask if a name or title is missing)
 - St. Joseph's College of Engineering and Technology, A.S. Nagar, Elupatti, Thanjavur – 613 403. Approved by AICTE, New Delhi; affiliated to Anna University, Chennai; NAAC accredited. Run by DMI Foundations, motto "Fully Human & Fully Alive".
 - Rev. Sr. P. Mariya Alangaram, DMI: Administrator (Chief Patron).
 - Prof. Dr. R. Ravikumar: Principal (i/c) (Patron).
+- Mech coordinators (APs): Mr. M. Pradeep, Mr. R. Jeevanesan, Mr. B. Nagendran, Dr. S. R. Sathishkumar.
 - Mr. M. Sureshkumar: HoD, Mechanical (the Oct 2026 PPCE seminar poster also lists him as AP/Mech when he is the speaker).
 - Dr. S. R. Sathishkumar: AP/Mech, event co-ordinator (PPCE seminar, Oct 2026).
 - Mechanical student lists: III year 821924114xxx (26 students), IV year 821923114xxx.

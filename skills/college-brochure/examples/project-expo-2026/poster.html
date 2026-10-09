@@ -1,0 +1,102 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Project Expo Poster</title>
+<style>
+@page{size:A4;margin:0}
+:root{--p:#4a1d8c;--pd:#2a0d5c;--pl:#7b4fd0;--g:#e2a614;--gl:#ffd666}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Times New Roman",Times,"Liberation Serif",serif;color:#1d1d1d}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:linear-gradient(180deg,#ffffff 0%,#f4effc 40%,#e9def9 100%)}
+.page>*{position:relative;z-index:2}
+.abs{position:absolute}
+.hdr{padding:6mm 8mm 2.5mm;background:#fff;border-bottom:3px solid var(--g)}
+.hdr img{width:100%;display:block}
+.dept{text-align:center;margin-top:5mm;font-weight:bold;font-size:22px;color:var(--p);letter-spacing:.4px}
+.org{display:flex;align-items:center;justify-content:center;gap:4mm;font-style:italic;font-size:19px;color:#333;margin-top:1mm}
+.org:before,.org:after{content:"";width:28mm;height:1.6px;background:var(--g)}
+.title{text-align:center;font-weight:bold;font-size:60px;line-height:1;color:var(--pd);letter-spacing:2px;margin-top:3mm}
+.title span{color:var(--g)}
+.tag{text-align:center;font-size:17px;font-weight:bold;color:#333;margin-top:2mm;letter-spacing:1px}
+.bandwrap{position:relative;margin:5mm 16mm 0}
+.bandwrap:before,.bandwrap:after{content:"";position:absolute;top:0;bottom:0;width:5mm;background:var(--g);z-index:3}
+.bandwrap:before{left:0;transform:skewX(23deg);transform-origin:top left}
+.bandwrap:after{right:0;transform:skewX(-23deg);transform-origin:top right}
+.band{margin:0 2.5mm;text-align:center;color:#fff;padding:4mm 10mm;background:linear-gradient(160deg,var(--pd),var(--p) 55%,#5b2aa6);clip-path:polygon(0 0,100% 0,90% 100%,10% 100%)}
+.band .f{font-size:26px;font-weight:bold;letter-spacing:.8px;line-height:1.1}
+.band .s{font-size:15px;color:#e9e1ff;margin-top:1mm}
+.illus{position:absolute;left:0;width:210mm;top:112mm;height:78mm;z-index:1}
+.chips{position:absolute;left:12mm;right:12mm;top:121mm;display:flex;flex-direction:column;gap:5mm;width:84mm;z-index:3}
+.chip{display:flex;align-items:center;gap:4mm;background:#fff;border-radius:3mm;padding:3mm 4mm;box-shadow:0 3px 9px rgba(42,13,92,.18);border-left:5px solid var(--g)}
+.chip svg{flex:none}
+.chip b{display:block;font-size:12px;letter-spacing:2px;color:var(--pl)}
+.chip span{font-size:21px;font-weight:bold;color:var(--pd);line-height:1.15}
+.logo{position:absolute;right:20mm;top:128mm;width:52mm;height:52mm;border-radius:50%;overflow:hidden;background:#fff;box-shadow:0 0 0 2.4mm #fff,0 0 0 3.2mm var(--g),0 5mm 12mm rgba(42,13,92,.45);z-index:4}
+.logo img{position:absolute;height:54.7mm;left:-9.7mm;top:-1.4mm}
+.themes{position:absolute;left:12mm;right:12mm;top:194mm;z-index:3}
+.themes h3{text-align:center;font-size:17px;letter-spacing:2px;color:var(--pd);margin-bottom:2.5mm}
+.tg{display:flex;flex-wrap:wrap;justify-content:center;gap:2.2mm}
+.tg div{background:var(--p);color:#fff;font-size:14px;font-weight:bold;padding:1.6mm 4mm;border-radius:20px}
+.tg div:nth-child(even){background:var(--pd)}
+.cta{position:absolute;left:14mm;right:14mm;top:226mm;z-index:3;background:#fff;border:1.6px solid var(--p);border-left:6px solid var(--g);border-radius:2mm;padding:3mm 5mm;text-align:center;box-shadow:0 3px 9px rgba(42,13,92,.15)}
+.ct1{font-size:16.5px;font-weight:bold;color:var(--pd);letter-spacing:.5px}
+.ct2{font-size:14px;color:#333;margin-top:1mm}
+.foot{position:absolute;left:0;right:0;bottom:0;z-index:3;background:linear-gradient(180deg,var(--p),var(--pd));color:#fff;padding:4.5mm 9mm 4mm;border-top:4px solid var(--g)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm 3mm;text-align:center}
+.r{font-size:10px;letter-spacing:2px;color:var(--g);font-weight:bold;margin-bottom:.5mm}
+.nm{font-size:13.5px;font-weight:bold;color:var(--gl)}
+.ds{font-size:11px;color:#e9e1ff}
+.co{margin-top:3mm;padding-top:2.5mm;border-top:1px solid rgba(226,166,20,.5)}
+.co .r{text-align:center;margin-bottom:1.2mm}
+.shard{position:absolute;z-index:1}
+.dots{position:absolute;z-index:0;background-image:radial-gradient(rgba(74,29,140,.28) 1.1px,transparent 1.3px);background-size:9px 9px}
+</style></head><body><div class="page">
+<div class="dots" style="right:0;top:40mm;width:30mm;height:40mm;opacity:.6"></div>
+<div class="dots" style="left:0;top:40mm;width:26mm;height:30mm;opacity:.6"></div>
+<div class="hdr"><img src="assets/header.webp" alt="St. Joseph's College of Engineering and Technology"></div>
+<div class="dept">DEPARTMENT OF MECHANICAL ENGINEERING</div>
+<div class="org">Organises</div>
+<div class="title">PROJECT EXPO <span>2026</span></div>
+<div class="tag">INNOVATE · DESIGN · BUILD · SHOWCASE</div>
+<div class="bandwrap"><div class="band"><div class="f">MECHANICAL ENGINEERING PROJECT EXHIBITION</div><div class="s">Working models · Prototypes · Design projects</div></div></div>
+<svg class="illus" id="illus" viewBox="0 0 210 78" preserveAspectRatio="none"></svg>
+<div class="chips">
+ <div class="chip"><svg width="11mm" height="11mm" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="#4a1d8c"/><rect x="3" y="5" width="18" height="5" rx="2" fill="#2a0d5c"/><rect x="7" y="2.5" width="2" height="5" rx="1" fill="#e2a614"/><rect x="15" y="2.5" width="2" height="5" rx="1" fill="#e2a614"/><g fill="#fff"><rect x="6" y="12.5" width="3" height="2.5"/><rect x="10.5" y="12.5" width="3" height="2.5"/><rect x="15" y="12.5" width="3" height="2.5"/><rect x="6" y="16.5" width="3" height="2.5"/><rect x="10.5" y="16.5" width="3" height="2.5"/></g></svg><div><b>DATE</b><span>12 October 2026</span><div style="font-size:13px;color:#555">Monday</div></div></div>
+ <div class="chip"><svg width="11mm" height="11mm" viewBox="0 0 24 24"><circle cx="12" cy="13" r="9" fill="#4a1d8c"/><circle cx="12" cy="13" r="7" fill="#fff"/><path d="M12 8v5l3 2" stroke="#2a0d5c" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="10" y="1.5" width="4" height="2.5" rx="1" fill="#e2a614"/></svg><div><b>TIME</b><span>10.30 AM – 12.30 PM</span></div></div>
+ <div class="chip"><svg width="11mm" height="11mm" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" fill="#4a1d8c"/><circle cx="12" cy="9" r="2.8" fill="#e2a614"/></svg><div><b>VENUE</b><span style="font-size:17px">Department of<br>Mechanical Engineering</span></div></div>
+</div>
+<div class="logo"><img src="assets/header.webp" alt="College logo"></div>
+<div class="themes"><h3>EXPO THEMES</h3><div class="tg">
+ <div>Design &amp; Fabrication</div><div>Automobile</div><div>Thermal &amp; Renewable Energy</div><div>Manufacturing &amp; Automation</div><div>Robotics, IoT &amp; Mechatronics</div><div>Sustainable Innovations</div></div></div>
+<div class="cta"><div class="ct1">ALL MECHANICAL ENGINEERING STUDENTS ARE INVITED TO PARTICIPATE</div><div class="ct2">Teams of up to 4 · Bring your working model / prototype with a poster · Report by 10.00 AM</div></div>
+<svg class="shard" style="left:0;top:0" width="34mm" height="20mm" viewBox="0 0 34 20"><polygon points="0,0 18,0 0,13" fill="#4a1d8c"/><polygon points="0,13 18,0 22,0 0,16" fill="#e2a614"/></svg>
+<div class="foot">
+ <div class="grid">
+  <div><div class="r">CHIEF PATRON</div><div class="nm">Rev. Sr. P. Mariya Alangaram, DMI</div><div class="ds">Administrator</div></div>
+  <div><div class="r">PATRON</div><div class="nm">Prof. Dr. R. Ravikumar</div><div class="ds">Principal (i/c)</div></div>
+  <div><div class="r">CONVENER</div><div class="nm">Mr. M. Sureshkumar</div><div class="ds">HoD / Mechanical</div></div>
+  <div><div class="r">ORGANISED BY</div><div class="nm">Department of Mechanical Engg.</div><div class="ds">SJCET, Thanjavur</div></div>
+ </div>
+ <div class="co"><div class="r">COORDINATORS</div><div class="grid">
+  <div><div class="nm">Mr. M. Pradeep</div><div class="ds">AP / Mech</div></div>
+  <div><div class="nm">Mr. R. Jeevanesan</div><div class="ds">AP / Mech</div></div>
+  <div><div class="nm">Mr. B. Nagendran</div><div class="ds">AP / Mech</div></div>
+  <div><div class="nm">Dr. S. R. Sathishkumar</div><div class="ds">AP / Mech</div></div>
+ </div></div>
+</div>
+</div>
+<script>
+(function(){
+ const s=document.getElementById('illus'),N='http://www.w3.org/2000/svg';
+ const el=(t,a,p=s)=>{const e=document.createElementNS(N,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+ const defs=el('defs',{});const rg=el('radialGradient',{id:'gl',cx:'72%',cy:'50%',r:'45%'},defs);
+ el('stop',{offset:'0','stop-color':'#ffffff','stop-opacity':'.95'},rg);el('stop',{offset:'.5','stop-color':'#b99bf0','stop-opacity':'.5'},rg);el('stop',{offset:'1','stop-color':'#4a1d8c','stop-opacity':'0'},rg);
+ el('rect',{x:0,y:0,width:210,height:78,fill:'url(#gl)'});
+ [[90,78,210,8,'#e2a614',2.2,.85],[110,78,210,30,'#4a1d8c',3,.45],[0,70,70,30,'#7b4fd0',1.2,.4]].forEach(([x1,y1,x2,y2,c,w,o])=>el('line',{x1,y1,x2,y2,stroke:c,'stroke-width':w,opacity:o}));
+ let seed=11;const r=()=>(seed=(seed*9301+49297)%233280)/233280;
+ const pts=[...Array(30)].map(()=>[100+r()*110,r()*74+2]);
+ pts.forEach((a,i)=>pts.forEach((b,j)=>{if(j>i&&Math.hypot(a[0]-b[0],a[1]-b[1])<20)el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#6a3fc0','stroke-width':.25,opacity:.5})}));
+ pts.forEach(p=>el('circle',{cx:p[0],cy:p[1],r:.7,fill:'#fff',stroke:'#6a3fc0','stroke-width':.25}));
+ function gear(cx,cy,R,n,col){let d='';for(let i=0;i<n*2;i++){const a1=i*Math.PI/n,a2=(i+1)*Math.PI/n,rr=i%2?R:R*1.18;
+  d+=(i?'L':'M')+(cx+rr*Math.cos(a1+.08)).toFixed(2)+','+(cy+rr*Math.sin(a1+.08)).toFixed(2)+'L'+(cx+rr*Math.cos(a2-.08)).toFixed(2)+','+(cy+rr*Math.sin(a2-.08)).toFixed(2)}
+  el('path',{d:d+'Z',fill:'none',stroke:col,'stroke-width':1.1,opacity:.85});el('circle',{cx,cy,r:R*.62,fill:'none',stroke:col,'stroke-width':.8,opacity:.85})}
+ gear(112,14,9,10,'#7b4fd0');gear(200,66,8,9,'#7b4fd0');gear(122,66,5,8,'#6a3fc0');
+})();
+</script></body></html>
