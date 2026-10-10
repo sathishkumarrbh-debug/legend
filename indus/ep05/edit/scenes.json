@@ -1,0 +1,402 @@
+{
+ "output": "ep010_indus_unicorn.mp4",
+ "tail_seconds": 3.6,
+ "cap_y": 0.68,
+ "handheld": 6,
+ "captions_from": 3.4,
+ "audio_fade_out": 0.8,
+ "voice_light": true,
+ "no_caption_lines": [
+  2
+ ],
+ "hook": {
+  "text": "A UNICORN...\n4,000 YEARS AGO?",
+  "until": 3.4,
+  "y": 0.12,
+  "size": 110,
+  "accent": [
+   "UNICORN..."
+  ]
+ },
+ "lines": [
+  {
+   "text": "This seal is four thousand years old. Look at the animal.",
+   "emph": [
+    "animal."
+   ],
+   "caption": "This seal is 4,000 years old. Look at the animal."
+  },
+  {
+   "text": "One horn. A unicorn.",
+   "emph": [
+    "unicorn."
+   ]
+  },
+  {
+   "text": "And it's on nearly seven of every ten seals.",
+   "emph": [
+    "7",
+    "10"
+   ],
+   "caption": "And it's on nearly 7 of every 10 seals."
+  },
+  {
+   "text": "Even the seal from Iraq in Part Two... is a unicorn.",
+   "emph": [
+    "iraq",
+    "unicorn."
+   ],
+   "caption": "Even the seal from Iraq in Part 2... is a unicorn."
+  },
+  {
+   "text": "The elephants and tigers they carved really roamed the Indus. So was the unicorn real too... or pure myth?",
+   "emph": [
+    "real",
+    "myth?"
+   ]
+  },
+  {
+   "text": "Some say it's just a bull, one horn hiding the other.",
+   "emph": [
+    "bull,"
+   ]
+  },
+  {
+   "text": "Others point to clay figures with just one horn.",
+   "emph": [
+    "one",
+    "horn."
+   ]
+  },
+  {
+   "text": "And always in front of it, a strange object. Incense burner? Sacred filter? No one knows.",
+   "emph": [
+    "strange"
+   ]
+  },
+  {
+   "text": "Then, around nineteen hundred BC, the unicorn vanished... along with their writing.",
+   "emph": [
+    "vanished..."
+   ],
+   "caption": "Then, around 1900 BC, the unicorn vanished... along with their writing."
+  },
+  {
+   "text": "Fifteen hundred years later, a Greek doctor wrote of a one-horned beast in India.",
+   "emph": [
+    "one-horned"
+   ],
+   "caption": "1,500 years later, a Greek doctor wrote of a one-horned beast in India."
+  },
+  {
+   "text": "Most experts think he meant a rhino. Or was it a faint memory of the Indus unicorn?",
+   "emph": [
+    "rhino.",
+    "memory"
+   ]
+  },
+  {
+   "text": "And on one rare seal, the animals gather around a figure... sitting like a yogi.",
+   "emph": [
+    "yogi."
+   ]
+  }
+ ],
+ "line_times": [
+  [
+   0.0,
+   3.62
+  ],
+  [
+   4.12,
+   6.6
+  ],
+  [
+   7.18,
+   9.85
+  ],
+  [
+   10.25,
+   13.79
+  ],
+  [
+   14.42,
+   20.99
+  ],
+  [
+   21.63,
+   24.41
+  ],
+  [
+   25.03,
+   27.42
+  ],
+  [
+   27.88,
+   34.56
+  ],
+  [
+   35.19,
+   39.81
+  ],
+  [
+   40.46,
+   44.74
+  ],
+  [
+   45.31,
+   50.15
+  ],
+  [
+   50.77,
+   56.37
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "hook.mp4",
+   "xfade": 0,
+   "label": "REAL: INDUS SEAL + MODERN IMPRESSION \u00b7 MET MUSEUM",
+   "label_y": 1560,
+   "label_dur": 3.4
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "horn.mp4",
+   "xfade": 0.08
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "tiles.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "kish.mp4",
+   "xfade": 0.1,
+   "flash": true
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "split.mp4",
+   "xfade": 0.08
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "horns.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "object.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "ai2.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "ai3.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.12
+   ],
+   "focus": [
+    0.45,
+    0.4
+   ],
+   "xfade": 0.15,
+   "ai": true,
+   "label": "CTESIAS, GREEK DOCTOR \u00b7 c. 400 BC",
+   "label_y": 300,
+   "label_dur": 3.0
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "met_916.jpg",
+   "move": "in",
+   "z": [
+    1.9,
+    2.3
+   ],
+   "focus": [
+    0.68,
+    0.55
+   ],
+   "xfade": 0.15
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "ai4.png",
+   "move": "in",
+   "z": [
+    1.0,
+    1.15
+   ],
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "xfade": 0.2,
+   "ai": true
+  },
+  {
+   "line": 11,
+   "at": "abs:56.5",
+   "src": "ending.mp4",
+   "xfade": 0.25
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.0",
+   "name": "thud_heavy",
+   "db": -9
+  },
+  {
+   "line": 1,
+   "at": "abs:4.35",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 1,
+   "at": "abs:5.74",
+   "name": "braam",
+   "db": -13
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "name": "stone_tap",
+   "db": -13
+  },
+  {
+   "line": 2,
+   "at": "abs:8.5",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -12
+  },
+  {
+   "line": 4,
+   "at": "abs:14.42",
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 4,
+   "at": "abs:15.42",
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 4,
+   "at": "abs:17.82",
+   "name": "stone_reveal",
+   "db": -11
+  },
+  {
+   "line": 4,
+   "at": "abs:19.97",
+   "name": "braam",
+   "db": -11
+  },
+  {
+   "line": 5,
+   "at": "abs:23.15",
+   "name": "scribble",
+   "db": -15
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 7,
+   "at": "abs:30.99",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 7,
+   "at": "abs:32.24",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "name": "thud_heavy",
+   "db": -13
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "name": "paper",
+   "db": -14
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "name": "heartbeat_phone",
+   "db": -13
+  },
+  {
+   "line": 11,
+   "at": "abs:56.75",
+   "name": "braam",
+   "db": -10
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/the_mountain_576567.mp3",
+   "align_src": 84.0,
+   "align_line": 4,
+   "align_at": 0,
+   "gap_db": 6.5,
+   "fade_in": 0.2
+  }
+ ],
+ "music_env": [
+  [
+   0,
+   0,
+   0
+  ]
+ ]
+}

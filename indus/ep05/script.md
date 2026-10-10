@@ -1,4 +1,37 @@
 # Indus Files #5: 4,000 Years Ago, Only They Carved a Unicorn
+
+## FINAL (v2, Legend's build notes, Drive indus_ep05/indus_ep05_BUILD_NOTES.md) — replaces the v1 table below
+1. This seal is four thousand years old. Look at the animal.
+2. One horn. A unicorn.
+3. And it's on nearly seven of every ten seals.
+4. Even the seal from Iraq in Part Two... is a unicorn.
+5. The elephants and tigers they carved really roamed the Indus. So was the unicorn real too... or pure myth?
+6. Some say it's just a bull, one horn hiding the other.
+7. Others point to clay figures with just one horn.
+8. And always in front of it, a strange object. Incense burner? Sacred filter? No one knows.
+9. Then, around nineteen hundred BC, the unicorn vanished... along with their writing.
+10. Fifteen hundred years later, a Greek doctor wrote of a one-horned beast in India.
+11. Most experts think he meant a rhino. Or was it a faint memory of the Indus unicorn?
+12. And on one rare seal, the animals gather around a figure... sitting like a yogi.
+Changes vs v1: dropped "no other civilisation of its time" (one-horned bovines also appear in Mesopotamian art); added the real-animals line (elephant, tiger: real; unicorn: real or myth? Kenoyer: mythical; Parpola: nilgai; Possehl: bull in profile).
+
+## Description
+A 4,000-year-old Indus seal, and on it: a unicorn. It appears on nearly 7 of every 10 Indus seals, and one was even found in Iraq. The elephants and tigers they carved were real animals of the Indus. So was the unicorn real, or a myth? Some experts say it is a bull seen from the side; others point to clay figures with one horn. And what is the strange object always standing in front of it? 1,500 years after it vanished, a Greek doctor, Ctesias, wrote of a one-horned beast in India.
+
+Indus Files #5. Part 4: the giant civilisation with no king. Next: the seal that may show India's oldest god.
+
+Sources: J.M. Kenoyer, "Iconography of the Indus Unicorn" and "One or two unicorn horns?" (harappa.com); G. Possehl; A. Parpola; I. Mahadevan (sacred filter); worldhistory.org, "The Unicorn Myth" (Ctesias, c. 400 BC).
+Photos (Wikimedia Commons): Indus stamp seal and modern impression, unicorn and incense burner, Metropolitan Museum of Art (CC0); Indus unicorn seal found at Kish, E.J.H. Mackay (public domain); elephant seal, British Museum, by Zunkir (CC BY-SA 4.0); seal mould with tigers by Ismoon (CC0); Asian elephant by Bernard Dupont (CC BY-SA 2.0); Bengal tiger by Charles J. Sharp (CC BY-SA 4.0).
+AI images: artist's impressions. Voice: ElevenLabs. Music: "The Mountain" (Pixabay).
+#IndusValley #Unicorn #IndusSeal #AncientIndia #Archaeology #Shorts
+
+## Edit notes (final v3, 60.0 s)
+- Voice take 1, tighten2 0.72/0.22/0.62; "Some say it's just a bull" restored from the untrimmed take (the trim had clipped "bull").
+- Code: horn traced exactly on the real horn of the Met impression (points measured on the 1920 px photo); dashed "second horn" for the bull-in-profile theory; 10 tiles (real crops: 7 unicorn, elephant, tiger) turning gold; split screens seal/real animal; ring on the standard + options + comment prompt.
+- Legend's rules: continuous music, no ducking (music_env flat; overall level gap 6.5 dB), no anvil hits, no whooshes, no shimmer. Sounds used: thud_heavy, click, stone_tap, stone_reveal, braam, scribble, paper, heartbeat.
+- The Mountain: its 84 s lift on line 5 ("The elephants and tigers...").
+- Loudness -14.5 LUFS; every line verified with Whisper on the final mix.
+
 Channel: Jambudvipa Files. Target 52 to 56 s (~137 words). Voice: Yash (prompts.md). Simple words, one idea per line.
 Formula kept from Parts 3-4 (69% avg viewed): early twist, motion every 2-3 s, on-screen comment prompt at the debate, ending card = cliffhanger + comment.
 
