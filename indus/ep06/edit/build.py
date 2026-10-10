@@ -5,7 +5,7 @@ from fxkit import W, H, ease, font, outlined, GOLD, WHITE
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 I = "images/"; todo = sys.argv[1:] or ["hook", "horns", "animals", "legs", "comment", "buffalo", "script", "marshall", "girl", "ending"]
 SEAL = I + "seal_mold.jpg"
-BOX = {"elephant": (74, 125, 266, 262), "tiger": (110, 300, 312, 446), "buffalo": (650, 175, 860, 302), "rhino": (622, 305, 830, 482),
+BOX = {"elephant": (74, 125, 266, 262), "tiger": (110, 300, 312, 446), "rhino": (650, 175, 860, 302), "buffalo": (622, 305, 830, 482),
        "horns": (268, 172, 630, 336), "deer": (385, 735, 600, 838), "script": (225, 72, 835, 190), "face": (410, 325, 505, 420)}
 LEG_L = [(372, 628), (420, 638), (462, 648)]; LEG_R = [(738, 608), (600, 628), (470, 648)]
 src = Image.open(SEAL).convert("RGB")
@@ -36,7 +36,7 @@ def tag(d, text, xy, a=255, size=44, color=GOLD): outlined(d, xy, text, font(fx.
 FULL = (0, 0, 888, 913)
 
 if "hook" in todo:
-    fx.dust_reveal(SEAL, I + "hook.mp4", peek=(0.5, 0.34, 0.24), t_gust=0.15, sweep=1.1, dur=5.4)
+    fx.dust_reveal(SEAL, I + "hook.mp4", peek=(0.5, 0.34, 0.24), t_gust=0.15, sweep=1.1, dur=6.0)   # must outlast line 0 (5.06 s) or it loops
 if "horns" in todo:   # line 1 (5.06-8.90): push to the figure, ring the horns at "huge horns" (~3.2 s)
     def frame(t):
         cam = view((180, 120, 720, 700), 1.0, 1.25, t, 4.0); im = render(cam); q = ease((t - 3.0) / 0.45)
@@ -51,6 +51,7 @@ if "animals" in todo:   # line 2 (9.36-15.46): tiger 10.19, elephant 11.02, rhin
             q = ease((t - tt) / 0.3)
             if q <= 0: continue
             ring(im, BOX[name], cam, q, pad=10, width=8); b = BOX[name]; p = scr(((b[0] + b[2]) / 2, b[3]), cam)
+            if name == "deer": p = scr(((b[0] + b[2]) / 2, b[1]), cam); p = (p[0], p[1] - 100)
             tag(d, lab, (p[0], p[1] + 42), 255 * q, 46)
             if name in ("tiger", "elephant") and t > tt + 0.3: tag(d, "SEEN IN PART 5", (p[0], p[1] + 86), 255 * ease((t - tt - 0.3) / 0.3), 28, WHITE)
         return im

@@ -40,6 +40,11 @@ Care: never call it Shiva as fact; "may", "named him", "other experts say". No c
 Shout-out to @guharup for spotting the pose in Part 5 🙏
 👇 Yogi, buffalo god, or something else? What do YOU see?
 
+## v3 fixes (Legend's doubts, both confirmed)
+- Rhino and buffalo labels were swapped: top-right = RHINO (horn on the nose), right-middle = WATER BUFFALO (big swept-back horns). Fixed.
+- Intro replayed at 4.6 s: hook.mp4 was 4.6 s but line 0 runs to 5.06 s, so the clip looped. Rebuilt at 6.0 s.
+- "2 DEER" label moved above the deer (was under the caption).
+
 ## Final build (v2, 59.5 s) — Legend's BUILD_NOTES (Drive indus_ep06)
 - Voice take 1 (Pashupati, "Mula Bandhasana", McEvilley all clear; no tags spoken); TTS spelling "Moola-bandhaasana", captions/on-screen "Mulabandhasana". tighten2 0.72/0.22/0.62.
 - NEW hook: fx.dust_reveal (engine/fxkit.py): frame 1 = seal under sand with the horned figure peeking (thumbnail); a gust (sfx sand_gust) blows the sand off left to right into streaking grains + dust clouds, camera push with a jolt.
