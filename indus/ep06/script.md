@@ -39,3 +39,22 @@ Care: never call it Shiva as fact; "may", "named him", "other experts say". No c
 🔓 Indus Files #7: "She's 4,000 Years Old and Still Has Attitude" 💃
 Shout-out to @guharup for spotting the pose in Part 5 🙏
 👇 Yogi, buffalo god, or something else? What do YOU see?
+
+## Final build (v2, 59.5 s) — Legend's BUILD_NOTES (Drive indus_ep06)
+- Voice take 1 (Pashupati, "Mula Bandhasana", McEvilley all clear; no tags spoken); TTS spelling "Moola-bandhaasana", captions/on-screen "Mulabandhasana". tighten2 0.72/0.22/0.62.
+- NEW hook: fx.dust_reveal (engine/fxkit.py): frame 1 = seal under sand with the horned figure peeking (thumbnail); a gust (sfx sand_gust) blows the sand off left to right into streaking grains + dust clouds, camera push with a jolt.
+- Code on the real seal cast (positions measured): ring on horns; rings + labels on tiger, elephant ("SEEN IN PART 5"), rhino, buffalo, deer on their words; gold trace on the legs + knee circles; @guharup comment card + MULABANDHASANA + "T. McEVILLEY, 1981"; "BUFFALO HORNS?" stamp + SRINIVASAN · POSSEHL; ring on the script + "YOUR GUESS? COMMENT".
+- Real National Museum photo on "So is this the world's oldest yogi?"; Marshall 1906 portrait card over the AI dig; Dancing Girl only as a solid dark rim-lit silhouette (hand-on-hip shape kept).
+- Music: Leberch "Documentary", its 32.45 s hit on "Mulabandhasana"; continuous, no ducking (gap 6.5 dB). No anvil/whoosh/shimmer.
+- Loudness -14.3 LUFS; every line verified with Whisper on the final mix.
+
+## Description
+A 4,000-year-old seal from Mohenjo-daro, smaller than a matchbox, and one of the most argued-over objects from ancient India. A horned figure sits on a low throne, surrounded by a tiger, an elephant, a rhino and a buffalo. John Marshall named him Pashupati, Lord of the Animals, a name of Shiva. A viewer spotted the pose: Mulabandhasana, heels pressed together, knees wide apart (Thomas McEvilley argued the same in 1981). Other experts say the horns are a buffalo's and he may be a different god altogether. And the writing above him is still unread.
+
+Indus Files #6. Part 5: the unicorn only they carved. Next: she's 4,000 years old and still has attitude.
+Thanks to @guharup for spotting the pose 🙏
+
+Sources: J. Marshall, Mohenjo-daro and the Indus Civilization (1931); T. McEvilley, "An Archaeology of Yoga", RES 1 (1981); D. M. Srinivasan (1976); G. Possehl; A. Hiltebeitel; National Museum, New Delhi.
+Photos (Wikimedia Commons): Pashupati seal cast by Ismoon (CC0); Pashupati seal, National Museum, New Delhi, by Nomu420 (CC BY-SA 3.0); Sir John Marshall, The Cyclopedia of India (1906, public domain); Dancing Girl by Gary Todd (CC0).
+AI images: artist's impressions. Voice: ElevenLabs. Music: "Documentary" by Leberch (Pixabay).
+#IndusValley #Pashupati #Yoga #MohenjoDaro #AncientIndia #Shorts

@@ -1,0 +1,394 @@
+{
+ "output": "ep011_indus_pashupati.mp4",
+ "tail_seconds": 3.6,
+ "cap_y": 0.68,
+ "handheld": 6,
+ "captions_from": 3.2,
+ "audio_fade_out": 0.8,
+ "voice_light": true,
+ "no_caption_lines": [],
+ "hook": {
+  "text": "INDIA'S\nOLDEST GOD?",
+  "until": 3.2,
+  "y": 0.1,
+  "size": 120,
+  "accent": [
+   "GOD?"
+  ]
+ },
+ "lines": [
+  {
+   "text": "This tiny seal may be ancient India's most argued-over object.",
+   "emph": [
+    "argued-over"
+   ]
+  },
+  {
+   "text": "In the middle, a figure sits on a low throne, wearing huge horns.",
+   "emph": [
+    "huge",
+    "horns."
+   ]
+  },
+  {
+   "text": "Around him: a tiger, an elephant, a rhino and a buffalo. Below, two deer.",
+   "emph": []
+  },
+  {
+   "text": "Archaeologist John Marshall named him Pashupati, Lord of the Animals... a name of Shiva.",
+   "emph": [
+    "pashupati,",
+    "shiva."
+   ]
+  },
+  {
+   "text": "Now look at the legs. Heels pressed together. Knees wide apart.",
+   "emph": [
+    "legs."
+   ]
+  },
+  {
+   "text": "A viewer of Part Five spotted it: Moola-bandhaasana. A yoga pose so hard, most people can't even get into it.",
+   "emph": [
+    "mulabandhasana."
+   ],
+   "caption": "A viewer of Part 5 spotted it: Mulabandhasana. A yoga pose so hard, most people can't even get into it."
+  },
+  {
+   "text": "Scholar Thomas McEvilley thought the same.",
+   "emph": [
+    "same."
+   ]
+  },
+  {
+   "text": "So is this the world's oldest yogi?",
+   "emph": [
+    "oldest",
+    "yogi?"
+   ]
+  },
+  {
+   "text": "Not so fast. Other experts say those are buffalo horns... and he may be a different god altogether.",
+   "emph": [
+    "buffalo"
+   ]
+  },
+  {
+   "text": "And the writing above his head? We still can't read it.",
+   "emph": [
+    "can't"
+   ]
+  },
+  {
+   "text": "But another Indus artist left someone we can almost meet... a girl smaller than your hand, hand on her hip.",
+   "emph": [
+    "girl"
+   ]
+  }
+ ],
+ "line_times": [
+  [
+   0.0,
+   4.46
+  ],
+  [
+   5.06,
+   8.9
+  ],
+  [
+   9.36,
+   15.46
+  ],
+  [
+   16.08,
+   21.22
+  ],
+  [
+   21.86,
+   25.86
+  ],
+  [
+   26.43,
+   32.92
+  ],
+  [
+   33.55,
+   35.47
+  ],
+  [
+   36.05,
+   38.32
+  ],
+  [
+   38.95,
+   44.98
+  ],
+  [
+   45.62,
+   48.37
+  ],
+  [
+   49.0,
+   55.91
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "hook.mp4",
+   "xfade": 0,
+   "label": "REAL: PASHUPATI SEAL CAST \u00b7 MOHENJO-DARO",
+   "label_y": 1600,
+   "label_dur": 3.6
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "ai1.png",
+   "move": "in",
+   "z": [
+    1.1,
+    1.2
+   ],
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "xfade": 0.1,
+   "ai": true
+  },
+  {
+   "line": 1,
+   "at": "abs:5.9",
+   "src": "horns.mp4",
+   "clip_start": 0.84,
+   "xfade": 0.1
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "animals.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "marshall.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "legs.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 5,
+   "at": 0,
+   "src": "comment.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "seal_nm.jpg",
+   "fit": "fit",
+   "move": "in",
+   "z": [
+    1.0,
+    1.15
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "xfade": 0.15,
+   "label": "REAL PHOTO: THE SEAL, NATIONAL MUSEUM, DELHI",
+   "label_y": 300,
+   "label_dur": 2.3
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "buffalo.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "script.mp4",
+   "xfade": 0.1
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "girl.mp4",
+   "xfade": 0.15
+  },
+  {
+   "line": 10,
+   "at": "abs:56.2",
+   "src": "ending.mp4",
+   "xfade": 0.25
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.12",
+   "name": "sand_gust",
+   "db": -8
+  },
+  {
+   "line": 0,
+   "at": "abs:0.15",
+   "name": "thud_heavy",
+   "db": -13
+  },
+  {
+   "line": 1,
+   "at": "abs:8.06",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 1,
+   "at": "abs:8.2",
+   "name": "braam",
+   "db": -13
+  },
+  {
+   "line": 2,
+   "at": "abs:10.19",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 2,
+   "at": "abs:11.02",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 2,
+   "at": "abs:12.06",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 2,
+   "at": "abs:12.81",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 2,
+   "at": "abs:14.81",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 3,
+   "at": "abs:17.3",
+   "name": "stone_reveal",
+   "db": -12
+  },
+  {
+   "line": 3,
+   "at": "abs:18.93",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 4,
+   "at": "abs:23.2",
+   "name": "scribble",
+   "db": -14
+  },
+  {
+   "line": 4,
+   "at": "abs:24.71",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 5,
+   "at": "abs:26.6",
+   "name": "paper",
+   "db": -13
+  },
+  {
+   "line": 5,
+   "at": "abs:28.38",
+   "name": "click",
+   "db": -9
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "name": "heartbeat_phone",
+   "db": -13
+  },
+  {
+   "line": 8,
+   "at": "abs:41.45",
+   "name": "stamp",
+   "db": -10
+  },
+  {
+   "line": 8,
+   "at": "abs:41.45",
+   "name": "thud_heavy",
+   "db": -13
+  },
+  {
+   "line": 9,
+   "at": "abs:46.1",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "name": "heartbeat_phone",
+   "db": -14
+  },
+  {
+   "line": 10,
+   "at": "abs:52.6",
+   "name": "rise",
+   "db": -15,
+   "anchor": "end"
+  },
+  {
+   "line": 10,
+   "at": "abs:56.45",
+   "name": "braam",
+   "db": -10
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/leberch-documentary-517370.mp3",
+   "align_src": 32.45,
+   "align_line": 5,
+   "align_at": "abs:28.41",
+   "gap_db": 6.5,
+   "fade_in": 0.2
+  }
+ ],
+ "music_env": [
+  [
+   0,
+   0,
+   0
+  ]
+ ]
+}

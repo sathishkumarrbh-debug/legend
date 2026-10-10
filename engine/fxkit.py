@@ -6,6 +6,7 @@ shot loops back to frame 0, e.g. a "+2,000" counter suddenly showing "+0").
 
   import fxkit as fx
   fx.punch_hook("images/ai1.png", "images/hook.mp4", focus=(0.36, 0.42), chips_from=(0.05, 0.72, 0.6, 0.95))
+  fx.dust_reveal("images/seal.jpg", "images/hook.mp4", peek=(0.5, 0.42, 0.12))   # sand blown off (alternative hook)
   fx.route_map(stops, route, bounds, "images/map_draw.mp4", draw=(0.1, 0.8))            # fast line draw
   fx.route_map(stops, route, bounds, "images/map_pin.mp4", pin="HARAPPA", pin_t=0.7, draw=(-1, 0.01))
   fx.arc_map(src, dests, bounds, "images/map_west.mp4", caption="SAME SEALS. 2,000+ KM APART.")
@@ -442,3 +443,60 @@ def make_sfx(folder):
     _save(folder, "paper", _bp(r.normal(size=n), 1500, 9000) * (0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 9 * t))) * np.minimum(t / 0.05, 1) * np.minimum((0.7 - t) / 0.2, 1))
     n = int(0.4 * SR); tt = np.arange(n) / SR
     _save(folder, "stone_tap", (np.sin(2 * np.pi * 1900 * tt) + 0.7 * np.sin(2 * np.pi * 2730 * tt)) * _env(n, 0.0005, 0.03) + 0.6 * _bp(r.normal(size=n), 1000, 8000) * _env(n, 0.0003, 0.005))
+
+
+# ------------------------------------------------------------------ hook: sand blown off an object by a gust (alternative to punch_hook)
+def dust_reveal(image, out, box=None, peek=(0.5, 0.42, 0.12), dur=4.6, t_gust=0.12, sweep=1.0, seed=5, bg_dim=0.55):
+    """Frame 1: the object lies under a sand layer, only `peek` (cx, cy, r as fractions of the object) shows (thumbnail).
+    Then a gust sweeps left->right: the sand lifts into streaking particles and dust clouds, camera pushes in with a jolt.
+    box: (x0, y0, x1, y1) on the 1080x1920 canvas where the object sits (default: centred, 1000 px wide)."""
+    src = Image.open(image).convert("RGB"); r = np.random.default_rng(seed)
+    if box is None:
+        w = 1000; h = int(src.height * w / src.width); x0 = (W - w) // 2; y0 = int(H * 0.53 - h / 2); box = (x0, y0, x0 + w, y0 + h)
+    bw, bh = box[2] - box[0], box[3] - box[1]
+    bg = Image.blend(cover(src).filter(ImageFilter.GaussianBlur(35)), Image.new("RGB", (W, H)), bg_dim)
+    canvas = bg.copy(); canvas.paste(src.resize((bw, bh), Image.LANCZOS), box[:2])
+    # sand layer: warm grain + soft dunes
+    n1 = np.asarray(Image.effect_noise((bw // 6, bh // 6), 60).resize((bw, bh), Image.BICUBIC)).astype(np.float32) / 255
+    n2 = np.asarray(Image.effect_noise((bw, bh), 90)).astype(np.float32) / 255
+    n3 = np.asarray(Image.effect_noise((bw // 30, bh // 30), 80).resize((bw, bh), Image.BICUBIC)).astype(np.float32) / 255
+    ripple = 0.5 + 0.5 * np.sin(np.mgrid[0:bh, 0:bw][0] / 9.0 + n3 * 9 + np.mgrid[0:bh, 0:bw][1] / 40.0)
+    shade = 0.78 + 0.22 * n3 + 0.08 * ripple
+    sand = (np.stack([200 + 30 * n1 + 26 * n2, 164 + 26 * n1 + 22 * n2, 116 + 18 * n1 + 16 * n2], -1) * shade[..., None]).clip(0, 255).astype(np.uint8)
+    sand_im = Image.fromarray(sand)
+    yy, xx = np.mgrid[0:bh, 0:bw].astype(np.float32)
+    px, py, pr = peek[0] * bw, peek[1] * bh, peek[2] * bw
+    rr_ = np.hypot(xx - px, (yy - py) * 0.9) * (0.85 + 0.3 * n3)
+    edge_d = np.minimum(np.minimum(xx, bw - xx), np.minimum(yy, bh - yy)) / (0.06 * bw) + (n3 - 0.5) * 1.5
+    base_a = np.clip((rr_ - pr) / (pr * 0.5), 0, 1) * np.clip(edge_d, 0, 1) * (0.88 + 0.12 * n1)
+    N = 1400; sx = r.uniform(0, bw, N); sy = r.uniform(0, bh, N); size = r.uniform(1.5, 6.5, N)
+    vx = r.uniform(500, 1500, N); vy = r.uniform(-500, 60, N); life = r.uniform(0.5, 1.3, N)
+    col = [tuple(int(c) for c in sand[int(min(bh - 1, y)), int(min(bw - 1, x))]) for x, y in zip(sx, sy)]
+    puffs = [(r.uniform(0, bw), r.uniform(0, bh), r.uniform(140, 340)) for _ in range(18)]
+    def front_x(t): return -0.25 * bw + 1.5 * bw * ease((t - t_gust) / sweep)
+    def frame(t):
+        fx_ = front_x(t); a = base_a.copy()
+        if t > t_gust:
+            edge = np.clip((xx + 60 * (n1 - 0.5) * 3 - fx_) / 90 + 0.5, 0, 1); a = a * edge
+        im = canvas.copy().convert("RGBA")
+        lay = sand_im.copy().convert("RGBA"); lay.putalpha(Image.fromarray((a * 255).astype(np.uint8))); im.alpha_composite(lay, box[:2])
+        fx_lay = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(fx_lay)
+        if t > t_gust:
+            for i in range(N):   # a grain lifts when the front passes it
+                t0 = t_gust + sweep * max(0.0, (sx[i] + 0.25 * bw) / (1.5 * bw)) ** 1.0 * 0.85; q = t - t0
+                if 0 < q < life[i]:
+                    x = box[0] + sx[i] + vx[i] * q; y = box[1] + sy[i] + vy[i] * q - 300 * q * q; al = int(230 * (1 - q / life[i]))
+                    L = min(60, vx[i] * 0.025); d.line((x - L, y - L * vy[i] / vx[i], x, y), fill=col[i] + (al,), width=max(1, int(size[i] * 0.7)))
+                    d.ellipse((x - size[i], y - size[i], x + size[i], y + size[i]), fill=col[i] + (al,))
+        cl = Image.new("RGBA", (W, H)); cd = ImageDraw.Draw(cl)
+        for (ux, uy, ur) in puffs:
+            t0 = t_gust + sweep * max(0.0, (ux + 0.25 * bw) / (1.5 * bw)) * 0.85; q = (t - t0) / 1.8
+            if 0 < q < 1:
+                rr = ur * (0.5 + 1.5 * q); x = box[0] + ux + 700 * q; y = box[1] + uy - 220 * q
+                cd.ellipse((x - rr, y - rr * 0.6, x + rr, y + rr * 0.6), fill=(214, 182, 140, int(150 * (1 - q) * min(1, q * 5))))
+        im.alpha_composite(cl.filter(ImageFilter.GaussianBlur(45))); im.alpha_composite(fx_lay)
+        z = 1.04 + 0.14 * ease((t - t_gust) / 2.5); amp = 18 * math.exp(-max(0, t - t_gust) * 4) if t > t_gust else 0
+        cw, ch = W / z, H / z; cx = W / 2 + amp * math.sin(t * 70); cy = (box[1] + box[3]) / 2 + amp * math.cos(t * 55)
+        cy = min(max(cy, ch / 2), H - ch / 2); cx = min(max(cx, cw / 2), W - cw / 2)
+        return im.resize((W, H), Image.BILINEAR, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
+    write_mp4(frame, dur, out)
