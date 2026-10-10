@@ -74,9 +74,13 @@ if "legs" in todo:   # line 4 (21.86-25.86): "heels pressed together" 23.28 (1.4
     fx.write_mp4(frame, 4.8, I + "legs.mp4")
 if "comment" in todo:   # lines 5-6 (26.43-35.47): viewer's comment card + MULABANDHASANA + McEvilley label (33.55 -> 7.12)
     def frame(t):
-        cam = view((300, 300, 800, 760), 1.1, 1.25, t, 9.5); im = render(cam)
-        im = Image.blend(im, Image.new("RGBA", (W, H), (0, 0, 0, 255)), 0.45); d = ImageDraw.Draw(im)
-        q = ease((t - 0.2) / 0.35); y = 560 + (1 - q) * 300
+        cam = view((280, 380, 820, 760), 1.0, 1.12, t, 9.5); im = render(cam)
+        for pts in (LEG_L, LEG_R):
+            lay = Image.new("RGBA", (W, H)); ImageDraw.Draw(lay).line([scr(x, cam) for x in pts], fill=GOLD + (255,), width=14, joint="curve")
+            im.alpha_composite(lay.filter(ImageFilter.GaussianBlur(8))); im.alpha_composite(lay)
+        top = Image.new("RGBA", (W, H)); ImageDraw.Draw(top).rectangle((0, 0, W, 640), fill=(0, 0, 0, 150)); im.alpha_composite(top.filter(ImageFilter.GaussianBlur(40)))
+        d = ImageDraw.Draw(im)
+        q = ease((t - 0.2) / 0.35); y = 120 - (1 - q) * 300
         if q > 0:
             d.rounded_rectangle((70, y, W - 70, y + 330), 28, fill=(28, 28, 30, int(235 * q)), outline=(90, 90, 95, int(255 * q)), width=3)
             d.ellipse((110, y + 40, 190, y + 120), fill=(200, 120, 60, int(255 * q))); outlined(d, (150, y + 80), "G", font(fx.F_BIG, 50), WHITE + (int(255 * q),), stroke=0)
@@ -84,18 +88,20 @@ if "comment" in todo:   # lines 5-6 (26.43-35.47): viewer's comment card + MULAB
             for k, ln in enumerate(("Yogi sitting in moolbandhasan, very", "tough practically impossible to get into")):
                 d.text((110, y + 140 + k * 62), ln, font=font(fx.F_TITLE, 38), fill=(245, 245, 245, int(255 * q)))
         q2 = ease((t - 1.95) / 0.3)
-        if q2 > 0: tag(d, "MULABANDHASANA", (W / 2, 1050), 255 * q2, int(104 * (1 + 0.2 * max(0, 1 - (t - 1.95) / 0.25))))
+        if q2 > 0: tag(d, "MULABANDHASANA", (W / 2, 560), 255 * q2, int(104 * (1 + 0.2 * max(0, 1 - (t - 1.95) / 0.25))))
         q3 = ease((t - 7.15) / 0.3)
-        if q3 > 0: tag(d, "T. McEVILLEY, 1981: SAME POSE", (W / 2, 1190), 255 * q3, 50, WHITE)
+        if q3 > 0: tag(d, "T. McEVILLEY, 1981: SAME POSE", (W / 2, 660), 255 * q3, 50, WHITE)
         return im
     fx.write_mp4(frame, 9.6, I + "comment.mp4")
 if "buffalo" in todo:   # line 8 (38.95-44.98): "buffalo horns" ~41.7 -> stamp 2.6 s; names
     st = None
     def frame(t):
-        cam = view((180, 120, 720, 520), 1.2, 1.35, t, 6.4); im = render(cam); d = ImageDraw.Draw(im)
+        cam = view((180, 60, 720, 560), 1.05, 1.15, t, 6.4); im = render(cam); d = ImageDraw.Draw(im)
         if t > 2.5:
             q = min(1, (t - 2.5) / 0.11); s = 2.0 - ease(q); fnt = font(fx.F_BIG, int(120 * s))
-            c = scr(((BOX["horns"][0] + BOX["horns"][2]) / 2, (BOX["horns"][1] + BOX["horns"][3]) / 2), cam)
+            ring(im, BOX["horns"], cam, ease((t - 2.5) / 0.3), pad=14); hc = scr(((BOX["horns"][0] + BOX["horns"][2]) / 2, BOX["horns"][1]), cam)
+            c = (W / 2, 250)
+            ay = 360 + 10 * math.sin(t * 8); d.polygon([(W / 2 - 34, ay), (W / 2 + 34, ay), (W / 2, ay + 46)], fill=GOLD + (255,))
             lay = Image.new("RGBA", (W, H)); ld = ImageDraw.Draw(lay)
             tw = ld.textlength("BUFFALO HORNS?", font=fnt); ld.rounded_rectangle((c[0] - tw / 2 - 30, c[1] - 90 * s, c[0] + tw / 2 + 30, c[1] + 90 * s), 24, fill=(15, 8, 6, 170), outline=(240, 50, 45, 255), width=12)
             ld.text(c, "BUFFALO HORNS?", font=fnt, fill=(240, 50, 45, 255), anchor="mm"); im.alpha_composite(lay.rotate(-6, center=c, resample=Image.BICUBIC))
@@ -151,8 +157,13 @@ if "girl" in todo:   # line 10 (49.00-55.91): night lane, then the Dancing Girl 
     rim = Image.new("RGBA", gs.size, (255, 180, 90, 0)); rim.putalpha(Image.fromarray(m).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(6)))
     sil = Image.new("RGBA", gs.size); sil.alpha_composite(rim); sil.alpha_composite(body)
     def frame(t):
-        z = 1 + 0.08 * t / 7.2; im = lane.resize((int(W * z), int(H * z)), Image.LANCZOS); x0, y0 = (im.width - W) // 2, (im.height - H) // 2
+        z = 1 + 0.22 * ease(t / 7.2); im = lane.resize((int(W * z), int(H * z)), Image.LANCZOS); x0, y0 = (im.width - W) // 2, int((im.height - H) * 0.7)
         im = im.crop((x0, y0, x0 + W, y0 + H)).convert("RGBA")
+        em = Image.new("RGBA", (W, H)); ed = ImageDraw.Draw(em)
+        for k in range(70):
+            ph = (k * 0.37) % 1; x = (k * 157) % W + 40 * math.sin(t * 1.3 + k); y = H - ((t * (60 + k % 40) + ph * H) % H)
+            r_ = 2 + k % 4; ed.ellipse((x - r_, y - r_, x + r_, y + r_), fill=(255, 170 + k % 60, 80, 150 + k % 90))
+        im.alpha_composite(em.filter(ImageFilter.GaussianBlur(1.2)))
         q = ease((t - 3.6) / 0.5)
         if q > 0:
             im = Image.blend(im, Image.new("RGBA", (W, H), (0, 0, 0, 255)), 0.6 * q)

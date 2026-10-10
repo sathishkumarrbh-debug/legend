@@ -40,6 +40,11 @@ Care: never call it Shiva as fact; "may", "named him", "other experts say". No c
 Shout-out to @guharup for spotting the pose in Part 5 🙏
 👇 Yogi, buffalo god, or something else? What do YOU see?
 
+## v4 after Gemini check (6.5/10)
+- Verified NOT a problem in v3: "sand flickers/restarts at 0:02-0:03" (frame-difference + brightness measured: one smooth clear 0.2-1.0 s; Gemini likely saw the older v2 loop).
+- Fixed: comment card moved to the top so the legs + gold trace stay visible (captions off for lines 5-6, text is on screen); BUFFALO HORNS? stamp above the seal with a ring on the horns + arrow (was over the face); night lane: stronger push + drifting lamp embers; 0.3 s dissolve at 0:05.
+- Not taken: "a name of Shiva" (it is Marshall's naming; counter-view at 0:39); elephant label is not at the edge.
+
 ## v3 fixes (Legend's doubts, both confirmed)
 - Rhino and buffalo labels were swapped: top-right = RHINO (horn on the nose), right-middle = WATER BUFFALO (big swept-back horns). Fixed.
 - Intro replayed at 4.6 s: hook.mp4 was 4.6 s but line 0 runs to 5.06 s, so the clip looped. Rebuilt at 6.0 s.
