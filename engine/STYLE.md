@@ -82,3 +82,14 @@ Rules: one thread; at most one new proper noun per 10 s; first twist by about 0:
 ## Lessons from Indus Files #6 (Pashupati)
 - Every clip's dur must exceed its shot's on-screen time; re-check after changing a clip's dur in a test call (the hook was rebuilt at a test length and looped at 4.6 s).
 - Identifying details on real objects: crop each one large and verify by features (rhino = horn on the nose; water buffalo = big swept-back horns; elephant = trunk/ear; tiger = stripes) and against a published description before labelling. Note casts/impressions are mirror images of the seal.
+
+## Production upgrades from the EP6 review (11 Oct 2026; Studio 28 d: 13.2K views, 60.3% stayed, 91% Shorts feed, 99% new, ~3 subs / 1,000 views)
+HIGH (apply to every Short):
+1. Visual variety: hero artifact in max 3 big beats; 18-26 distinct visual beats per 60 s; nothing unmoving > ~3 s. Details via snap punch-ins (100->115% in 0.3 s, then settle), not slow drifts. Hard cuts for evidence; 4-8 frame dissolves only for a change of time/place.
+2. Hook frame: no sand/dust wipe at 0:00. Sharp, bright, tight crop already moving; hook text 110-120 px; snap out at ~0.6 s with ONE low impact.
+3. Captions: pop 94%->100% over 6-8 frames (no bounce); one antique-gold keyword (#D4B15C) when spoken, rest white; 2-3 px near-black stroke + soft shadow (40%, 3-5 px blur, 2-3 px down); 80-96 px; centred y 1150-1480; keep right 160 px and bottom 300 px clear.
+4. Labels: min 32-38 px on a dark semi-transparent pill; one short source card near the end; full citations in the description.
+5. Sound per reveal: stone scrape on artifact reveal, soft click when an annotation draws, low hit only on the twist. Dip music 0.3-1 s before the twist line, then land the impact (music_env). Still no whooshes, anvil hits, shimmer.
+MEDIUM: 2.5D parallax on 2-3 stills (fg 15-25 px, bg 5-10 px; never invent detail) · one annotation style: hand-drawn ink/chalk stroke that draws on (red stamp only for the one real contradiction) · SEEN vs THEORY? cards; scholar views on an aged-paper card · loop ending (last frame matches the first crop) · small series tag "INDUS FILES · CASE 0N" (28-32 px) early.
+SKIP: permanent progress bar, subscribe animation, metallic/glow/gradient fonts, SFX on every cut, 3-line captions.
+Measure: stayed %, retention at 3-5 s and 15-30 s, avg % viewed, subs per 1,000 views (baseline ~3).
