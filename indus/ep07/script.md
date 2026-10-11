@@ -43,3 +43,21 @@ Care: no "who owns her" politics; no claims she is a goddess/slave/princess (all
 ## Pinned comment
 🔓 Indus Files #8: "These Aren't Dice. They're 4,000-Year-Old Weights" ⚖️
 👇 Dancer, queen, or just a girl with attitude? What do YOU see?
+
+## Final build (v3, 60.3 s)
+- Voice: take 1, with take 2's "Archaeologist Ernest Mackay found her at Mohenjo-daro, in 1926" (take 1 said "founder") and take 1's raw "Hand on her hip" re-spliced (trim clipped it); tighten2 0.62/0.2/0.55; +0.45 s pause before the twist. No tag words spoken.
+- Engine: caption_style v2 (make_short2.py: pop 94->100% in 7 frames, one antique-gold #D4B15C keyword lit when spoken, 3 px stroke + soft 40% shadow, safe area right 160 px). fxkit: parallax_warp (tear-free 2.5D on every AI image), snapz punch-ins, particles (embers/sparks/dust), heat_haze, ink_stroke/ink_ellipse (hand-drawn annotation), pill labels (34-40 px).
+- 18 clips / ~26 beats; measured longest near-static stretch = 0.00 s.
+- Modesty: real statue only as face/arm/hand-on-hip crops; full figure only small (hook scale shot).
+- Sound: thud_heavy only on the hook snap, the twist and the ending; stone_reveal on artifact reveals; click on annotations; music dips -10 dB 0.45 s before "no one knows" then lands the hit. No whooshes/anvil/shimmer.
+- Ending dissolves back to the opening face crop (loop). Loudness -14.2 LUFS.
+
+## Description
+She's 4,000 years old and smaller than your hand. Found by Ernest Mackay at Mohenjo-daro in 1926, the bronze "Dancing Girl" stands with her hand on her hip, chin up, 24 bangles on one arm. She was made with lost-wax casting: shaped in wax, coated in clay, heated until the wax ran out, then filled with molten metal. One mould, one statue. Mortimer Wheeler called her "perfectly confident of herself and the world". But no one knows if she ever danced. And lost-wax casting is still practised in India today, in Dhokra craft.
+
+Indus Files #7. Part 6: the seal that may show India's oldest god. Next: these aren't dice, they're 4,000-year-old weights.
+
+Sources: Wikipedia, "Dancing Girl (prehistoric sculpture)"; MAP Academy; ThePrint; B. Pillai, JOM (2002) on lost-wax casting in India; Wikipedia, "Dhokra".
+Photos (Wikimedia Commons): Dancing Girl by Gary Todd (CC0) and Ismoon (CC0); Dhokra casting and Dhokra rhino, Government of Odisha (CC BY 4.0); Indus cube weights, British Museum, by Zunkir (CC BY-SA 4.0).
+AI images: artist's impressions. Voice: ElevenLabs. Music: "The Mountain" (Pixabay).
+#IndusValley #DancingGirl #MohenjoDaro #LostWax #Dhokra #AncientIndia #Shorts

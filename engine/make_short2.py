@@ -182,6 +182,28 @@ def caption_layer(words, active, emph, size=100):
     return img
 
 
+def caption_layer_v2(words, active, emph, size=90):
+    """Caption style v2 (EP6 review): white words, ONE antique-gold keyword (#D4B15C) lit once it is spoken,
+    2-3 px near-black stroke + soft shadow (40%, ~4 px blur, 3 px down). Centred in the safe width (right 160 px kept clear)."""
+    GOLD2, STROKE = (212, 177, 92, 255), (16, 12, 8, 255)
+    safe = W - 160
+    font = ImageFont.truetype(FONT_CAP, size); sp = size * 0.26
+    widths = [font.getlength(w) for w in words]; total = sum(widths) + sp * (len(words) - 1)
+    if total > safe * 0.92:
+        return caption_layer_v2(words, active, emph, int(size * safe * 0.92 / total))
+    key = next((i for i, e in enumerate(emph) if e), None)
+    img = Image.new("RGBA", (W, int(size * 1.9)), (0, 0, 0, 0)); sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d, ds = ImageDraw.Draw(img), ImageDraw.Draw(sh)
+    x = (safe - total) / 2; y = size * 0.3
+    for i, (w, wd) in enumerate(zip(words, widths)):
+        col = GOLD2 if (i == key and active >= i) else (255, 255, 255, 255)
+        ds.text((x, y + 3), w, font=font, fill=(0, 0, 0, 102), stroke_width=3, stroke_fill=(0, 0, 0, 102))
+        d.text((x, y), w, font=font, fill=col, stroke_width=3, stroke_fill=STROKE)
+        x += wd + sp
+    out = sh.filter(ImageFilter.GaussianBlur(4)); out.alpha_composite(img)
+    return out
+
+
 def label_layer(text, size=40):
     f = ImageFont.truetype(FONT_T, size)
     tw = f.getlength(text)
@@ -638,13 +660,20 @@ def main():
                 cap_cache.clear()
                 ws = [w[0].upper() for w in ch]
                 em = [re.sub(r"[^\w']", "", w[0].lower()) in emph_words[li] for w in ch]
-                cap_cache[key] = caption_layer(ws, act, em)
+                cap_cache[key] = caption_layer_v2(ws, act, em, plan.get("cap_size", 90)) if plan.get("caption_style") == "v2" else caption_layer(ws, act, em)
             layer = cap_cache[key]
             age = t - ch[0][1]
-            if age < 0.1:
-                sc = 0.88 + 0.12 * max(0, age) / 0.1
-                layer = layer.resize((int(W * sc), int(layer.height * sc)), Image.BILINEAR)
-            fr.alpha_composite(layer, ((W - layer.width) // 2, int(H * s.get("cap_y", plan.get("cap_y", 0.60)))))
+            if plan.get("caption_style") == "v2":
+                if age < 0.23:   # pop 94% -> 100% over 7 frames, no bounce
+                    sc = 0.94 + 0.06 * max(0, age) / 0.23
+                    layer = layer.resize((int(W * sc), int(layer.height * sc)), Image.BILINEAR)
+                cx = (W - 160) / 2
+                fr.alpha_composite(layer, (int(cx - layer.width * (cx / W)), int(H * s.get("cap_y", plan.get("cap_y", 0.60)))))
+            else:
+                if age < 0.1:
+                    sc = 0.88 + 0.12 * max(0, age) / 0.1
+                    layer = layer.resize((int(W * sc), int(layer.height * sc)), Image.BILINEAR)
+                fr.alpha_composite(layer, ((W - layer.width) // 2, int(H * s.get("cap_y", plan.get("cap_y", 0.60)))))
         if only:
             fr.convert("RGB").save(os.path.join(work, f"frame_{t:05.2f}.jpg"), quality=85)
         else:

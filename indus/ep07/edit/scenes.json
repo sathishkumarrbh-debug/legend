@@ -1,0 +1,459 @@
+{
+ "output": "ep012_indus_girl.mp4",
+ "tail_seconds": 4.05,
+ "cap_y": 0.655,
+ "cap_size": 88,
+ "caption_style": "v2",
+ "handheld": 0,
+ "captions_from": 2.7,
+ "audio_fade_out": 0.8,
+ "voice_light": true,
+ "no_caption_lines": [
+  8
+ ],
+ "hook": {
+  "text": "4,000 YEARS OLD.\nSTILL HAS ATTITUDE.",
+  "until": 2.6,
+  "y": 0.1,
+  "size": 115,
+  "accent": [
+   "ATTITUDE."
+  ]
+ },
+ "lines": [
+  {
+   "text": "She's four thousand years old... and smaller than your hand.",
+   "emph": [
+    "hand."
+   ],
+   "caption": "She's 4,000 years old... and smaller than your hand."
+  },
+  {
+   "text": "Archaeologist Ernest Mackay found her at Mohenjo-daro, in nineteen twenty-six.",
+   "emph": [
+    "1926."
+   ],
+   "caption": "Archaeologist Ernest Mackay found her at Mohenjo-daro, in 1926."
+  },
+  {
+   "text": "Look at her. Hand on her hip. Chin up.",
+   "emph": [
+    "hip."
+   ]
+  },
+  {
+   "text": "And bangles... almost all the way to her shoulder. Twenty-four on one arm.",
+   "emph": [
+    "24"
+   ],
+   "caption": "And bangles... almost all the way to her shoulder. 24 on one arm."
+  },
+  {
+   "text": "She isn't carved. She was cast in bronze, with a trick called lost-wax.",
+   "emph": [
+    "lost-wax."
+   ]
+  },
+  {
+   "text": "Shape her in wax. Coat her in clay. Heat it... and the wax runs out.",
+   "emph": [
+    "runs"
+   ]
+  },
+  {
+   "text": "Pour in molten metal. Then break the mould... and she's born.",
+   "emph": [
+    "born."
+   ]
+  },
+  {
+   "text": "One mould, one statue. There's no other like her.",
+   "emph": [
+    "other"
+   ]
+  },
+  {
+   "text": "Archaeologist Mortimer Wheeler said she was perfectly confident of herself and the world.",
+   "emph": [
+    "confident"
+   ]
+  },
+  {
+   "text": "But we call her a dancer... and no one knows if she ever danced.",
+   "emph": [
+    "danced."
+   ]
+  },
+  {
+   "text": "And that lost-wax trick? Craftsmen in India still use it today.",
+   "emph": [
+    "today."
+   ]
+  },
+  {
+   "text": "But to trade metal like this, you have to weigh it... and their weights were frighteningly exact.",
+   "emph": [
+    "exact."
+   ]
+  }
+ ],
+ "line_times": [
+  [
+   0.0,
+   4.08
+  ],
+  [
+   4.64,
+   9.06
+  ],
+  [
+   9.52,
+   12.29
+  ],
+  [
+   12.69,
+   17.57
+  ],
+  [
+   18.12,
+   22.84
+  ],
+  [
+   23.27,
+   27.52
+  ],
+  [
+   27.92,
+   31.36
+  ],
+  [
+   31.92,
+   35.63
+  ],
+  [
+   36.16,
+   41.28
+  ],
+  [
+   41.84,
+   45.89
+  ],
+  [
+   46.44,
+   50.26
+  ],
+  [
+   50.8,
+   56.25
+  ]
+ ],
+ "shots": [
+  {
+   "line": 0,
+   "at": 0,
+   "src": "c_hook.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 1,
+   "at": 0,
+   "src": "c_dig.mp4",
+   "xfade": 0.2
+  },
+  {
+   "line": 2,
+   "at": 0,
+   "src": "c_look.mp4",
+   "xfade": 0.2
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "src": "c_bangles.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "src": "c_carved.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 4,
+   "at": "abs:19.40",
+   "src": "c_wax.mp4",
+   "xfade": 0.2
+  },
+  {
+   "line": 5,
+   "at": "abs:24.65",
+   "src": "c_clay.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 5,
+   "at": "abs:25.80",
+   "src": "c_heat.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "src": "c_pour.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 6,
+   "at": "abs:29.42",
+   "src": "c_break.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 6,
+   "at": "abs:30.58",
+   "src": "c_born.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "src": "c_one.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 8,
+   "at": 0,
+   "src": "c_quote.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 9,
+   "at": 0,
+   "src": "c_dancer.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "src": "c_today.mp4",
+   "xfade": 0.2
+  },
+  {
+   "line": 11,
+   "at": 0,
+   "src": "c_trade.mp4",
+   "xfade": 0.2
+  },
+  {
+   "line": 11,
+   "at": "abs:53.66",
+   "src": "c_weights.mp4",
+   "xfade": 0
+  },
+  {
+   "line": 11,
+   "at": "abs:56.5",
+   "src": "c_ending.mp4",
+   "xfade": 0
+  }
+ ],
+ "sfx": [
+  {
+   "line": 0,
+   "at": "abs:0.6",
+   "name": "thud_heavy",
+   "db": -11
+  },
+  {
+   "line": 0,
+   "at": "abs:2.6",
+   "name": "click",
+   "db": -12
+  },
+  {
+   "line": 1,
+   "at": "abs:5.0",
+   "name": "dirt_brush_crisp",
+   "db": -17
+  },
+  {
+   "line": 1,
+   "at": "abs:6.0",
+   "name": "click",
+   "db": -14
+  },
+  {
+   "line": 2,
+   "at": "abs:10.55",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 2,
+   "at": "abs:11.76",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 3,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -14
+  },
+  {
+   "line": 3,
+   "at": "abs:16.07",
+   "name": "click",
+   "db": -10
+  },
+  {
+   "line": 4,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -13
+  },
+  {
+   "line": 4,
+   "at": "abs:21.8",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 5,
+   "at": "abs:23.27",
+   "name": "click",
+   "db": -14
+  },
+  {
+   "line": 5,
+   "at": "abs:24.65",
+   "name": "click",
+   "db": -14
+  },
+  {
+   "line": 5,
+   "at": "abs:25.80",
+   "name": "click",
+   "db": -14
+  },
+  {
+   "line": 6,
+   "at": 0,
+   "name": "click",
+   "db": -14
+  },
+  {
+   "line": 6,
+   "at": "abs:29.42",
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 6,
+   "at": "abs:30.58",
+   "name": "stone_reveal",
+   "db": -12
+  },
+  {
+   "line": 7,
+   "at": 0,
+   "name": "click",
+   "db": -12
+  },
+  {
+   "line": 7,
+   "at": "abs:32.88",
+   "name": "click",
+   "db": -12
+  },
+  {
+   "line": 8,
+   "at": "abs:36.36",
+   "name": "paper",
+   "db": -13
+  },
+  {
+   "line": 9,
+   "at": "abs:44.06",
+   "name": "thud_heavy",
+   "db": -9
+  },
+  {
+   "line": 10,
+   "at": 0,
+   "name": "stone_reveal",
+   "db": -14
+  },
+  {
+   "line": 10,
+   "at": "abs:48.07",
+   "name": "click",
+   "db": -12
+  },
+  {
+   "line": 11,
+   "at": "abs:53.66",
+   "name": "stone_tap",
+   "db": -12
+  },
+  {
+   "line": 11,
+   "at": "abs:54.64",
+   "name": "click",
+   "db": -11
+  },
+  {
+   "line": 11,
+   "at": "abs:56.5",
+   "name": "thud_heavy",
+   "db": -12
+  }
+ ],
+ "music": [
+  {
+   "src": "../music/the_mountain_576567.mp3",
+   "align_src": 84.0,
+   "align_line": 5,
+   "align_at": 0,
+   "gap_db": 6.5,
+   "fade_in": 0.2
+  }
+ ],
+ "music_env": [
+  [
+   0,
+   0,
+   -4
+  ],
+  [
+   1,
+   0,
+   0
+  ],
+  [
+   9,
+   "abs:43.35",
+   0
+  ],
+  [
+   9,
+   "abs:43.6",
+   -10
+  ],
+  [
+   9,
+   "abs:44.04",
+   -10
+  ],
+  [
+   9,
+   "abs:44.12",
+   1
+  ],
+  [
+   10,
+   0,
+   0
+  ]
+ ]
+}

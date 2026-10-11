@@ -500,3 +500,118 @@ def dust_reveal(image, out, box=None, peek=(0.5, 0.42, 0.12), dur=4.6, t_gust=0.
         cy = min(max(cy, ch / 2), H - ch / 2); cx = min(max(cx, cw / 2), W - cw / 2)
         return im.resize((W, H), Image.BILINEAR, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
     write_mp4(frame, dur, out)
+
+
+# ------------------------------------------------------------------ EP7 toolkit: parallax, snap camera, particles, ink strokes, pills, cards
+GOLD2 = (212, 177, 92)          # antique gold (#D4B15C), the v2 accent
+CHALK = (244, 236, 216)
+
+def depth_split(img, thr=0.45, grow=9):
+    """Foreground = the sharp (in-focus) region of a shallow-depth-of-field image. Returns (fg RGBA, clean background RGB)."""
+    import cv2
+    a = np.asarray(img.convert("RGB")); g = cv2.cvtColor(a, cv2.COLOR_RGB2GRAY).astype(np.float32)
+    lap = np.abs(cv2.Laplacian(g, cv2.CV_32F, ksize=3)); sharp = cv2.GaussianBlur(lap, (0, 0), 18)
+    sharp = sharp / (np.percentile(sharp, 99) + 1e-6); m = (sharp > thr).astype(np.uint8) * 255
+    m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((25, 25), np.uint8)); m = cv2.dilate(m, np.ones((grow, grow), np.uint8))
+    n, lab, st, _ = cv2.connectedComponentsWithStats(m)
+    if n > 1:
+        keep = [k for k in range(1, n) if st[k, cv2.CC_STAT_AREA] > 0.02 * m.size]; m = np.isin(lab, keep).astype(np.uint8) * 255
+    small = cv2.resize(a, (a.shape[1] // 2, a.shape[0] // 2)); ms = cv2.resize(cv2.dilate(m, np.ones((31, 31), np.uint8)), (small.shape[1], small.shape[0]))
+    bg = cv2.resize(cv2.inpaint(small, ms, 9, cv2.INPAINT_TELEA), (a.shape[1], a.shape[0]), interpolation=cv2.INTER_CUBIC)
+    bg = np.where(m[..., None] > 0, cv2.GaussianBlur(bg, (0, 0), 6), a)
+    fg = Image.fromarray(a).convert("RGBA"); fg.putalpha(Image.fromarray(cv2.GaussianBlur(m, (0, 0), 4)))
+    return fg, Image.fromarray(bg.astype(np.uint8))
+
+def _place(im, z, cx, cy):
+    """Crop a W x H window from a canvas-sized image at zoom z centred on (cx, cy) in canvas px."""
+    cw, ch = W / z, H / z; cx = min(max(cx, cw / 2), W - cw / 2); cy = min(max(cy, ch / 2), H - ch / 2)
+    return im.resize((W, H), Image.BICUBIC, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
+
+def snapz(t, t_snap=None, base=(1.0, 1.06), dur=4.0, amount=0.15):
+    """Slow push from base[0] to base[1]; at t_snap a snap punch-in (+amount in 0.3 s, ease-out) that then settles 30%."""
+    z = base[0] + (base[1] - base[0]) * ease(t / dur)
+    if t_snap is not None and t > t_snap:
+        u = (t - t_snap) / 0.3; z += amount * (ease(u) if u < 1 else 1 - 0.3 * ease((u - 1) * 0.3 / 1.5))
+    return z
+
+def parallax_frame(fg, bg, t, dur, direction=1, fg_px=22, bg_px=8, z0=1.04, z1=1.10, focus=(0.5, 0.5), snap=None):
+    """2.5D move: background and foreground layers drift by different amounts (never invents detail)."""
+    u = ease(t / dur); z = snapz(t, snap, (z0, z1), dur)
+    b = fx_cover(bg); f = fx_cover(fg)
+    cx, cy = focus[0] * W, focus[1] * H
+    bimg = _place(b, z * 0.985, cx - direction * bg_px * u, cy)
+    fimg = _place(f, z, cx - direction * fg_px * u, cy)
+    out = bimg.convert("RGBA"); out.alpha_composite(fimg); return out
+
+def fx_cover(im):
+    return cover(im) if im.mode != "RGBA" else _cover_rgba(im)
+
+def _cover_rgba(im):
+    s = max(W / im.width, H / im.height); im = im.resize((int(im.width * s) + 1, int(im.height * s) + 1), Image.LANCZOS)
+    x, y = (im.width - W) // 2, (im.height - H) // 2; return im.crop((x, y, x + W, y + H))
+
+def particles(im, t, kind="embers", n=60, seed=3, area=(0, 0, W, H), strength=1.0):
+    """Ambient motion that never covers the subject much: embers (rise, orange), sparks (fast, bright), dust (slow drifting motes), smoke."""
+    r = np.random.default_rng(seed); lay = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(lay)
+    x0, y0, x1, y1 = area; xs = r.uniform(x0, x1, n); ph = r.uniform(0, 1, n); sp = r.uniform(0.6, 1.4, n); sz = r.uniform(1.5, 4.5, n)
+    for i in range(n):
+        if kind == "embers":
+            q = (t * 0.22 * sp[i] + ph[i]) % 1; x = xs[i] + 30 * math.sin(t * 1.7 + i); y = y1 - q * (y1 - y0)
+            a = int(220 * strength * math.sin(math.pi * q)); col = (255, 150 + (i * 7) % 80, 60, a); rr = sz[i]
+        elif kind == "sparks":
+            q = (t * 0.9 * sp[i] + ph[i]) % 1; x = xs[i] + (i % 2 * 2 - 1) * 160 * q; y = y1 - q * (y1 - y0) * 0.7 + 260 * q * q
+            a = int(255 * strength * (1 - q)); col = (255, 210, 120, a); rr = sz[i] * 0.8
+        else:   # dust
+            q = (t * 0.05 * sp[i] + ph[i]) % 1; x = xs[i] + 40 * math.sin(t * 0.6 + i); y = y0 + q * (y1 - y0)
+            a = int(110 * strength * math.sin(math.pi * q)); col = (240, 220, 190, a); rr = sz[i] * 1.2
+        d.ellipse((x - rr, y - rr, x + rr, y + rr), fill=col)
+    im.alpha_composite(lay.filter(ImageFilter.GaussianBlur(0.8 if kind != "dust" else 1.6)))
+    return im
+
+def heat_haze(im, t, area, amp=3.0):
+    """Gentle shimmer above a fire (row-wise sine shift inside area)."""
+    a = np.asarray(im).copy(); x0, y0, x1, y1 = [int(v) for v in area]
+    for y in range(y0, y1, 2):
+        s = int(amp * math.sin(y * 0.09 + t * 9)); a[y:y + 2, x0:x1] = np.roll(a[y:y + 2, x0:x1], s, axis=1)
+    return Image.fromarray(a)
+
+def ink_stroke(im, pts, frac, width=12, color=CHALK, seed=1, alpha=255):
+    """Hand-drawn chalk/ink stroke that draws on: wobbly, tapered, slightly broken texture."""
+    if frac <= 0 or len(pts) < 2: return im
+    r = np.random.default_rng(seed); P = np.array(pts, float)
+    t_ = np.linspace(0, 1, len(P)); u = np.linspace(0, 1, 120); P = np.stack([np.interp(u, t_, P[:, 0]), np.interp(u, t_, P[:, 1])], 1)
+    P += np.cumsum(r.normal(0, 0.6, P.shape), 0) * 0.5; n = max(2, int(len(P) * min(1, frac)))
+    lay = Image.new("RGBA", (W, H)); d = ImageDraw.Draw(lay)
+    for k in range(3):
+        off = r.normal(0, 1.2, 2)
+        for i in range(n - 1):
+            w = width * (0.55 + 0.45 * math.sin(math.pi * i / max(1, len(P) - 1))) * (0.9 - 0.15 * k)
+            d.line((P[i][0] + off[0], P[i][1] + off[1], P[i + 1][0] + off[0], P[i + 1][1] + off[1]), fill=color + (int(alpha * (0.85 - 0.2 * k)),), width=max(2, int(w)))
+    grit = Image.effect_noise((W, H), 60).point(lambda v: 255 if v > 70 else 120)
+    lay.putalpha(Image.composite(lay.getchannel("A"), Image.new("L", (W, H), 0), grit))
+    sh = lay.copy(); sh.putalpha(sh.getchannel("A").point(lambda v: v // 3))
+    im.alpha_composite(Image.merge("RGBA", (Image.new("L", (W, H), 0),) * 3 + (sh.getchannel("A"),)).filter(ImageFilter.GaussianBlur(3)), (0, 3))
+    im.alpha_composite(lay); return im
+
+def ink_ellipse(cx, cy, rx, ry, start=-100, turns=1.08, n=60):
+    return [(cx + rx * math.cos(math.radians(start + 360 * turns * i / n)) * (1 + 0.04 * math.sin(i)), cy + ry * math.sin(math.radians(start + 360 * turns * i / n))) for i in range(n + 1)]
+
+def pill(im, text, xy, size=36, a=255, color=(245, 240, 230), bg=(10, 8, 6), anchor="mm", f=None):
+    """Readable label: >= 32-38 px on a dark semi-transparent pill."""
+    fnt = font(f or F_BIG, size); d = ImageDraw.Draw(im); tw = d.textlength(text, font=fnt); h = size * 1.5
+    x, y = xy; x0 = x - tw / 2 - 26 if anchor == "mm" else x; y0 = y - h / 2
+    lay = Image.new("RGBA", (W, H)); ld = ImageDraw.Draw(lay)
+    ld.rounded_rectangle((x0, y0, x0 + tw + 52, y0 + h), h / 2, fill=bg + (int(170 * a / 255),))
+    ld.text((x0 + 26, y0 + h / 2), text, font=fnt, fill=color + (a,), anchor="lm"); im.alpha_composite(lay); return im
+
+def parallax_warp(img, t, dur, direction=1, near_px=24, far_px=6, z=(1.05, 1.11), focus=(0.5, 0.5), snap=None, horizon=0.35):
+    """Tear-free 2.5D: a smooth horizontal displacement field, small at the top (far) and larger at the bottom (near),
+    plus a gentle push. No masks, no invented detail. Works for tabletop / ground-level compositions."""
+    import cv2
+    src = img if isinstance(img, np.ndarray) else np.asarray(cover(img.convert("RGB")))
+    u = ease(t / dur); zz = snapz(t, snap, z, dur)
+    yy = np.linspace(0, 1, H, dtype=np.float32)[:, None]; w = np.clip((yy - horizon) / (1 - horizon), 0, 1) ** 1.3
+    shift = direction * u * (far_px + (near_px - far_px) * w)
+    mx = (np.arange(W, dtype=np.float32)[None, :] + shift).astype(np.float32); my = np.repeat(np.arange(H, dtype=np.float32)[:, None], W, 1)
+    out = cv2.remap(src, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+    return _place(Image.fromarray(out), zz, focus[0] * W, focus[1] * H).convert("RGBA")
