@@ -93,3 +93,8 @@ HIGH (apply to every Short):
 MEDIUM: 2.5D parallax on 2-3 stills (fg 15-25 px, bg 5-10 px; never invent detail) · one annotation style: hand-drawn ink/chalk stroke that draws on (red stamp only for the one real contradiction) · SEEN vs THEORY? cards; scholar views on an aged-paper card · loop ending (last frame matches the first crop) · small series tag "INDUS FILES · CASE 0N" (28-32 px) early.
 SKIP: permanent progress bar, subscribe animation, metallic/glow/gradient fonts, SFX on every cut, 3-line captions.
 Measure: stayed %, retention at 3-5 s and 15-30 s, avg % viewed, subs per 1,000 views (baseline ~3).
+
+## Result: EP7 (Dancing Girl, first new-style Short), 22 h
+290 views, 65.7% stayed, AVD 1:17 on a 61 s Short = 126% avg viewed (EP3 was 69%), 10 likes, 0 comments, 0 shares.
+Keep: loop ending (last frame = first crop), no frame static (measured), snap punch-ins, parallax, one twist with music dip.
+Next: script the last line to flow straight into the first line (spoken loop); pin a one-word-answer question (not only a teaser); reply to every comment in the first hour.
