@@ -35,3 +35,10 @@ Optional: merge 9 and 10 (Mohenjo-daro + Lothal) to make 11 parts.
 - No India vs Pakistan framing; no political/communal angles (Aryan debate only as "largely rejected by archaeologists" if at all).
 - Pashupati: "some scholars see…, others argue…"; Part 4: "no clear evidence of kings" (interpretation, not proof).
 - Real photos for real objects (Wikimedia, licence-checked); AI images labelled "Artist's impression".
+
+## Audience analysis (12 Oct 2026, vidIQ public views)
+Top: Railway 2,962 · Iron Pillar 1,399 · Iraq seal 1,399 · Unicorn 1,311 · No King 1,284 · Famine 1,249 · Wootz 802 · Kuyili 645 · Kedarnath 392 · Signboard 240 · Panna Dai 197.
+Likes: (1) ancient Indian tech/achievement that still amazes, (2) India linked to the world, (3) shock/loss/injustice hook. Comments come from spiritual/identity links (yoga, "was Sargon Indian?").
+Weak: hero biographies; pure "nobody knows" mysteries without a concrete wow in the title. Lowest three were posted 01:00-06:00 UTC; prefer ~12:30 UTC (6 pm IST).
+Remaining Indus parts with wow angles: #8 weights (precision), #9 Mohenjo-daro toilets/drains, #10 Lothal dock (debate), #11 decline ("5 million people vanished?"), #12 Rakhigarhi DNA ("they never left").
+Next series "Impossible Ancient India": Kailasa (Ellora), Zawar zinc, Ramappa floating bricks (careful), Brihadeeswara, Kerala school series (careful), Chand Baori.
