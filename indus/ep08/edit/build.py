@@ -42,9 +42,9 @@ if "hook" in todo:   # 0-5.33: tight bright crop moving; snap out 0.6; die pops 
             q = ease((t - 3.75) / 0.25); s = 260; die = Image.new("RGBA", (s, s)); d = ImageDraw.Draw(die)
             d.rounded_rectangle((4, 4, s - 4, s - 4), 34, fill=(248, 246, 240, 255), outline=(30, 30, 30, 255), width=5)
             for (x, y) in ((0.25, 0.25), (0.75, 0.25), (0.5, 0.5), (0.25, 0.75), (0.75, 0.75)): d.ellipse((x * s - 20, y * s - 20, x * s + 20, y * s + 20), fill=(25, 25, 25, 255))
-            die = die.rotate(-12 + 20 * (1 - q), expand=True, resample=Image.BICUBIC); drop(im, die, (W / 2 - 80 - die.width / 2, 1060 - die.height / 2 + (1 - q) * 300), q)
-            if t > 4.0: fx.ink_stroke(im, [(W / 2 - 300, 1200), (W / 2 + 140, 900)], (t - 4.0) / 0.25, 22, color=(230, 60, 50), seed=2)
-            pa(im, "NOT DICE", 1330, 4.1, t, 56, GOLD2)
+            die = die.rotate(-12 + 20 * (1 - q), expand=True, resample=Image.BICUBIC); drop(im, die, (W / 2 - 80 - die.width / 2, 900 - die.height / 2 + (1 - q) * 300), q)
+            if t > 4.0: fx.ink_stroke(im, [(W / 2 - 300, 1040), (W / 2 + 140, 740)], (t - 4.0) / 0.25, 22, color=(230, 60, 50), seed=2)
+            pa(im, "NOT DICE", 1560, 4.1, t, 56, GOLD2)
         if 2.7 < t: pa(im, "INDUS FILES · CASE 08", 250, 2.7, t, 30, x=40, anchor="lm")
         return im
     fx.write_mp4(frame, 5.6, I + "c_hook.mp4")
@@ -121,11 +121,11 @@ if "decimal" in todo:   # 23.12-27.74: true-scale cubes (side ~ weight^(1/3)): 6
         if a64 > 0:
             x = W / 2 - 80 - c64.width / 2 - 200 * ease(min(1, t / 1.1)); drop(im, c64, (x, base_y - c64.height), a64)
             outlined(d, (x + c64.width / 2, base_y - c64.height - 45), "64", font(fx.F_BIG, 64), (255, 255, 255, int(255 * a64)), stroke=4)
-        for j, (lab, tt, n, cx) in enumerate((("×10 = 160", 1.3, 160, 230), ("×100 = 1,600", 2.0, 1600, 640))):
+        for j, (lab, tt, n, cx) in enumerate((("16 × 10 = 160", 1.3, 160, 240), ("16 × 100 = 1,600", 2.0, 1600, 650))):
             if t > tt:
                 q = min(1, (t - tt) / 0.12); c = cube_img(k * n ** (1 / 3) * (1.15 - 0.15 * ease(q)))
                 x = cx - c.width / 2; drop(im, c, (x, base_y - c.height))
-                outlined(d, (cx, base_y - c.height - 50), lab, font(fx.F_BIG, 60 if j == 0 else 70), GOLD2 + (255,), stroke=4)
+                outlined(d, (cx, base_y - c.height - 50), lab, font(fx.F_BIG, 50 if j == 0 else 60), GOLD2 + (255,), stroke=4)
         pa(im, "THEN TENS AND HUNDREDS", 330, 0.2, t, 54, GOLD2); pa(im, "SEEN: BINARY, THEN DECIMAL", 1560, 2.77, t, 40)
         pa(im, "TRUE SCALE", 1640, 2.2, t, 28)
         return fx._place(im, 1 + 0.05 * t / 4.9, W / 2, H / 2).convert("RGBA")
@@ -133,16 +133,16 @@ if "decimal" in todo:   # 23.12-27.74: true-scale cubes (side ~ weight^(1/3)): 6
 
 CITIES = {"HARAPPA": (72.86, 30.63), "MOHENJO-DARO": (68.14, 27.33), "DHOLAVIRA": (70.21, 23.89), "LOTHAL": (72.25, 22.52)}
 if "map" in todo:   # 27.74-31.15: four cities pop with the same cube icon
-    P = fx.Proj(64.5, 79.0, 20.0, 33.0, top=420, bottom=1550); bgm = fx.base_map(P); icon = cube_img(0.22); tt = [0.35, 0.8, 1.25, 1.7]
+    P = fx.Proj(64.5, 79.0, 21.5, 31.5, top=470, bottom=1130); bgm = fx.base_map(P); icon = cube_img(0.22); tt = [0.25, 0.65, 1.05, 1.45]
     def frame(t):
         im = bgm.copy().convert("RGBA"); d = ImageDraw.Draw(im)
         for k, (n, ll) in enumerate(CITIES.items()):
             q = ease((t - tt[k]) / 0.2)
             if q <= 0: continue
             c = P(*ll); ic = icon.resize((max(2, int(icon.width * q)), max(2, int(icon.height * q))))
-            drop(im, ic, (c[0] - ic.width / 2, c[1] - ic.height / 2)); fx.map_label(d, (c[0], c[1] + 60), n, 32, anchor="mm", alpha=q)
+            drop(im, ic, (c[0] - ic.width / 2, c[1] - ic.height / 2)); fx.map_label(d, (c[0] + 42, c[1] + 4) if n == "LOTHAL" else (c[0], c[1] + 60), n, 32, anchor="lm" if n == "LOTHAL" else "mm", alpha=q)
         pa(im, "SAME SET · 1,000 KM APART", 330, 0.1, t, 46, GOLD2)
-        z = 1 + 0.06 * t / 3.6; return fx._place(im, z, W / 2, H / 2).convert("RGBA")
+        z = 1 + 0.12 * ease(min(1, t / 2.0)) + 0.02 * t; return fx._place(im, z, W / 2, H / 2).convert("RGBA")
     fx.write_mp4(frame, 3.6, I + "c_map.mp4")
 
 if "bahrain" in todo:   # 31.15-36.47: arc map 0-1.1, AI harbour 1.1-2.9, REAL mounds 2.9-5.32
@@ -150,15 +150,16 @@ if "bahrain" in todo:   # 31.15-36.47: arc map 0-1.1, AI harbour 1.1-2.9, REAL m
     A = P(68.5, 26.5); B = P(50.55, 26.07)
     arc = [(A[0] + (B[0] - A[0]) * u, A[1] + (B[1] - A[1]) * u - 220 * math.sin(math.pi * u)) for u in np.linspace(0, 1, 60)]
     def frame(t):
-        if t < 1.1:
+        if t < 1.5:
             im = bgm.copy().convert("RGBA"); d = ImageDraw.Draw(im); p = fx._partial(arc, ease(t / 0.7))
             if len(p) > 1:
                 for i in range(0, len(p) - 1, 2): d.line((p[i], p[i + 1]), fill=(255, 255, 255, 255), width=9)
             fx.map_label(d, (A[0], A[1] + 60), "INDUS", 44, GOLD2, "mm")
-            if t > 0.7: fx._pin(d, B, t); fx.map_label(d, (B[0] + 40, B[1] + 70), "BAHRAIN (DILMUN)", 40, anchor="lm")
+            fx.map_label(d, (B[0] + 40, B[1] + 70), "BAHRAIN (DILMUN)", 40, anchor="lm", alpha=ease(t / 0.25))
+            if t > 0.7: fx._pin(d, B, t)
             return fx._place(im, 1 + 0.08 * t, W / 2, H / 2).convert("RGBA")
         if t < 2.9:
-            im = fx.parallax_warp(src, t - 1.1, 1.8, 1, 24, 6, (1.05, 1.1)); fx.particles(im, t, "dust", 30, 9, (0, 300, W, 1500), 0.5); return ai_tag(im)
+            im = fx.parallax_warp(src, t - 1.5, 1.8, 1, 24, 6, (1.05, 1.1)); fx.particles(im, t, "dust", 30, 9, (0, 300, W, 1500), 0.5); return ai_tag(im)
         im, _ = photo_cam(mounds, 980 + 120 * ease((t - 2.9) / 2.4), 700, 1400, 1.0 + 0.05 * (t - 2.9))
         pa(im, "REAL: DILMUN BURIAL MOUNDS, BAHRAIN (1918)", 1600, 2.95, t, 30); pa(im, "WEIGHTS THAT MATCH", 330, 3.2, t, 56, GOLD2)
         return im

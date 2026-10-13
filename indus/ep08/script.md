@@ -52,6 +52,15 @@ Who do YOU think checked the weights? 👇 One word: Merchants? Priests? Kings?
 - Labels moved above the cubes so they never clash with captions.
 - ×10 / ×100 cubes redrawn at true scale (side ∝ weight^(1/3)), labelled "×10 = 160" and "×100 = 1,600", with a "TRUE SCALE" pill.
 
+## v4 after Gemini review (score 7.5-8.5)
+Adopted (checked against frames):
+- 0:04 die sat on the "THEY'RE NOT" caption: die and strike raised, "NOT DICE" pill moved below the caption.
+- 0:24 "×10 = 160" right after the 64 cube read as 64×10: labels now "16 × 10 = 160" / "16 × 100 = 1,600".
+- 0:31 Bahrain label appeared only after the arc landed: label now fades in at the start; map held 1.5 s (was 1.1).
+- 0:28-0:31 map: faster push-in, cities pop earlier. Also fixed (Gemini missed it): Dholavira/Lothal labels sat under the captions; map refit higher, Lothal label to the right.
+Rejected: 0:39-0:42 "SAME WEIGHTS EVERYWHERE" vs caption clash. The pill is at y 500, the caption at about y 1260; no overlap in any frame.
+Checks: 56.0 s, -14.1 LUFS, longest still 0.00 s.
+
 ## Description
 These little stone cubes are 4,000 years old, and they're not dice. They're Indus weights, polished from banded stone. The smallest weighs less than a gram; the most common, about 14 grams. Each one doubles the last: 1, 2, 4, 8, 16, 32, 64. Then the big ones jump in tens and hundreds. Cities 1,000 km apart used the same set, and weights that match theirs were found on Bahrain. No king we know of, no law we can read, yet a whole civilisation agreed on the same weights. Who checked them? We don't know.
 
