@@ -38,3 +38,23 @@ Care: no "accurate to 0.1 g" style precision claims (not verified). "Gram" never
 ## Pinned comment (one-word answer)
 Who do YOU think checked the weights? 👇 One word: Merchants? Priests? Kings?
 🔓 Indus Files #9: "Toilets in Every Home… 4,500 Years Ago?" 🚽
+
+## Final build (v2, 56.0 s)
+- Voice: take 1 (take 2 garbled "Mohenjo-daro"); tighten2 0.72/0.22/0.62, kept "Who checked them" together, 0.95 s pause before "We don't know". No tags spoken.
+- Spoken + visual loop: last line "look again at" runs into the hook; last frame = first frame (same BM crop; only overlay text differs). Tail 0.35 s.
+- Doubling beat: one REAL cube (BM photo crop) scaled by ratio^(1/3) per number, click on each number; ×10/×100 blocks; scale readouts 0.86 g / 13.7 g (from harappa.com figures).
+- Maps: same cube icon at Harappa, Mohenjo-daro, Dholavira, Lothal; arc Indus -> Bahrain; REAL Dilmun mounds (1918).
+- Twist: music -10 dB 0.4 s before "We don't know", then thud. Every frame moves (measured). Loudness -14.1 LUFS.
+
+## Description
+These little stone cubes are 4,000 years old, and they're not dice. They're Indus weights, polished from banded stone. The smallest weighs less than a gram; the most common, about 14 grams. Each one doubles the last: 1, 2, 4, 8, 16, 32, 64. Then the big ones jump in tens and hundreds. Cities 1,000 km apart used the same set, and weights that match theirs were found on Bahrain. No king we know of, no law we can read, yet a whole civilisation agreed on the same weights. Who checked them? We don't know.
+
+Indus Files #8. Part 7: the Dancing Girl. Next: toilets in their homes, 4,500 years ago?
+
+Sources: harappa.com ("Cubical weights"; National Museum of Pakistan); Kuml (Danish excavations in Bahrain); M. Roaf (1982); C. Zaccagnini (1986), "The Dilmun Standard and its Relationship with Indus and Near Eastern Weight Systems".
+Photos (Wikimedia Commons): Indus weights, British Museum, by Zunkir (CC BY-SA 4.0); Burial mounds in Bahrain 1918 by E. A. Storrs-Fox (public domain); A drain at Lothal by Raveesh Vyas (CC BY-SA 2.0); Street, Mohenjo-daro, by Saqib Qayyum (CC BY-SA 3.0).
+AI images: artist's impressions. Voice: ElevenLabs. Music: "Documentary" (Nastelbom, Pixabay). Maps: Natural Earth.
+#IndusValley #Harappa #MohenjoDaro #AncientIndia #Archaeology #Shorts
+
+## Tags
+indus valley weights, harappan weights, indus valley civilization, harappa, mohenjo daro, ancient india, binary system ancient, dilmun, bahrain history, lothal, indian history, archaeology, ancient math, 4000 year old, indus files, jambudvipa files, history shorts, ancient civilizations
