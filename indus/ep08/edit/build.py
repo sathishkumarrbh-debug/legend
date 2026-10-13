@@ -91,6 +91,12 @@ if "double" in todo:   # 14.67-23.12: numbers at 3.17 3.82 4.50 5.14 5.66 6.57 7
         im = bg.copy(); fx.particles(im, t, "dust", 40, 8, (0, 0, W, H), 0.6); d = ImageDraw.Draw(im)
         pa(im, "EACH ONE DOUBLES", 330, 1.25, t, 64, GOLD2)
         shown = [k for k in range(7) if t >= ts[k] - 0.05]
+        if t < ts[0] - 0.05:   # waiting cube 1 + "?" so the trick line is never empty
+            q = ease((t - 0.25) / 0.3); c = cube_img(base * 2.2); x0 = W / 2 - 80 - c.width / 2; y0 = 1150 - c.height
+            if q > 0: drop(im, c, (x0, y0 + (1 - q) * 200), q)
+            if t > 1.0: fx.ink_stroke(im, fx.ink_ellipse(x0 + c.width / 2, y0 + c.height / 2, c.width * 0.75, c.height * 0.72), (t - 1.0) / 0.5, 12, seed=4)
+            p = 1 + 0.08 * math.sin(t * 6); outlined(d, (W / 2 - 80, 1250), "?", font(fx.F_BIG, int(110 * p)), GOLD2 + (int(255 * q),), stroke=5)
+            return fx._place(im, 1 + 0.06 * t / 3.2, W / 2, H * 0.55).convert("RGBA")
         # layout: row along a baseline, camera slides left as cubes grow
         sizes = [base * (n ** (1 / 3)) for n in nums]; xs = []; x = 60
         for s in sizes: xs.append(x); x += CUBE.width * s + 34
@@ -107,17 +113,22 @@ if "double" in todo:   # 14.67-23.12: numbers at 3.17 3.82 4.50 5.14 5.66 6.57 7
         return im
     fx.write_mp4(frame, 8.7, I + "c_double.mp4")
 
-if "decimal" in todo:   # 23.12-27.74: ×10 2.0? "tens" ~1.5, "hundreds" ~2.2; "the way we count today" 2.77
-    bg = bg_blur(BM, 0.5)
+if "decimal" in todo:   # 23.12-27.74: true-scale cubes (side ~ weight^(1/3)): 64 -> ×10 = 160 (1.3) -> ×100 = 1,600 (2.0)
+    bg = bg_blur(BM, 0.5); k = 0.15
     def frame(t):
-        im = bg.copy(); z = 1 + 0.05 * t
-        for j, (lab, tt, s) in enumerate((("×10", 1.3, 1.6), ("×100", 2.0, 2.3))):
+        im = bg.copy(); d = ImageDraw.Draw(im); base_y = 1130
+        c64 = cube_img(k * 64 ** (1 / 3)); a64 = 1 - ease((t - 1.1) / 0.3)
+        if a64 > 0:
+            x = W / 2 - 80 - c64.width / 2 - 200 * ease(min(1, t / 1.1)); drop(im, c64, (x, base_y - c64.height), a64)
+            outlined(d, (x + c64.width / 2, base_y - c64.height - 45), "64", font(fx.F_BIG, 64), (255, 255, 255, int(255 * a64)), stroke=4)
+        for j, (lab, tt, n, cx) in enumerate((("×10 = 160", 1.3, 160, 230), ("×100 = 1,600", 2.0, 1600, 640))):
             if t > tt:
-                q = min(1, (t - tt) / 0.12); sc = s * (1.3 - 0.3 * ease(q)); c = cube_img(sc * 0.55)
-                x = W / 2 - 80 - c.width / 2 + (-210 if j == 0 else 190); y = 1250 - c.height
-                drop(im, c, (x, y)); outlined(ImageDraw.Draw(im), (x + c.width / 2, 1310), lab, font(fx.F_BIG, 90), GOLD2 + (255,), stroke=5)
-        pa(im, "THEN TENS AND HUNDREDS", 330, 0.2, t, 54, GOLD2); pa(im, "SEEN: BINARY, THEN DECIMAL", 1520, 2.77, t, 40)
-        return im
+                q = min(1, (t - tt) / 0.12); c = cube_img(k * n ** (1 / 3) * (1.15 - 0.15 * ease(q)))
+                x = cx - c.width / 2; drop(im, c, (x, base_y - c.height))
+                outlined(d, (cx, base_y - c.height - 50), lab, font(fx.F_BIG, 60 if j == 0 else 70), GOLD2 + (255,), stroke=4)
+        pa(im, "THEN TENS AND HUNDREDS", 330, 0.2, t, 54, GOLD2); pa(im, "SEEN: BINARY, THEN DECIMAL", 1560, 2.77, t, 40)
+        pa(im, "TRUE SCALE", 1640, 2.2, t, 28)
+        return fx._place(im, 1 + 0.05 * t / 4.9, W / 2, H / 2).convert("RGBA")
     fx.write_mp4(frame, 4.9, I + "c_decimal.mp4")
 
 CITIES = {"HARAPPA": (72.86, 30.63), "MOHENJO-DARO": (68.14, 27.33), "DHOLAVIRA": (70.21, 23.89), "LOTHAL": (72.25, 22.52)}

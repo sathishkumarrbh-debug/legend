@@ -46,6 +46,12 @@ Who do YOU think checked the weights? 👇 One word: Merchants? Priests? Kings?
 - Maps: same cube icon at Harappa, Mohenjo-daro, Dholavira, Lothal; arc Indus -> Bahrain; REAL Dilmun mounds (1918).
 - Twist: music -10 dB 0.4 s before "We don't know", then thud. Every frame moves (measured). Loudness -14.1 LUFS.
 
+## v3 after self-review (56.0 s, -14.1 LUFS, longest still 0.00 s)
+- 0:14.7-0:17.8 ("Here's the trick"): was an empty background; now a REAL cube with an ink circle and a pulsing "?" waiting for "one".
+- 0:23.1-0:24.4: the 64 cube now carries over into the decimal beat instead of an empty frame.
+- Labels moved above the cubes so they never clash with captions.
+- ×10 / ×100 cubes redrawn at true scale (side ∝ weight^(1/3)), labelled "×10 = 160" and "×100 = 1,600", with a "TRUE SCALE" pill.
+
 ## Description
 These little stone cubes are 4,000 years old, and they're not dice. They're Indus weights, polished from banded stone. The smallest weighs less than a gram; the most common, about 14 grams. Each one doubles the last: 1, 2, 4, 8, 16, 32, 64. Then the big ones jump in tens and hundreds. Cities 1,000 km apart used the same set, and weights that match theirs were found on Bahrain. No king we know of, no law we can read, yet a whole civilisation agreed on the same weights. Who checked them? We don't know.
 
