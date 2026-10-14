@@ -42,3 +42,16 @@ Likes: (1) ancient Indian tech/achievement that still amazes, (2) India linked t
 Weak: hero biographies; pure "nobody knows" mysteries without a concrete wow in the title. Lowest three were posted 01:00-06:00 UTC; prefer ~12:30 UTC (6 pm IST).
 Remaining Indus parts with wow angles: #8 weights (precision), #9 Mohenjo-daro toilets/drains, #10 Lothal dock (debate), #11 decline ("5 million people vanished?"), #12 Rakhigarhi DNA ("they never left").
 Next series "Impossible Ancient India": Kailasa (Ellora), Zawar zinc, Ramappa floating bricks (careful), Brihadeeswara, Kerala school series (careful), Chand Baori.
+
+## Analytics check, 14 Oct (vidIQ connected to YouTube Analytics)
+| Short | Views | Engaged % | Avg viewed | Shorts-feed views |
+|---|---|---|---|---|
+| Railway | 2,961 | 56% | 105% | |
+| Pashupati (Part 6) | 1,505 | 50% | 69% | 1,386 |
+| No King (Part 4) | 1,289 | 57% | 74% | |
+| Unicorn (Part 5) | 1,306 | 52% | 61% | |
+| Dancing Girl (Part 7) | 283 | 60% | 128% | 273 |
+- Part 7 was the best-watched Short on the channel but YouTube tested it on only ~270 feed viewers and stopped. Problem = reach, not the edit.
+- Likely causes: posted 11:34 pm IST, ~25 h after Part 6 (4 uploads in 50 h); possibly a sensitivity limit on the nude bronze (unverified).
+- 99% of views are non-subscribers; each Short gets one burst on day 0-1, then stops. Famine had a slow first day and got its views the next day, so judge a Short after 48 h.
+- Rules: one Short per day max, 6 pm IST, 24 h+ between Indus parts; titles don't give away the answer.
